@@ -1,0 +1,5 @@
+C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.Core\bin\Debug\SetUpSheet.Core.dll
+C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.Core\bin\Debug\SetUpSheet.Core.pdb
+C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.Core\obj\Debug\SetUpSheet.Core.csproj.CoreCompileInputs.cache
+C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.Core\obj\Debug\SetUpSheet.Core.dll
+C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.Core\obj\Debug\SetUpSheet.Core.pdb
