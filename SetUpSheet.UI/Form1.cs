@@ -14,13 +14,28 @@ namespace SetUpSheet.UI
 {
     public partial class Form1 : Form
     {
-        Roster roster;
+        Roster roster = new Roster();
         public Form1()
         {            
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void refresh()
+        {
+            listBox1.DataSource = null;
+            listBox1.DataSource = roster.Employees;
+            rosterControl1.DataSource(roster.Employees[0]);
+        }
+
+        private void bntLoad_Click(object sender, EventArgs e)
+        {
+            roster.LoadFile(ServiceLocator.GetEmployeePersistence("Production"));
+            Load load = new Load(roster);
+            load.ShowDialog();
+            refresh();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             AddEmployee addEmployee = new AddEmployee();
             addEmployee.ShowDialog();
@@ -34,18 +49,6 @@ namespace SetUpSheet.UI
                 roster.AddEmployee(temp);
                 refresh();
             }
-        }
-        private void refresh()
-        {
-            listBox1.DataSource = null;
-            listBox1.DataSource = roster.Employees;
-            rosterControl1.DataSource(roster.Employees[0]);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            roster = new Roster(ServiceLocator.GetEmployeePersistence("Production"));
-            refresh();
         }
     }
 }

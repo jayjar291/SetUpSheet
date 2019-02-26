@@ -7,3 +7,12 @@ C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpS
 C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpSheet.DataFunctions.csproj.CopyComplete
 C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpSheet.DataFunctions.dll
 C:\Users\jared\source\repos\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpSheet.DataFunctions.pdb
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\bin\Debug\SetUpSheet.DataFunctions.dll
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\bin\Debug\SetUpSheet.DataFunctions.pdb
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\bin\Debug\SetUpSheet.Core.dll
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\bin\Debug\SetUpSheet.Core.pdb
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpSheet.DataFunctions.csprojAssemblyReference.cache
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpSheet.DataFunctions.csproj.CoreCompileInputs.cache
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpSheet.DataFunctions.csproj.CopyComplete
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpSheet.DataFunctions.dll
+C:\Users\jared\Source\Repos\jayjar291\SetUpSheet\SetUpSheet.DataFunctions\obj\Debug\SetUpSheet.DataFunctions.pdb
