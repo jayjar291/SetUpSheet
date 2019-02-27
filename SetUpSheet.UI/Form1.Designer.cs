@@ -30,8 +30,7 @@
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rosterControl1 = new SetUpSheet.UI.RosterControl();
+            this.pnlLunch = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +38,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.bntLoad = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -60,21 +58,14 @@
             this.label9.TabIndex = 131;
             this.label9.Text = "Lunch Shift:";
             // 
-            // panel1
+            // pnlLunch
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.rosterControl1);
-            this.panel1.Location = new System.Drawing.Point(442, 43);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(519, 129);
-            this.panel1.TabIndex = 129;
-            // 
-            // rosterControl1
-            // 
-            this.rosterControl1.Location = new System.Drawing.Point(2, 3);
-            this.rosterControl1.Name = "rosterControl1";
-            this.rosterControl1.Size = new System.Drawing.Size(477, 27);
-            this.rosterControl1.TabIndex = 0;
+            this.pnlLunch.AutoScroll = true;
+            this.pnlLunch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLunch.Location = new System.Drawing.Point(464, 43);
+            this.pnlLunch.Name = "pnlLunch";
+            this.pnlLunch.Size = new System.Drawing.Size(497, 129);
+            this.pnlLunch.TabIndex = 129;
             // 
             // label4
             // 
@@ -140,15 +131,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 316);
+            this.ClientSize = new System.Drawing.Size(973, 455);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.bntLoad);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlLunch);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,13 +148,12 @@
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlLunch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private RosterControl rosterControl1;
         private System.Windows.Forms.Button bntLoad;
         private System.Windows.Forms.Button btnAdd;
     }

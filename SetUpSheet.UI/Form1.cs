@@ -24,7 +24,16 @@ namespace SetUpSheet.UI
         {
             listBox1.DataSource = null;
             listBox1.DataSource = roster.Employees;
-            rosterControl1.DataSource(roster.Employees[0]);
+            pnlLunch.Controls.Clear();
+            int y = 3;
+            foreach (var item in roster.Employees)
+            {
+                RosterControl temp = new RosterControl();
+                temp.Location = new Point(3, y);
+                temp.DataSource(item);
+                pnlLunch.Controls.Add(temp);
+                y += 33;
+            }
         }
 
         private void bntLoad_Click(object sender, EventArgs e)

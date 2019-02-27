@@ -16,11 +16,14 @@ namespace SetUpSheet.UI
         public Load(Roster roster)
         {
             InitializeComponent();
+            int y = 12;
             foreach (var item in roster.Employees)
             {
                 RosterControl temp = new RosterControl();
+                temp.Location = new Point(12,y);
                 temp.DataSource(item);
                 Controls.Add(temp);
+                y += 33;
             }
         }
     }
