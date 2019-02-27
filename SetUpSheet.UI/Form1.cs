@@ -41,14 +41,19 @@ namespace SetUpSheet.UI
             try
             {
                 roster.LoadFile(ServiceLocator.GetEmployeePersistence("Production"));
+                Load load = new Load(roster);
+                var result = load.ShowDialog();
+                if (result == DialogResult.Cancel)
+                {
+                    roster.Employees.Clear();
+                }
+                refresh();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            Load load = new Load(roster);
-            load.ShowDialog();
-            refresh();
+            
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
