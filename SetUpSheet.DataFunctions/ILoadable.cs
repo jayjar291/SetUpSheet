@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace SetUpSheet.DataFunctions
 {
+    /* Load Interface*/
     public interface ILoadable
     {
         List<Employee> Load();

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace SetUpSheet.Core
 {
+    /*main Employee Class*/
     public class Employee
     {
         public string FName { get; set; }

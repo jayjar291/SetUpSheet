@@ -11,6 +11,7 @@ namespace SetUpSheet.DataFunctions
     {
         public List<Employee> Load()
         {
+            /* Mock file service*/
             return new List<Employee>()
             {
                 new Employee("Jared", true, DateTime.Now.AddHours(-5), DateTime.Now)

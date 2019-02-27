@@ -14,12 +14,14 @@ namespace SetUpSheet.UI
         {
             switch (source)
             {
+                /*Open File to load*/
                 case "Production":
                     OpenFileDialog openFile = new OpenFileDialog();
                     openFile.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
                     var result = openFile.ShowDialog();
                     if (result == DialogResult.OK)
                     {
+                        /*Load File*/
                         return new FileService(openFile.FileName);
                     }
                     else

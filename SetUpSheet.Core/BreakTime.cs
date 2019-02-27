@@ -8,6 +8,7 @@ namespace SetUpSheet.Core
 {
     public class BreakTime
     {
+        /*calculate Break times*/
         public BreakTime(Employee employee)
         {
             if (employee.IsMinor)

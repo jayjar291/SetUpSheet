@@ -17,6 +17,7 @@ namespace SetUpSheet.DataFunctions
             this.fileName = fileName;
         }
 
+        /*load file in to list*/
         public List<Employee> Load()
         {
             FileStream input = new FileStream(fileName, FileMode.Open, FileAccess.Read);

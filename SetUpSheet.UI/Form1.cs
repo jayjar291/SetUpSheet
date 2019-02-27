@@ -1,4 +1,20 @@
-﻿using SetUpSheet.Core;
+﻿/*
+ * Dev Jared Stapley
+ * Date 2-27-19
+ * Setup Sheet UI
+ *  
+ *  The main functions for the first Deliverable are:
+ *  
+ *  Load employees’ function
+ *  manually add employee
+ *  auto break times
+ *  
+ *  these functions are finished
+ *  
+ *  There are a bunch of unfinsshed functions that will be added in later Deliverables.
+ *  */
+
+using SetUpSheet.Core;
 using SetUpSheet.DataFunctions;
 using System;
 using System.Collections.Generic;
@@ -19,7 +35,7 @@ namespace SetUpSheet.UI
         {            
             InitializeComponent();
         }
-
+        /*Refresh Data Sources*/
         private void refresh()
         {
             listBox1.DataSource = null;
@@ -35,7 +51,7 @@ namespace SetUpSheet.UI
                 y += 33;
             }
         }
-
+        /*load Functions*/
         private void bntLoad_Click(object sender, EventArgs e)
         {
             try
@@ -55,7 +71,7 @@ namespace SetUpSheet.UI
             }
             
         }
-
+        /*add Functions*/
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddEmployee addEmployee = new AddEmployee();
@@ -71,7 +87,7 @@ namespace SetUpSheet.UI
                 refresh();
             }
         }
-
+        /*Auto Breaks Function*/
         private void btnBreaks_Click(object sender, EventArgs e)
         {
             foreach (var item in roster.Employees)

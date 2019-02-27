@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace SetUpSheet.UI
 {
+    /*Add employee Ui*/
     public partial class AddEmployee : Form
     {
         public bool noInput;

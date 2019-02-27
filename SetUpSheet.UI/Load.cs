@@ -17,6 +17,7 @@ namespace SetUpSheet.UI
         {
            
             InitializeComponent();
+            /*Initialize RosterControls*/
             int y = 12;
             foreach (var item in roster.Employees)
             {

@@ -10,11 +10,13 @@ namespace SetUpSheet.DataFunctions
 {
     public class Roster
     {
+        /*list of employee classes*/ 
         public List<Employee> Employees { get; set; }
         public void LoadFile(ILoadable employeeService)
         {
             Employees = employeeService.Load();
         }
+        /*add employee function*/
         public void AddEmployee(Employee emp)
         {
             if (Employees is null)
