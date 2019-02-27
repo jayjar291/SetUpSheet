@@ -38,6 +38,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.bntLoad = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnBreaks = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -62,9 +63,9 @@
             // 
             this.pnlLunch.AutoScroll = true;
             this.pnlLunch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLunch.Location = new System.Drawing.Point(464, 43);
+            this.pnlLunch.Location = new System.Drawing.Point(461, 43);
             this.pnlLunch.Name = "pnlLunch";
-            this.pnlLunch.Size = new System.Drawing.Size(497, 129);
+            this.pnlLunch.Size = new System.Drawing.Size(500, 129);
             this.pnlLunch.TabIndex = 129;
             // 
             // label4
@@ -127,11 +128,22 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // btnBreaks
+            // 
+            this.btnBreaks.Location = new System.Drawing.Point(250, 71);
+            this.btnBreaks.Name = "btnBreaks";
+            this.btnBreaks.Size = new System.Drawing.Size(75, 23);
+            this.btnBreaks.TabIndex = 134;
+            this.btnBreaks.Text = "Auto Breaks";
+            this.btnBreaks.UseVisualStyleBackColor = true;
+            this.btnBreaks.Click += new System.EventHandler(this.btnBreaks_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 455);
+            this.Controls.Add(this.btnBreaks);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.bntLoad);
             this.Controls.Add(this.label9);
@@ -156,6 +168,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button bntLoad;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnBreaks;
     }
 }
 

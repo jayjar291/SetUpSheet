@@ -15,14 +15,19 @@ namespace SetUpSheet.Core
                 TimeSpan time = new TimeSpan(3, 0, 0);
                 if (employee.TotalHours >= time)
                 {
-                    time.Add(TimeSpan.FromHours(2));
+                    time = time.Add(new TimeSpan(2,0,0));
                     if (employee.TotalHours >= time)
                     {
-                        employee.BrakeStartTime = new DateTime(employee.TotalHours.Ticks / 2);
+                        TimeSpan breakSpan = new TimeSpan(employee.TotalHours.Ticks / 2);
+                        employee.BrakeStartTime = employee.ClockInTime + breakSpan;
                         employee.BrakeType = 1;
                     }
-                    employee.BrakeStartTime = new DateTime(employee.TotalHours.Ticks / 2);
-                    employee.BrakeType = 0;
+                    else
+                    {
+                        TimeSpan breakSpan = new TimeSpan(employee.TotalHours.Ticks / 2);
+                        employee.BrakeStartTime = employee.ClockInTime + breakSpan;
+                        employee.BrakeType = 0;
+                    }
                 }
                 else
                 {
@@ -34,14 +39,19 @@ namespace SetUpSheet.Core
                 TimeSpan time = new TimeSpan(4, 0, 0);
                 if (employee.TotalHours >= time)
                 {
-                    time.Add(TimeSpan.FromHours(4));
+                    time = time.Add(new TimeSpan(4, 0, 0));
                     if (employee.TotalHours >= time)
                     {
-                        employee.BrakeStartTime = new DateTime(employee.TotalHours.Ticks / 2);
+                        TimeSpan breakSpan = new TimeSpan(employee.TotalHours.Ticks / 2);
+                        employee.BrakeStartTime = employee.ClockInTime + breakSpan;
                         employee.BrakeType = 3;
                     }
-                    employee.BrakeStartTime = new DateTime(employee.TotalHours.Ticks / 2);
-                    employee.BrakeType = 2;
+                    else
+                    {
+                        TimeSpan breakSpan = new TimeSpan(employee.TotalHours.Ticks / 2);
+                        employee.BrakeStartTime = employee.ClockInTime + breakSpan;
+                        employee.BrakeType = 2;
+                    }
                 }
                 else
                 {

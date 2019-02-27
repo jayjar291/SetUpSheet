@@ -17,6 +17,7 @@ namespace SetUpSheet.UI
         {
             InitializeComponent();
         }
+
         public  void DataSource(Employee employee)
         {
             txtName.Text = employee.FName;

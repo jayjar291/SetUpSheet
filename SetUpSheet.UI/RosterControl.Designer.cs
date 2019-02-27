@@ -41,7 +41,7 @@
             this.BreakTime.CustomFormat = "hh:mm tt";
             this.BreakTime.Enabled = false;
             this.BreakTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.BreakTime.Location = new System.Drawing.Point(396, 3);
+            this.BreakTime.Location = new System.Drawing.Point(416, 3);
             this.BreakTime.Name = "BreakTime";
             this.BreakTime.Size = new System.Drawing.Size(75, 20);
             this.BreakTime.TabIndex = 118;
@@ -71,7 +71,7 @@
             this.txtbreakType.Enabled = false;
             this.txtbreakType.Location = new System.Drawing.Point(343, 3);
             this.txtbreakType.Name = "txtbreakType";
-            this.txtbreakType.Size = new System.Drawing.Size(47, 20);
+            this.txtbreakType.Size = new System.Drawing.Size(67, 20);
             this.txtbreakType.TabIndex = 115;
             // 
             // ckbIsMinor
@@ -104,7 +104,7 @@
             this.Controls.Add(this.ckbIsMinor);
             this.Controls.Add(this.txtName);
             this.Name = "RosterControl";
-            this.Size = new System.Drawing.Size(477, 27);
+            this.Size = new System.Drawing.Size(494, 27);
             this.ResumeLayout(false);
             this.PerformLayout();
 

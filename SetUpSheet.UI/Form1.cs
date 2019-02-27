@@ -38,7 +38,14 @@ namespace SetUpSheet.UI
 
         private void bntLoad_Click(object sender, EventArgs e)
         {
-            roster.LoadFile(ServiceLocator.GetEmployeePersistence("Production"));
+            try
+            {
+                roster.LoadFile(ServiceLocator.GetEmployeePersistence("Production"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             Load load = new Load(roster);
             load.ShowDialog();
             refresh();
@@ -58,6 +65,15 @@ namespace SetUpSheet.UI
                 roster.AddEmployee(temp);
                 refresh();
             }
+        }
+
+        private void btnBreaks_Click(object sender, EventArgs e)
+        {
+            foreach (var item in roster.Employees)
+            {
+                BreakTime breakTime = new BreakTime(item);
+            }
+            refresh();
         }
     }
 }

@@ -25,6 +25,24 @@ namespace SetUpSheet.UI
                 Controls.Add(temp);
                 y += 33;
             }
+            Button btnOK = new Button();
+            btnOK.Text = "OK";
+            btnOK.Location = new Point(261, y);
+            Button btnQuit = new Button();
+            btnQuit.Text = "Cancel";
+            btnQuit.Location = new Point(180, y);
+            Controls.Add(btnOK);
+            Controls.Add(btnQuit);
+            AcceptButton = btnOK;
+            CancelButton = btnQuit;
+            btnOK.Click += new System.EventHandler(this.btnOK_Click);
+
         }
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+            Close();
+        }
+        
     }
 }

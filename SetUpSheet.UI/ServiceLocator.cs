@@ -16,8 +16,16 @@ namespace SetUpSheet.UI
             {
                 case "Production":
                     OpenFileDialog openFile = new OpenFileDialog();
-                    openFile.ShowDialog();
-                    return new FileService(openFile.FileName);
+                    openFile.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+                    var result = openFile.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        return new FileService(openFile.FileName);
+                    }
+                    else
+                    {
+                        throw new Exception("Could not find file.");
+                    }
                 case "Development":
                     return new MockFileService();
                 default:
