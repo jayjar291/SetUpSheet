@@ -32,30 +32,25 @@ namespace SetUpSheet.UI
     {
         Roster roster = new Roster();
         public Form1()
-        {            
+        {
             InitializeComponent();
         }
         /*Refresh Data Sources*/
         private void refresh()
         {
-            cboLeader.DataSource = roster.Employees;
-            foreach (var item in pnlLunch.Controls)
+            cboLeader.DataSource = null;
+            cboLeader.DataSource = roster.Employees.ToList();
+            foreach (ComboBox item in pnlNames.Controls.OfType<ComboBox>())
             {
-                if (item is RosterControl)
-                {
-                    var casted = (RosterControl)item;
-                    pnlLunch.Controls.Remove(casted);
-                    casted.Dispose();
-                }
+                item.DataSource = roster.Employees.ToList();
             }
-            foreach (var item in pnlTransition.Controls)
+            foreach (Control item in pnlLunch.Controls.OfType<RosterControl>())
             {
-                if (item is RosterControl)
-                {
-                    var casted = (RosterControl)item;
-                    pnlLunch.Controls.Remove(casted);
-                    casted.Dispose();
-                }
+                pnlLunch.Controls.Remove(item);
+            }
+            foreach (var item in pnlTransition.Controls.OfType<RosterControl>())
+            {
+                pnlTransition.Controls.Remove(item);
             }
             int y = 21;
             int transY = 21;
@@ -120,5 +115,6 @@ namespace SetUpSheet.UI
             }
             refresh();
         }
+
     }
 }
