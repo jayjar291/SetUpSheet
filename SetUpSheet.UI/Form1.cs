@@ -38,6 +38,7 @@ namespace SetUpSheet.UI
         /*Refresh Data Sources*/
         private void refresh()
         {
+            cboLeader.DataSource = roster.Employees;
             foreach (var item in pnlLunch.Controls)
             {
                 if (item is RosterControl)
@@ -76,7 +77,7 @@ namespace SetUpSheet.UI
             }
         }
         /*load Functions*/
-        private void bntLoad_Click(object sender, EventArgs e)
+        private void munOpen_Click(object sender, EventArgs e)
         {
             try
             {
@@ -93,10 +94,9 @@ namespace SetUpSheet.UI
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
         /*add Functions*/
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void mnuAdd_Click(object sender, EventArgs e)
         {
             AddEmployee addEmployee = new AddEmployee();
             addEmployee.ShowDialog();
@@ -112,7 +112,7 @@ namespace SetUpSheet.UI
             }
         }
         /*Auto Breaks Function*/
-        private void btnBreaks_Click(object sender, EventArgs e)
+        private void mnuBreaks_Click(object sender, EventArgs e)
         {
             foreach (var item in roster.Employees)
             {

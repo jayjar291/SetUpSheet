@@ -29,5 +29,9 @@ namespace SetUpSheet.Core
         {
             TotalHours = ClockOutTime - ClockInTime;
         }
+        public override string ToString()
+        {
+            return FName;
+        }
     }
 }
