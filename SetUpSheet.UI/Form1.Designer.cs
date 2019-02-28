@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlLunch = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,33 +38,38 @@
             this.bntLoad = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnBreaks = new System.Windows.Forms.Button();
+            this.pnlTransition = new System.Windows.Forms.Panel();
+            this.lblTransition = new System.Windows.Forms.Label();
+            this.lblNameL = new System.Windows.Forms.Label();
+            this.lblClockInL = new System.Windows.Forms.Label();
+            this.lblBreakL = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pnlLunch.SuspendLayout();
+            this.pnlTransition.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(233, 420);
-            this.listBox1.TabIndex = 0;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(526, 9);
+            this.label9.Location = new System.Drawing.Point(540, 7);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(158, 31);
+            this.label9.Size = new System.Drawing.Size(96, 31);
             this.label9.TabIndex = 131;
-            this.label9.Text = "Lunch Shift:";
+            this.label9.Text = "Lunch:";
             // 
             // pnlLunch
             // 
             this.pnlLunch.AutoScroll = true;
             this.pnlLunch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLunch.Location = new System.Drawing.Point(461, 43);
+            this.pnlLunch.Controls.Add(this.lblBreakL);
+            this.pnlLunch.Controls.Add(this.lblClockInL);
+            this.pnlLunch.Controls.Add(this.lblNameL);
+            this.pnlLunch.Location = new System.Drawing.Point(546, 41);
             this.pnlLunch.Name = "pnlLunch";
-            this.pnlLunch.Size = new System.Drawing.Size(500, 129);
+            this.pnlLunch.Size = new System.Drawing.Size(500, 293);
             this.pnlLunch.TabIndex = 129;
             // 
             // label4
@@ -110,7 +114,7 @@
             // 
             // bntLoad
             // 
-            this.bntLoad.Location = new System.Drawing.Point(251, 12);
+            this.bntLoad.Location = new System.Drawing.Point(452, 142);
             this.bntLoad.Name = "bntLoad";
             this.bntLoad.Size = new System.Drawing.Size(75, 23);
             this.bntLoad.TabIndex = 132;
@@ -120,7 +124,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(251, 41);
+            this.btnAdd.Location = new System.Drawing.Point(452, 171);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 133;
@@ -130,7 +134,7 @@
             // 
             // btnBreaks
             // 
-            this.btnBreaks.Location = new System.Drawing.Point(250, 71);
+            this.btnBreaks.Location = new System.Drawing.Point(451, 201);
             this.btnBreaks.Name = "btnBreaks";
             this.btnBreaks.Size = new System.Drawing.Size(75, 23);
             this.btnBreaks.TabIndex = 134;
@@ -138,27 +142,112 @@
             this.btnBreaks.UseVisualStyleBackColor = true;
             this.btnBreaks.Click += new System.EventHandler(this.btnBreaks_Click);
             // 
+            // pnlTransition
+            // 
+            this.pnlTransition.AutoScroll = true;
+            this.pnlTransition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTransition.Controls.Add(this.label8);
+            this.pnlTransition.Controls.Add(this.label10);
+            this.pnlTransition.Controls.Add(this.label11);
+            this.pnlTransition.Location = new System.Drawing.Point(546, 371);
+            this.pnlTransition.Name = "pnlTransition";
+            this.pnlTransition.Size = new System.Drawing.Size(500, 197);
+            this.pnlTransition.TabIndex = 130;
+            // 
+            // lblTransition
+            // 
+            this.lblTransition.AutoSize = true;
+            this.lblTransition.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransition.Location = new System.Drawing.Point(540, 337);
+            this.lblTransition.Name = "lblTransition";
+            this.lblTransition.Size = new System.Drawing.Size(142, 31);
+            this.lblTransition.TabIndex = 135;
+            this.lblTransition.Text = "Transition:";
+            // 
+            // lblNameL
+            // 
+            this.lblNameL.AutoSize = true;
+            this.lblNameL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameL.Location = new System.Drawing.Point(3, 0);
+            this.lblNameL.Name = "lblNameL";
+            this.lblNameL.Size = new System.Drawing.Size(57, 18);
+            this.lblNameL.TabIndex = 1;
+            this.lblNameL.Text = "Name:";
+            // 
+            // lblClockInL
+            // 
+            this.lblClockInL.AutoSize = true;
+            this.lblClockInL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClockInL.Location = new System.Drawing.Point(185, 0);
+            this.lblClockInL.Name = "lblClockInL";
+            this.lblClockInL.Size = new System.Drawing.Size(149, 18);
+            this.lblClockInL.TabIndex = 2;
+            this.lblClockInL.Text = "Clock in/Out Time:";
+            // 
+            // lblBreakL
+            // 
+            this.lblBreakL.AutoSize = true;
+            this.lblBreakL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBreakL.Location = new System.Drawing.Point(348, 0);
+            this.lblBreakL.Name = "lblBreakL";
+            this.lblBreakL.Size = new System.Drawing.Size(114, 18);
+            this.lblBreakL.TabIndex = 3;
+            this.lblBreakL.Text = "Break:   Time:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(348, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(114, 18);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Break:   Time:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(185, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(149, 18);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "Clock in/Out Time:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 18);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "Name:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 455);
+            this.ClientSize = new System.Drawing.Size(1058, 580);
+            this.Controls.Add(this.lblTransition);
+            this.Controls.Add(this.pnlTransition);
             this.Controls.Add(this.btnBreaks);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.bntLoad);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pnlLunch);
-            this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.pnlLunch.ResumeLayout(false);
+            this.pnlLunch.PerformLayout();
+            this.pnlTransition.ResumeLayout(false);
+            this.pnlTransition.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel pnlLunch;
         private System.Windows.Forms.Label label4;
@@ -169,6 +258,14 @@
         private System.Windows.Forms.Button bntLoad;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnBreaks;
+        private System.Windows.Forms.Panel pnlTransition;
+        private System.Windows.Forms.Label lblTransition;
+        private System.Windows.Forms.Label lblBreakL;
+        private System.Windows.Forms.Label lblClockInL;
+        private System.Windows.Forms.Label lblNameL;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 

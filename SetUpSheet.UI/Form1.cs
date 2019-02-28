@@ -38,16 +38,40 @@ namespace SetUpSheet.UI
         /*Refresh Data Sources*/
         private void refresh()
         {
-            listBox1.DataSource = null;
-            listBox1.DataSource = roster.Employees;
-            pnlLunch.Controls.Clear();
-            int y = 3;
+            foreach (var item in pnlLunch.Controls)
+            {
+                if (item is RosterControl)
+                {
+                    var casted = (RosterControl)item;
+                    pnlLunch.Controls.Remove(casted);
+                    casted.Dispose();
+                }
+            }
+            foreach (var item in pnlTransition.Controls)
+            {
+                if (item is RosterControl)
+                {
+                    var casted = (RosterControl)item;
+                    pnlLunch.Controls.Remove(casted);
+                    casted.Dispose();
+                }
+            }
+            int y = 21;
+            int transY = 21;
             foreach (var item in roster.Employees)
             {
                 RosterControl temp = new RosterControl();
                 temp.Location = new Point(3, y);
                 temp.DataSource(item);
                 pnlLunch.Controls.Add(temp);
+                if (item.ClockOutTime.TimeOfDay > new TimeSpan(14, 30, 0))
+                {
+                    RosterControl temp2 = new RosterControl();
+                    temp2.Location = new Point(3, transY);
+                    temp2.DataSource(item);
+                    pnlTransition.Controls.Add(temp2);
+                    transY += 33;
+                }
                 y += 33;
             }
         }
