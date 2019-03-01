@@ -54,12 +54,6 @@
             this.lblUiDriveThru = new System.Windows.Forms.Label();
             this.lblUiDTLead = new System.Windows.Forms.Label();
             this.cboDTLead = new System.Windows.Forms.ComboBox();
-            this.cboSecondary1 = new System.Windows.Forms.ComboBox();
-            this.cboSecondary2 = new System.Windows.Forms.ComboBox();
-            this.grpSecondary = new System.Windows.Forms.GroupBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblUiIpos1 = new System.Windows.Forms.Label();
             this.cboIpos1 = new System.Windows.Forms.ComboBox();
             this.cboIpos2 = new System.Windows.Forms.ComboBox();
@@ -69,11 +63,32 @@
             this.lblUiIpos3 = new System.Windows.Forms.Label();
             this.lblUiCash = new System.Windows.Forms.Label();
             this.pnlNames = new System.Windows.Forms.Panel();
+            this.cboShakes = new System.Windows.Forms.ComboBox();
+            this.cboDrinks = new System.Windows.Forms.ComboBox();
+            this.cboBagging = new System.Windows.Forms.ComboBox();
+            this.cboWindow = new System.Windows.Forms.ComboBox();
+            this.cboExpedite = new System.Windows.Forms.ComboBox();
+            this.lblUiExpedite = new System.Windows.Forms.Label();
+            this.lblUiWindow = new System.Windows.Forms.Label();
+            this.lblUiBagging = new System.Windows.Forms.Label();
+            this.lblUiDrinks = new System.Windows.Forms.Label();
+            this.lblUiShakes = new System.Windows.Forms.Label();
+            this.pnlSecondary = new System.Windows.Forms.Panel();
+            this.cboSecondary10 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary9 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary8 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary7 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary6 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary1 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary5 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary2 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary3 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary4 = new System.Windows.Forms.ComboBox();
             this.pnlLunch.SuspendLayout();
             this.pnlTransition.SuspendLayout();
             this.mnuControls.SuspendLayout();
-            this.grpSecondary.SuspendLayout();
             this.pnlNames.SuspendLayout();
+            this.pnlSecondary.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLunch
@@ -313,59 +328,6 @@
             this.cboDTLead.Size = new System.Drawing.Size(121, 21);
             this.cboDTLead.TabIndex = 143;
             // 
-            // cboSecondary1
-            // 
-            this.cboSecondary1.FormattingEnabled = true;
-            this.cboSecondary1.Location = new System.Drawing.Point(6, 13);
-            this.cboSecondary1.Name = "cboSecondary1";
-            this.cboSecondary1.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary1.TabIndex = 144;
-            // 
-            // cboSecondary2
-            // 
-            this.cboSecondary2.FormattingEnabled = true;
-            this.cboSecondary2.Location = new System.Drawing.Point(6, 38);
-            this.cboSecondary2.Name = "cboSecondary2";
-            this.cboSecondary2.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary2.TabIndex = 145;
-            // 
-            // grpSecondary
-            // 
-            this.grpSecondary.Controls.Add(this.comboBox6);
-            this.grpSecondary.Controls.Add(this.comboBox5);
-            this.grpSecondary.Controls.Add(this.comboBox1);
-            this.grpSecondary.Controls.Add(this.cboSecondary1);
-            this.grpSecondary.Controls.Add(this.cboSecondary2);
-            this.grpSecondary.Location = new System.Drawing.Point(236, 64);
-            this.grpSecondary.Name = "grpSecondary";
-            this.grpSecondary.Size = new System.Drawing.Size(132, 209);
-            this.grpSecondary.TabIndex = 146;
-            this.grpSecondary.TabStop = false;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(5, 119);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 148;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(6, 92);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 147;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 146;
-            // 
             // lblUiIpos1
             // 
             this.lblUiIpos1.AutoSize = true;
@@ -436,6 +398,11 @@
             // 
             // pnlNames
             // 
+            this.pnlNames.Controls.Add(this.cboShakes);
+            this.pnlNames.Controls.Add(this.cboDrinks);
+            this.pnlNames.Controls.Add(this.cboBagging);
+            this.pnlNames.Controls.Add(this.cboWindow);
+            this.pnlNames.Controls.Add(this.cboExpedite);
             this.pnlNames.Controls.Add(this.cboDTLead);
             this.pnlNames.Controls.Add(this.cboCash);
             this.pnlNames.Controls.Add(this.cboIpos1);
@@ -446,17 +413,204 @@
             this.pnlNames.Size = new System.Drawing.Size(129, 512);
             this.pnlNames.TabIndex = 152;
             // 
+            // cboShakes
+            // 
+            this.cboShakes.FormattingEnabled = true;
+            this.cboShakes.Location = new System.Drawing.Point(3, 244);
+            this.cboShakes.Name = "cboShakes";
+            this.cboShakes.Size = new System.Drawing.Size(121, 21);
+            this.cboShakes.TabIndex = 152;
+            // 
+            // cboDrinks
+            // 
+            this.cboDrinks.FormattingEnabled = true;
+            this.cboDrinks.Location = new System.Drawing.Point(3, 217);
+            this.cboDrinks.Name = "cboDrinks";
+            this.cboDrinks.Size = new System.Drawing.Size(121, 21);
+            this.cboDrinks.TabIndex = 151;
+            // 
+            // cboBagging
+            // 
+            this.cboBagging.FormattingEnabled = true;
+            this.cboBagging.Location = new System.Drawing.Point(3, 190);
+            this.cboBagging.Name = "cboBagging";
+            this.cboBagging.Size = new System.Drawing.Size(121, 21);
+            this.cboBagging.TabIndex = 150;
+            // 
+            // cboWindow
+            // 
+            this.cboWindow.FormattingEnabled = true;
+            this.cboWindow.Location = new System.Drawing.Point(3, 163);
+            this.cboWindow.Name = "cboWindow";
+            this.cboWindow.Size = new System.Drawing.Size(121, 21);
+            this.cboWindow.TabIndex = 149;
+            // 
+            // cboExpedite
+            // 
+            this.cboExpedite.FormattingEnabled = true;
+            this.cboExpedite.Location = new System.Drawing.Point(3, 136);
+            this.cboExpedite.Name = "cboExpedite";
+            this.cboExpedite.Size = new System.Drawing.Size(121, 21);
+            this.cboExpedite.TabIndex = 148;
+            // 
+            // lblUiExpedite
+            // 
+            this.lblUiExpedite.AutoSize = true;
+            this.lblUiExpedite.Location = new System.Drawing.Point(43, 210);
+            this.lblUiExpedite.Name = "lblUiExpedite";
+            this.lblUiExpedite.Size = new System.Drawing.Size(48, 13);
+            this.lblUiExpedite.TabIndex = 153;
+            this.lblUiExpedite.Text = "Expedite";
+            // 
+            // lblUiWindow
+            // 
+            this.lblUiWindow.AutoSize = true;
+            this.lblUiWindow.Location = new System.Drawing.Point(45, 237);
+            this.lblUiWindow.Name = "lblUiWindow";
+            this.lblUiWindow.Size = new System.Drawing.Size(46, 13);
+            this.lblUiWindow.TabIndex = 154;
+            this.lblUiWindow.Text = "Window";
+            // 
+            // lblUiBagging
+            // 
+            this.lblUiBagging.AutoSize = true;
+            this.lblUiBagging.Location = new System.Drawing.Point(45, 264);
+            this.lblUiBagging.Name = "lblUiBagging";
+            this.lblUiBagging.Size = new System.Drawing.Size(46, 13);
+            this.lblUiBagging.TabIndex = 155;
+            this.lblUiBagging.Text = "Bagging";
+            // 
+            // lblUiDrinks
+            // 
+            this.lblUiDrinks.AutoSize = true;
+            this.lblUiDrinks.Location = new System.Drawing.Point(54, 291);
+            this.lblUiDrinks.Name = "lblUiDrinks";
+            this.lblUiDrinks.Size = new System.Drawing.Size(37, 13);
+            this.lblUiDrinks.TabIndex = 156;
+            this.lblUiDrinks.Text = "Drinks";
+            // 
+            // lblUiShakes
+            // 
+            this.lblUiShakes.AutoSize = true;
+            this.lblUiShakes.Location = new System.Drawing.Point(48, 318);
+            this.lblUiShakes.Name = "lblUiShakes";
+            this.lblUiShakes.Size = new System.Drawing.Size(43, 13);
+            this.lblUiShakes.TabIndex = 157;
+            this.lblUiShakes.Text = "Shakes";
+            // 
+            // pnlSecondary
+            // 
+            this.pnlSecondary.Controls.Add(this.cboSecondary10);
+            this.pnlSecondary.Controls.Add(this.cboSecondary9);
+            this.pnlSecondary.Controls.Add(this.cboSecondary8);
+            this.pnlSecondary.Controls.Add(this.cboSecondary7);
+            this.pnlSecondary.Controls.Add(this.cboSecondary6);
+            this.pnlSecondary.Controls.Add(this.cboSecondary1);
+            this.pnlSecondary.Controls.Add(this.cboSecondary5);
+            this.pnlSecondary.Controls.Add(this.cboSecondary2);
+            this.pnlSecondary.Controls.Add(this.cboSecondary3);
+            this.pnlSecondary.Controls.Add(this.cboSecondary4);
+            this.pnlSecondary.Location = new System.Drawing.Point(236, 71);
+            this.pnlSecondary.Name = "pnlSecondary";
+            this.pnlSecondary.Size = new System.Drawing.Size(129, 512);
+            this.pnlSecondary.TabIndex = 153;
+            // 
+            // cboSecondary10
+            // 
+            this.cboSecondary10.FormattingEnabled = true;
+            this.cboSecondary10.Location = new System.Drawing.Point(3, 244);
+            this.cboSecondary10.Name = "cboSecondary10";
+            this.cboSecondary10.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary10.TabIndex = 152;
+            // 
+            // cboSecondary9
+            // 
+            this.cboSecondary9.FormattingEnabled = true;
+            this.cboSecondary9.Location = new System.Drawing.Point(3, 217);
+            this.cboSecondary9.Name = "cboSecondary9";
+            this.cboSecondary9.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary9.TabIndex = 151;
+            // 
+            // cboSecondary8
+            // 
+            this.cboSecondary8.FormattingEnabled = true;
+            this.cboSecondary8.Location = new System.Drawing.Point(3, 190);
+            this.cboSecondary8.Name = "cboSecondary8";
+            this.cboSecondary8.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary8.TabIndex = 150;
+            // 
+            // cboSecondary7
+            // 
+            this.cboSecondary7.FormattingEnabled = true;
+            this.cboSecondary7.Location = new System.Drawing.Point(3, 163);
+            this.cboSecondary7.Name = "cboSecondary7";
+            this.cboSecondary7.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary7.TabIndex = 149;
+            // 
+            // cboSecondary6
+            // 
+            this.cboSecondary6.FormattingEnabled = true;
+            this.cboSecondary6.Location = new System.Drawing.Point(3, 136);
+            this.cboSecondary6.Name = "cboSecondary6";
+            this.cboSecondary6.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary6.TabIndex = 148;
+            // 
+            // cboSecondary1
+            // 
+            this.cboSecondary1.FormattingEnabled = true;
+            this.cboSecondary1.Location = new System.Drawing.Point(3, 3);
+            this.cboSecondary1.Name = "cboSecondary1";
+            this.cboSecondary1.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary1.TabIndex = 143;
+            // 
+            // cboSecondary5
+            // 
+            this.cboSecondary5.FormattingEnabled = true;
+            this.cboSecondary5.Location = new System.Drawing.Point(3, 109);
+            this.cboSecondary5.Name = "cboSecondary5";
+            this.cboSecondary5.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary5.TabIndex = 147;
+            // 
+            // cboSecondary2
+            // 
+            this.cboSecondary2.FormattingEnabled = true;
+            this.cboSecondary2.Location = new System.Drawing.Point(3, 28);
+            this.cboSecondary2.Name = "cboSecondary2";
+            this.cboSecondary2.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary2.TabIndex = 144;
+            // 
+            // cboSecondary3
+            // 
+            this.cboSecondary3.FormattingEnabled = true;
+            this.cboSecondary3.Location = new System.Drawing.Point(3, 55);
+            this.cboSecondary3.Name = "cboSecondary3";
+            this.cboSecondary3.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary3.TabIndex = 145;
+            // 
+            // cboSecondary4
+            // 
+            this.cboSecondary4.FormattingEnabled = true;
+            this.cboSecondary4.Location = new System.Drawing.Point(3, 82);
+            this.cboSecondary4.Name = "cboSecondary4";
+            this.cboSecondary4.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary4.TabIndex = 146;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 597);
+            this.Controls.Add(this.pnlSecondary);
+            this.Controls.Add(this.lblUiShakes);
+            this.Controls.Add(this.lblUiDrinks);
+            this.Controls.Add(this.lblUiBagging);
+            this.Controls.Add(this.lblUiWindow);
+            this.Controls.Add(this.lblUiExpedite);
             this.Controls.Add(this.pnlNames);
             this.Controls.Add(this.lblUiCash);
             this.Controls.Add(this.lblUiIpos3);
             this.Controls.Add(this.lblUiIpos2);
             this.Controls.Add(this.lblUiIpos1);
-            this.Controls.Add(this.grpSecondary);
             this.Controls.Add(this.lblUiDTLead);
             this.Controls.Add(this.lblUiDriveThru);
             this.Controls.Add(this.lblUiSecondaryDuties);
@@ -477,8 +631,8 @@
             this.pnlTransition.PerformLayout();
             this.mnuControls.ResumeLayout(false);
             this.mnuControls.PerformLayout();
-            this.grpSecondary.ResumeLayout(false);
             this.pnlNames.ResumeLayout(false);
+            this.pnlSecondary.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,12 +664,6 @@
         private System.Windows.Forms.Label lblUiSecondaryDuties;
         private System.Windows.Forms.Label lblUiDriveThru;
         private System.Windows.Forms.Label lblUiDTLead;
-        private System.Windows.Forms.ComboBox cboSecondary1;
-        private System.Windows.Forms.ComboBox cboSecondary2;
-        private System.Windows.Forms.GroupBox grpSecondary;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label lblUiIpos1;
         private System.Windows.Forms.Label lblUiIpos2;
         private System.Windows.Forms.Label lblUiIpos3;
@@ -526,6 +674,27 @@
         public System.Windows.Forms.ComboBox cboIpos2;
         public System.Windows.Forms.ComboBox cboIpos1;
         private System.Windows.Forms.Panel pnlNames;
+        public System.Windows.Forms.ComboBox cboShakes;
+        public System.Windows.Forms.ComboBox cboDrinks;
+        public System.Windows.Forms.ComboBox cboBagging;
+        public System.Windows.Forms.ComboBox cboWindow;
+        public System.Windows.Forms.ComboBox cboExpedite;
+        private System.Windows.Forms.Label lblUiExpedite;
+        private System.Windows.Forms.Label lblUiWindow;
+        private System.Windows.Forms.Label lblUiBagging;
+        private System.Windows.Forms.Label lblUiDrinks;
+        private System.Windows.Forms.Label lblUiShakes;
+        private System.Windows.Forms.Panel pnlSecondary;
+        public System.Windows.Forms.ComboBox cboSecondary10;
+        public System.Windows.Forms.ComboBox cboSecondary9;
+        public System.Windows.Forms.ComboBox cboSecondary8;
+        public System.Windows.Forms.ComboBox cboSecondary7;
+        public System.Windows.Forms.ComboBox cboSecondary6;
+        public System.Windows.Forms.ComboBox cboSecondary1;
+        public System.Windows.Forms.ComboBox cboSecondary5;
+        public System.Windows.Forms.ComboBox cboSecondary2;
+        public System.Windows.Forms.ComboBox cboSecondary3;
+        public System.Windows.Forms.ComboBox cboSecondary4;
     }
 }
 

@@ -30,10 +30,28 @@ namespace SetUpSheet.UI
 {
     public partial class Form1 : Form
     {
+        int y = 21;
+        int transY = 21;
         Roster roster = new Roster();
         public Form1()
         {
             InitializeComponent();
+        }
+        private void PlaceControls(Employee employee)
+        {
+            RosterControl temp = new RosterControl();
+            temp.Location = new Point(3, y);
+            temp.DataSource(employee);
+            pnlLunch.Controls.Add(temp);
+            if (employee.ClockOutTime.TimeOfDay > new TimeSpan(14, 30, 0))
+            {
+                RosterControl temp2 = new RosterControl();
+                temp2.Location = new Point(3, transY);
+                temp2.DataSource(employee);
+                pnlTransition.Controls.Add(temp2);
+                transY += 33;
+            }
+            y += 33;
         }
         /*Refresh Data Sources*/
         private void refresh()
@@ -43,32 +61,6 @@ namespace SetUpSheet.UI
             foreach (ComboBox item in pnlNames.Controls.OfType<ComboBox>())
             {
                 item.DataSource = roster.Employees.ToList();
-            }
-            foreach (Control item in pnlLunch.Controls.OfType<RosterControl>())
-            {
-                pnlLunch.Controls.Remove(item);
-            }
-            foreach (var item in pnlTransition.Controls.OfType<RosterControl>())
-            {
-                pnlTransition.Controls.Remove(item);
-            }
-            int y = 21;
-            int transY = 21;
-            foreach (var item in roster.Employees)
-            {
-                RosterControl temp = new RosterControl();
-                temp.Location = new Point(3, y);
-                temp.DataSource(item);
-                pnlLunch.Controls.Add(temp);
-                if (item.ClockOutTime.TimeOfDay > new TimeSpan(14, 30, 0))
-                {
-                    RosterControl temp2 = new RosterControl();
-                    temp2.Location = new Point(3, transY);
-                    temp2.DataSource(item);
-                    pnlTransition.Controls.Add(temp2);
-                    transY += 33;
-                }
-                y += 33;
             }
         }
         /*load Functions*/
@@ -83,7 +75,10 @@ namespace SetUpSheet.UI
                 {
                     roster.Employees.Clear();
                 }
-                refresh();
+                foreach (var item in roster.Employees)
+                {
+                    PlaceControls(item);
+                }
             }
             catch (Exception ex)
             {
@@ -97,15 +92,16 @@ namespace SetUpSheet.UI
             addEmployee.ShowDialog();
             if (addEmployee.noInput)
             {
-                refresh();
             }
             else
             {
                 Employee temp = new Employee(addEmployee.txtName.Text, addEmployee.IsMinor.Checked, DateTime.Parse(addEmployee.Clockintime.Text), DateTime.Parse(addEmployee.Clockoutime.Text));
                 roster.AddEmployee(temp);
-                refresh();
+                PlaceControls(temp);
             }
         }
+        //todo move and remove
+
         /*Auto Breaks Function*/
         private void mnuBreaks_Click(object sender, EventArgs e)
         {
@@ -113,8 +109,6 @@ namespace SetUpSheet.UI
             {
                 BreakTime breakTime = new BreakTime(item);
             }
-            refresh();
         }
-
     }
 }
