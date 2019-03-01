@@ -57,14 +57,14 @@
             this.cboSecondary1 = new System.Windows.Forms.ComboBox();
             this.cboSecondary2 = new System.Windows.Forms.ComboBox();
             this.grpSecondary = new System.Windows.Forms.GroupBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblUiIpos1 = new System.Windows.Forms.Label();
             this.cboIpos1 = new System.Windows.Forms.ComboBox();
             this.cboIpos2 = new System.Windows.Forms.ComboBox();
             this.cboIpos3 = new System.Windows.Forms.ComboBox();
             this.cboCash = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.lblUiIpos2 = new System.Windows.Forms.Label();
             this.lblUiIpos3 = new System.Windows.Forms.Label();
             this.lblUiCash = new System.Windows.Forms.Label();
@@ -342,6 +342,30 @@
             this.grpSecondary.TabIndex = 146;
             this.grpSecondary.TabStop = false;
             // 
+            // comboBox6
+            // 
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Location = new System.Drawing.Point(5, 119);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(121, 21);
+            this.comboBox6.TabIndex = 148;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(6, 92);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(121, 21);
+            this.comboBox5.TabIndex = 147;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(6, 65);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 146;
+            // 
             // lblUiIpos1
             // 
             this.lblUiIpos1.AutoSize = true;
@@ -383,30 +407,6 @@
             this.cboCash.Size = new System.Drawing.Size(121, 21);
             this.cboCash.TabIndex = 147;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 146;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(6, 92);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 147;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(5, 119);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 148;
-            // 
             // lblUiIpos2
             // 
             this.lblUiIpos2.AutoSize = true;
@@ -443,7 +443,7 @@
             this.pnlNames.Controls.Add(this.cboIpos3);
             this.pnlNames.Location = new System.Drawing.Point(97, 71);
             this.pnlNames.Name = "pnlNames";
-            this.pnlNames.Size = new System.Drawing.Size(129, 202);
+            this.pnlNames.Size = new System.Drawing.Size(129, 512);
             this.pnlNames.TabIndex = 152;
             // 
             // Form1
