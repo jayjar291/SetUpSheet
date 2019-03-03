@@ -110,6 +110,7 @@
             this.cboSecondary13 = new System.Windows.Forms.ComboBox();
             this.cboSecondary11 = new System.Windows.Forms.ComboBox();
             this.cboSecondary12 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnlLunch.SuspendLayout();
             this.pnlTransition.SuspendLayout();
             this.mnuControls.SuspendLayout();
@@ -244,20 +245,20 @@
             // munOpen
             // 
             this.munOpen.Name = "munOpen";
-            this.munOpen.Size = new System.Drawing.Size(103, 22);
+            this.munOpen.Size = new System.Drawing.Size(180, 22);
             this.munOpen.Text = "Open";
             this.munOpen.Click += new System.EventHandler(this.munOpen_Click);
             // 
             // mnuSave
             // 
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(103, 22);
+            this.mnuSave.Size = new System.Drawing.Size(180, 22);
             this.mnuSave.Text = "Save";
             // 
             // mnuRun
             // 
             this.mnuRun.Name = "mnuRun";
-            this.mnuRun.Size = new System.Drawing.Size(103, 22);
+            this.mnuRun.Size = new System.Drawing.Size(180, 22);
             this.mnuRun.Text = "Run";
             // 
             // mnuTools
@@ -273,22 +274,23 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(137, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
             // 
             // mnuBreaks
             // 
             this.mnuBreaks.Name = "mnuBreaks";
-            this.mnuBreaks.Size = new System.Drawing.Size(137, 22);
+            this.mnuBreaks.Size = new System.Drawing.Size(180, 22);
             this.mnuBreaks.Text = "Auto Breaks";
             this.mnuBreaks.Click += new System.EventHandler(this.mnuBreaks_Click);
             // 
             // mnuEdit
             // 
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(137, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
             this.mnuEdit.Text = "Edit";
+            this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
             // cboLeader
             // 
@@ -847,11 +849,22 @@
             this.cboSecondary12.Size = new System.Drawing.Size(121, 21);
             this.cboSecondary12.TabIndex = 154;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(535, 264);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 167;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1299, 729);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblUiTill7);
             this.Controls.Add(this.lblUiTill6);
             this.Controls.Add(this.lblUiTill5);
@@ -982,6 +995,7 @@
         private System.Windows.Forms.Label lblUiTill5;
         private System.Windows.Forms.Label lblUiTill6;
         private System.Windows.Forms.Label lblUiTill7;
+        private System.Windows.Forms.Button button1;
     }
 }
 

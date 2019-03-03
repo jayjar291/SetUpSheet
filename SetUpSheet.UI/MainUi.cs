@@ -51,7 +51,10 @@ namespace SetUpSheet.UI
                 pnlTransition.Controls.Add(temp2);
                 transY += 33;
             }
-            y += 33;
+            else
+            {
+                y += 33;
+            }
         }
         /*Refresh Data Sources*/
         private void refresh()
@@ -62,6 +65,18 @@ namespace SetUpSheet.UI
             {
                 item.DataSource = roster.Employees.ToList();
             }
+            foreach (Employee item in roster.Employees)
+            {
+                foreach (RosterControl item2 in pnlLunch.Controls.OfType<RosterControl>())
+                {
+                    item2.DataSource(item);
+                }
+                foreach (RosterControl item2 in pnlTransition.Controls.OfType<RosterControl>())
+                {
+                    item2.DataSource(item);
+                }
+            }
+            
         }
         /*load Functions*/
         private void munOpen_Click(object sender, EventArgs e)
@@ -84,6 +99,7 @@ namespace SetUpSheet.UI
             {
                 MessageBox.Show(ex.Message);
             }
+            refresh();
         }
         /*add Functions*/
         private void mnuAdd_Click(object sender, EventArgs e)
@@ -99,6 +115,7 @@ namespace SetUpSheet.UI
                 roster.AddEmployee(temp);
                 PlaceControls(temp);
             }
+            refresh();
         }
         //todo move and remove
 
@@ -109,6 +126,23 @@ namespace SetUpSheet.UI
             {
                 BreakTime breakTime = new BreakTime(item);
             }
+        }
+
+        private void mnuEdit_Click(object sender, EventArgs e)
+        {
+            foreach (RosterControl item in pnlLunch.Controls.OfType<RosterControl>())
+            {
+                item.EditMode(true);
+            }
+            foreach (RosterControl item in pnlTransition.Controls.OfType<RosterControl>())
+            {
+                item.EditMode(true);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            refresh();
         }
     }
 }

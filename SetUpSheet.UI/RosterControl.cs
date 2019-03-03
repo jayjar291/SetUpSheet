@@ -59,5 +59,22 @@ namespace SetUpSheet.UI
                     break;
             }
         }
+        public void EditMode(bool mode)
+        {
+            if (mode)
+            {
+                foreach (Control item in Controls)
+                {
+                    item.Enabled = true;
+                }
+            }
+            else
+            {
+                foreach (Control item in Controls)
+                {
+                    item.Enabled = false;
+                }
+            }
+        }
     }
 }
