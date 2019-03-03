@@ -1,6 +1,6 @@
 ﻿namespace SetUpSheet.UI
 {
-    partial class Form1
+    partial class MainUi
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUi));
             this.lblLunch = new System.Windows.Forms.Label();
             this.pnlLunch = new System.Windows.Forms.Panel();
             this.lblBreakL = new System.Windows.Forms.Label();
@@ -63,6 +64,14 @@
             this.lblUiIpos3 = new System.Windows.Forms.Label();
             this.lblUiCash = new System.Windows.Forms.Label();
             this.pnlNames = new System.Windows.Forms.Panel();
+            this.cboTill7 = new System.Windows.Forms.ComboBox();
+            this.cboTill6 = new System.Windows.Forms.ComboBox();
+            this.cboTill5 = new System.Windows.Forms.ComboBox();
+            this.cboTill4 = new System.Windows.Forms.ComboBox();
+            this.cboTill3 = new System.Windows.Forms.ComboBox();
+            this.cboFCServer = new System.Windows.Forms.ComboBox();
+            this.cboFCLead = new System.Windows.Forms.ComboBox();
+            this.cboFCBagging = new System.Windows.Forms.ComboBox();
             this.cboShakes = new System.Windows.Forms.ComboBox();
             this.cboDrinks = new System.Windows.Forms.ComboBox();
             this.cboBagging = new System.Windows.Forms.ComboBox();
@@ -84,6 +93,23 @@
             this.cboSecondary2 = new System.Windows.Forms.ComboBox();
             this.cboSecondary3 = new System.Windows.Forms.ComboBox();
             this.cboSecondary4 = new System.Windows.Forms.ComboBox();
+            this.lblUiFCLead = new System.Windows.Forms.Label();
+            this.lblUiFrontCounter = new System.Windows.Forms.Label();
+            this.lblUiFCBagging = new System.Windows.Forms.Label();
+            this.lblUiServer = new System.Windows.Forms.Label();
+            this.lblUiTill3 = new System.Windows.Forms.Label();
+            this.lblUiTill4 = new System.Windows.Forms.Label();
+            this.lblUiTill5 = new System.Windows.Forms.Label();
+            this.lblUiTill6 = new System.Windows.Forms.Label();
+            this.lblUiTill7 = new System.Windows.Forms.Label();
+            this.cboSecondary18 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary17 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary16 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary15 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary14 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary13 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary11 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary12 = new System.Windows.Forms.ComboBox();
             this.pnlLunch.SuspendLayout();
             this.pnlTransition.SuspendLayout();
             this.mnuControls.SuspendLayout();
@@ -267,7 +293,7 @@
             // cboLeader
             // 
             this.cboLeader.FormattingEnabled = true;
-            this.cboLeader.Location = new System.Drawing.Point(61, 40);
+            this.cboLeader.Location = new System.Drawing.Point(79, 40);
             this.cboLeader.Name = "cboLeader";
             this.cboLeader.Size = new System.Drawing.Size(121, 21);
             this.cboLeader.TabIndex = 137;
@@ -276,7 +302,7 @@
             // 
             this.lblUiLunch.AutoSize = true;
             this.lblUiLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUiLunch.Location = new System.Drawing.Point(12, 24);
+            this.lblUiLunch.Location = new System.Drawing.Point(30, 24);
             this.lblUiLunch.Name = "lblUiLunch";
             this.lblUiLunch.Size = new System.Drawing.Size(52, 16);
             this.lblUiLunch.TabIndex = 138;
@@ -285,7 +311,7 @@
             // lblUiLeader
             // 
             this.lblUiLeader.AutoSize = true;
-            this.lblUiLeader.Location = new System.Drawing.Point(12, 43);
+            this.lblUiLeader.Location = new System.Drawing.Point(30, 43);
             this.lblUiLeader.Name = "lblUiLeader";
             this.lblUiLeader.Size = new System.Drawing.Size(43, 13);
             this.lblUiLeader.TabIndex = 139;
@@ -295,7 +321,7 @@
             // 
             this.lblUiSecondaryDuties.AutoSize = true;
             this.lblUiSecondaryDuties.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUiSecondaryDuties.Location = new System.Drawing.Point(233, 24);
+            this.lblUiSecondaryDuties.Location = new System.Drawing.Point(251, 24);
             this.lblUiSecondaryDuties.Name = "lblUiSecondaryDuties";
             this.lblUiSecondaryDuties.Size = new System.Drawing.Size(135, 16);
             this.lblUiSecondaryDuties.TabIndex = 140;
@@ -305,7 +331,7 @@
             // 
             this.lblUiDriveThru.AutoSize = true;
             this.lblUiDriveThru.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUiDriveThru.Location = new System.Drawing.Point(12, 64);
+            this.lblUiDriveThru.Location = new System.Drawing.Point(30, 64);
             this.lblUiDriveThru.Name = "lblUiDriveThru";
             this.lblUiDriveThru.Size = new System.Drawing.Size(84, 16);
             this.lblUiDriveThru.TabIndex = 141;
@@ -314,7 +340,7 @@
             // lblUiDTLead
             // 
             this.lblUiDTLead.AutoSize = true;
-            this.lblUiDTLead.Location = new System.Drawing.Point(12, 80);
+            this.lblUiDTLead.Location = new System.Drawing.Point(30, 80);
             this.lblUiDTLead.Name = "lblUiDTLead";
             this.lblUiDTLead.Size = new System.Drawing.Size(82, 13);
             this.lblUiDTLead.TabIndex = 142;
@@ -331,7 +357,7 @@
             // lblUiIpos1
             // 
             this.lblUiIpos1.AutoSize = true;
-            this.lblUiIpos1.Location = new System.Drawing.Point(39, 105);
+            this.lblUiIpos1.Location = new System.Drawing.Point(57, 105);
             this.lblUiIpos1.Name = "lblUiIpos1";
             this.lblUiIpos1.Size = new System.Drawing.Size(52, 13);
             this.lblUiIpos1.TabIndex = 148;
@@ -372,7 +398,7 @@
             // lblUiIpos2
             // 
             this.lblUiIpos2.AutoSize = true;
-            this.lblUiIpos2.Location = new System.Drawing.Point(39, 132);
+            this.lblUiIpos2.Location = new System.Drawing.Point(57, 132);
             this.lblUiIpos2.Name = "lblUiIpos2";
             this.lblUiIpos2.Size = new System.Drawing.Size(52, 13);
             this.lblUiIpos2.TabIndex = 149;
@@ -381,7 +407,7 @@
             // lblUiIpos3
             // 
             this.lblUiIpos3.AutoSize = true;
-            this.lblUiIpos3.Location = new System.Drawing.Point(46, 159);
+            this.lblUiIpos3.Location = new System.Drawing.Point(64, 159);
             this.lblUiIpos3.Name = "lblUiIpos3";
             this.lblUiIpos3.Size = new System.Drawing.Size(45, 13);
             this.lblUiIpos3.TabIndex = 150;
@@ -390,7 +416,7 @@
             // lblUiCash
             // 
             this.lblUiCash.AutoSize = true;
-            this.lblUiCash.Location = new System.Drawing.Point(21, 186);
+            this.lblUiCash.Location = new System.Drawing.Point(39, 186);
             this.lblUiCash.Name = "lblUiCash";
             this.lblUiCash.Size = new System.Drawing.Size(70, 13);
             this.lblUiCash.TabIndex = 151;
@@ -398,6 +424,14 @@
             // 
             // pnlNames
             // 
+            this.pnlNames.Controls.Add(this.cboTill7);
+            this.pnlNames.Controls.Add(this.cboTill6);
+            this.pnlNames.Controls.Add(this.cboTill5);
+            this.pnlNames.Controls.Add(this.cboTill4);
+            this.pnlNames.Controls.Add(this.cboTill3);
+            this.pnlNames.Controls.Add(this.cboFCServer);
+            this.pnlNames.Controls.Add(this.cboFCLead);
+            this.pnlNames.Controls.Add(this.cboFCBagging);
             this.pnlNames.Controls.Add(this.cboShakes);
             this.pnlNames.Controls.Add(this.cboDrinks);
             this.pnlNames.Controls.Add(this.cboBagging);
@@ -408,10 +442,74 @@
             this.pnlNames.Controls.Add(this.cboIpos1);
             this.pnlNames.Controls.Add(this.cboIpos2);
             this.pnlNames.Controls.Add(this.cboIpos3);
-            this.pnlNames.Location = new System.Drawing.Point(97, 71);
+            this.pnlNames.Location = new System.Drawing.Point(115, 71);
             this.pnlNames.Name = "pnlNames";
-            this.pnlNames.Size = new System.Drawing.Size(129, 512);
+            this.pnlNames.Size = new System.Drawing.Size(129, 561);
             this.pnlNames.TabIndex = 152;
+            // 
+            // cboTill7
+            // 
+            this.cboTill7.FormattingEnabled = true;
+            this.cboTill7.Location = new System.Drawing.Point(3, 487);
+            this.cboTill7.Name = "cboTill7";
+            this.cboTill7.Size = new System.Drawing.Size(121, 21);
+            this.cboTill7.TabIndex = 160;
+            // 
+            // cboTill6
+            // 
+            this.cboTill6.FormattingEnabled = true;
+            this.cboTill6.Location = new System.Drawing.Point(3, 460);
+            this.cboTill6.Name = "cboTill6";
+            this.cboTill6.Size = new System.Drawing.Size(121, 21);
+            this.cboTill6.TabIndex = 159;
+            // 
+            // cboTill5
+            // 
+            this.cboTill5.FormattingEnabled = true;
+            this.cboTill5.Location = new System.Drawing.Point(3, 433);
+            this.cboTill5.Name = "cboTill5";
+            this.cboTill5.Size = new System.Drawing.Size(121, 21);
+            this.cboTill5.TabIndex = 158;
+            // 
+            // cboTill4
+            // 
+            this.cboTill4.FormattingEnabled = true;
+            this.cboTill4.Location = new System.Drawing.Point(3, 406);
+            this.cboTill4.Name = "cboTill4";
+            this.cboTill4.Size = new System.Drawing.Size(121, 21);
+            this.cboTill4.TabIndex = 157;
+            // 
+            // cboTill3
+            // 
+            this.cboTill3.FormattingEnabled = true;
+            this.cboTill3.Location = new System.Drawing.Point(3, 379);
+            this.cboTill3.Name = "cboTill3";
+            this.cboTill3.Size = new System.Drawing.Size(121, 21);
+            this.cboTill3.TabIndex = 156;
+            // 
+            // cboFCServer
+            // 
+            this.cboFCServer.FormattingEnabled = true;
+            this.cboFCServer.Location = new System.Drawing.Point(3, 352);
+            this.cboFCServer.Name = "cboFCServer";
+            this.cboFCServer.Size = new System.Drawing.Size(121, 21);
+            this.cboFCServer.TabIndex = 155;
+            // 
+            // cboFCLead
+            // 
+            this.cboFCLead.FormattingEnabled = true;
+            this.cboFCLead.Location = new System.Drawing.Point(3, 298);
+            this.cboFCLead.Name = "cboFCLead";
+            this.cboFCLead.Size = new System.Drawing.Size(121, 21);
+            this.cboFCLead.TabIndex = 154;
+            // 
+            // cboFCBagging
+            // 
+            this.cboFCBagging.FormattingEnabled = true;
+            this.cboFCBagging.Location = new System.Drawing.Point(3, 325);
+            this.cboFCBagging.Name = "cboFCBagging";
+            this.cboFCBagging.Size = new System.Drawing.Size(121, 21);
+            this.cboFCBagging.TabIndex = 153;
             // 
             // cboShakes
             // 
@@ -456,7 +554,7 @@
             // lblUiExpedite
             // 
             this.lblUiExpedite.AutoSize = true;
-            this.lblUiExpedite.Location = new System.Drawing.Point(43, 210);
+            this.lblUiExpedite.Location = new System.Drawing.Point(61, 210);
             this.lblUiExpedite.Name = "lblUiExpedite";
             this.lblUiExpedite.Size = new System.Drawing.Size(48, 13);
             this.lblUiExpedite.TabIndex = 153;
@@ -465,7 +563,7 @@
             // lblUiWindow
             // 
             this.lblUiWindow.AutoSize = true;
-            this.lblUiWindow.Location = new System.Drawing.Point(45, 237);
+            this.lblUiWindow.Location = new System.Drawing.Point(63, 237);
             this.lblUiWindow.Name = "lblUiWindow";
             this.lblUiWindow.Size = new System.Drawing.Size(46, 13);
             this.lblUiWindow.TabIndex = 154;
@@ -474,7 +572,7 @@
             // lblUiBagging
             // 
             this.lblUiBagging.AutoSize = true;
-            this.lblUiBagging.Location = new System.Drawing.Point(45, 264);
+            this.lblUiBagging.Location = new System.Drawing.Point(63, 264);
             this.lblUiBagging.Name = "lblUiBagging";
             this.lblUiBagging.Size = new System.Drawing.Size(46, 13);
             this.lblUiBagging.TabIndex = 155;
@@ -483,7 +581,7 @@
             // lblUiDrinks
             // 
             this.lblUiDrinks.AutoSize = true;
-            this.lblUiDrinks.Location = new System.Drawing.Point(54, 291);
+            this.lblUiDrinks.Location = new System.Drawing.Point(72, 291);
             this.lblUiDrinks.Name = "lblUiDrinks";
             this.lblUiDrinks.Size = new System.Drawing.Size(37, 13);
             this.lblUiDrinks.TabIndex = 156;
@@ -492,7 +590,7 @@
             // lblUiShakes
             // 
             this.lblUiShakes.AutoSize = true;
-            this.lblUiShakes.Location = new System.Drawing.Point(48, 318);
+            this.lblUiShakes.Location = new System.Drawing.Point(66, 318);
             this.lblUiShakes.Name = "lblUiShakes";
             this.lblUiShakes.Size = new System.Drawing.Size(43, 13);
             this.lblUiShakes.TabIndex = 157;
@@ -500,6 +598,14 @@
             // 
             // pnlSecondary
             // 
+            this.pnlSecondary.Controls.Add(this.cboSecondary18);
+            this.pnlSecondary.Controls.Add(this.cboSecondary17);
+            this.pnlSecondary.Controls.Add(this.cboSecondary16);
+            this.pnlSecondary.Controls.Add(this.cboSecondary15);
+            this.pnlSecondary.Controls.Add(this.cboSecondary14);
+            this.pnlSecondary.Controls.Add(this.cboSecondary13);
+            this.pnlSecondary.Controls.Add(this.cboSecondary11);
+            this.pnlSecondary.Controls.Add(this.cboSecondary12);
             this.pnlSecondary.Controls.Add(this.cboSecondary10);
             this.pnlSecondary.Controls.Add(this.cboSecondary9);
             this.pnlSecondary.Controls.Add(this.cboSecondary8);
@@ -510,9 +616,9 @@
             this.pnlSecondary.Controls.Add(this.cboSecondary2);
             this.pnlSecondary.Controls.Add(this.cboSecondary3);
             this.pnlSecondary.Controls.Add(this.cboSecondary4);
-            this.pnlSecondary.Location = new System.Drawing.Point(236, 71);
+            this.pnlSecondary.Location = new System.Drawing.Point(254, 71);
             this.pnlSecondary.Name = "pnlSecondary";
-            this.pnlSecondary.Size = new System.Drawing.Size(129, 512);
+            this.pnlSecondary.Size = new System.Drawing.Size(129, 561);
             this.pnlSecondary.TabIndex = 153;
             // 
             // cboSecondary10
@@ -595,11 +701,166 @@
             this.cboSecondary4.Size = new System.Drawing.Size(121, 21);
             this.cboSecondary4.TabIndex = 146;
             // 
-            // Form1
+            // lblUiFCLead
+            // 
+            this.lblUiFCLead.AutoSize = true;
+            this.lblUiFCLead.Location = new System.Drawing.Point(32, 368);
+            this.lblUiFCLead.Name = "lblUiFCLead";
+            this.lblUiFCLead.Size = new System.Drawing.Size(80, 13);
+            this.lblUiFCLead.TabIndex = 159;
+            this.lblUiFCLead.Text = "FC Team Lead:";
+            // 
+            // lblUiFrontCounter
+            // 
+            this.lblUiFrontCounter.AutoSize = true;
+            this.lblUiFrontCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUiFrontCounter.Location = new System.Drawing.Point(10, 352);
+            this.lblUiFrontCounter.Name = "lblUiFrontCounter";
+            this.lblUiFrontCounter.Size = new System.Drawing.Size(104, 16);
+            this.lblUiFrontCounter.TabIndex = 158;
+            this.lblUiFrontCounter.Text = "Front Counter:";
+            // 
+            // lblUiFCBagging
+            // 
+            this.lblUiFCBagging.AutoSize = true;
+            this.lblUiFCBagging.Location = new System.Drawing.Point(63, 399);
+            this.lblUiFCBagging.Name = "lblUiFCBagging";
+            this.lblUiFCBagging.Size = new System.Drawing.Size(46, 13);
+            this.lblUiFCBagging.TabIndex = 160;
+            this.lblUiFCBagging.Text = "Bagging";
+            // 
+            // lblUiServer
+            // 
+            this.lblUiServer.AutoSize = true;
+            this.lblUiServer.Location = new System.Drawing.Point(71, 426);
+            this.lblUiServer.Name = "lblUiServer";
+            this.lblUiServer.Size = new System.Drawing.Size(38, 13);
+            this.lblUiServer.TabIndex = 161;
+            this.lblUiServer.Text = "Server";
+            // 
+            // lblUiTill3
+            // 
+            this.lblUiTill3.AutoSize = true;
+            this.lblUiTill3.Location = new System.Drawing.Point(93, 453);
+            this.lblUiTill3.Name = "lblUiTill3";
+            this.lblUiTill3.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill3.TabIndex = 162;
+            this.lblUiTill3.Text = "3:";
+            // 
+            // lblUiTill4
+            // 
+            this.lblUiTill4.AutoSize = true;
+            this.lblUiTill4.Location = new System.Drawing.Point(93, 480);
+            this.lblUiTill4.Name = "lblUiTill4";
+            this.lblUiTill4.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill4.TabIndex = 163;
+            this.lblUiTill4.Text = "4:";
+            // 
+            // lblUiTill5
+            // 
+            this.lblUiTill5.AutoSize = true;
+            this.lblUiTill5.Location = new System.Drawing.Point(93, 507);
+            this.lblUiTill5.Name = "lblUiTill5";
+            this.lblUiTill5.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill5.TabIndex = 164;
+            this.lblUiTill5.Text = "5:";
+            // 
+            // lblUiTill6
+            // 
+            this.lblUiTill6.AutoSize = true;
+            this.lblUiTill6.Location = new System.Drawing.Point(93, 534);
+            this.lblUiTill6.Name = "lblUiTill6";
+            this.lblUiTill6.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill6.TabIndex = 165;
+            this.lblUiTill6.Text = "6:";
+            // 
+            // lblUiTill7
+            // 
+            this.lblUiTill7.AutoSize = true;
+            this.lblUiTill7.Location = new System.Drawing.Point(93, 561);
+            this.lblUiTill7.Name = "lblUiTill7";
+            this.lblUiTill7.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill7.TabIndex = 166;
+            this.lblUiTill7.Text = "7:";
+            // 
+            // cboSecondary18
+            // 
+            this.cboSecondary18.FormattingEnabled = true;
+            this.cboSecondary18.Location = new System.Drawing.Point(3, 487);
+            this.cboSecondary18.Name = "cboSecondary18";
+            this.cboSecondary18.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary18.TabIndex = 160;
+            // 
+            // cboSecondary17
+            // 
+            this.cboSecondary17.FormattingEnabled = true;
+            this.cboSecondary17.Location = new System.Drawing.Point(3, 460);
+            this.cboSecondary17.Name = "cboSecondary17";
+            this.cboSecondary17.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary17.TabIndex = 159;
+            // 
+            // cboSecondary16
+            // 
+            this.cboSecondary16.FormattingEnabled = true;
+            this.cboSecondary16.Location = new System.Drawing.Point(3, 433);
+            this.cboSecondary16.Name = "cboSecondary16";
+            this.cboSecondary16.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary16.TabIndex = 158;
+            // 
+            // cboSecondary15
+            // 
+            this.cboSecondary15.FormattingEnabled = true;
+            this.cboSecondary15.Location = new System.Drawing.Point(3, 406);
+            this.cboSecondary15.Name = "cboSecondary15";
+            this.cboSecondary15.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary15.TabIndex = 157;
+            // 
+            // cboSecondary14
+            // 
+            this.cboSecondary14.FormattingEnabled = true;
+            this.cboSecondary14.Location = new System.Drawing.Point(3, 379);
+            this.cboSecondary14.Name = "cboSecondary14";
+            this.cboSecondary14.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary14.TabIndex = 156;
+            // 
+            // cboSecondary13
+            // 
+            this.cboSecondary13.FormattingEnabled = true;
+            this.cboSecondary13.Location = new System.Drawing.Point(3, 352);
+            this.cboSecondary13.Name = "cboSecondary13";
+            this.cboSecondary13.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary13.TabIndex = 155;
+            // 
+            // cboSecondary11
+            // 
+            this.cboSecondary11.FormattingEnabled = true;
+            this.cboSecondary11.Location = new System.Drawing.Point(3, 298);
+            this.cboSecondary11.Name = "cboSecondary11";
+            this.cboSecondary11.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary11.TabIndex = 153;
+            // 
+            // cboSecondary12
+            // 
+            this.cboSecondary12.FormattingEnabled = true;
+            this.cboSecondary12.Location = new System.Drawing.Point(3, 325);
+            this.cboSecondary12.Name = "cboSecondary12";
+            this.cboSecondary12.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary12.TabIndex = 154;
+            // 
+            // MainUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 597);
+            this.ClientSize = new System.Drawing.Size(1299, 729);
+            this.Controls.Add(this.lblUiTill7);
+            this.Controls.Add(this.lblUiTill6);
+            this.Controls.Add(this.lblUiTill5);
+            this.Controls.Add(this.lblUiTill4);
+            this.Controls.Add(this.lblUiTill3);
+            this.Controls.Add(this.lblUiServer);
+            this.Controls.Add(this.lblUiFCBagging);
+            this.Controls.Add(this.lblUiFCLead);
+            this.Controls.Add(this.lblUiFrontCounter);
             this.Controls.Add(this.pnlSecondary);
             this.Controls.Add(this.lblUiShakes);
             this.Controls.Add(this.lblUiDrinks);
@@ -622,9 +883,10 @@
             this.Controls.Add(this.lblLunch);
             this.Controls.Add(this.pnlLunch);
             this.Controls.Add(this.mnuControls);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuControls;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainUi";
+            this.Text = "Lunch Setup Sheet";
             this.pnlLunch.ResumeLayout(false);
             this.pnlLunch.PerformLayout();
             this.pnlTransition.ResumeLayout(false);
@@ -695,6 +957,31 @@
         public System.Windows.Forms.ComboBox cboSecondary2;
         public System.Windows.Forms.ComboBox cboSecondary3;
         public System.Windows.Forms.ComboBox cboSecondary4;
+        public System.Windows.Forms.ComboBox cboTill7;
+        public System.Windows.Forms.ComboBox cboTill6;
+        public System.Windows.Forms.ComboBox cboTill5;
+        public System.Windows.Forms.ComboBox cboTill4;
+        public System.Windows.Forms.ComboBox cboTill3;
+        public System.Windows.Forms.ComboBox cboFCServer;
+        public System.Windows.Forms.ComboBox cboFCLead;
+        public System.Windows.Forms.ComboBox cboFCBagging;
+        private System.Windows.Forms.Label lblUiFCLead;
+        private System.Windows.Forms.Label lblUiFrontCounter;
+        public System.Windows.Forms.ComboBox cboSecondary18;
+        public System.Windows.Forms.ComboBox cboSecondary17;
+        public System.Windows.Forms.ComboBox cboSecondary16;
+        public System.Windows.Forms.ComboBox cboSecondary15;
+        public System.Windows.Forms.ComboBox cboSecondary14;
+        public System.Windows.Forms.ComboBox cboSecondary13;
+        public System.Windows.Forms.ComboBox cboSecondary11;
+        public System.Windows.Forms.ComboBox cboSecondary12;
+        private System.Windows.Forms.Label lblUiFCBagging;
+        private System.Windows.Forms.Label lblUiServer;
+        private System.Windows.Forms.Label lblUiTill3;
+        private System.Windows.Forms.Label lblUiTill4;
+        private System.Windows.Forms.Label lblUiTill5;
+        private System.Windows.Forms.Label lblUiTill6;
+        private System.Windows.Forms.Label lblUiTill7;
     }
 }
 

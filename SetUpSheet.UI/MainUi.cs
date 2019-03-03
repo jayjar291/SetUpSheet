@@ -28,12 +28,12 @@ using System.Windows.Forms;
 
 namespace SetUpSheet.UI
 {
-    public partial class Form1 : Form
+    public partial class MainUi : Form
     {
         int y = 21;
         int transY = 21;
         Roster roster = new Roster();
-        public Form1()
+        public MainUi()
         {
             InitializeComponent();
         }
