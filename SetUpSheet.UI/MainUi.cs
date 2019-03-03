@@ -65,17 +65,17 @@ namespace SetUpSheet.UI
             {
                 item.DataSource = roster.Employees.ToList();
             }
-            foreach (Employee item in roster.Employees)
-            {
-                foreach (RosterControl item2 in pnlLunch.Controls.OfType<RosterControl>())
-                {
-                    item2.DataSource(item);
-                }
-                foreach (RosterControl item2 in pnlTransition.Controls.OfType<RosterControl>())
-                {
-                    item2.DataSource(item);
-                }
-            }
+            //foreach (Employee item in roster.Employees)
+            //{
+            //    foreach (RosterControl item2 in pnlLunch.Controls.OfType<RosterControl>())
+            //    {
+            //        item2.DataSource(item);
+            //    }
+            //    foreach (RosterControl item2 in pnlTransition.Controls.OfType<RosterControl>())
+            //    {
+            //        item2.DataSource(item);
+            //    }
+            //}
             
         }
         /*load Functions*/
@@ -126,6 +126,7 @@ namespace SetUpSheet.UI
             {
                 BreakTime breakTime = new BreakTime(item);
             }
+            refresh();
         }
 
         private void mnuEdit_Click(object sender, EventArgs e)
