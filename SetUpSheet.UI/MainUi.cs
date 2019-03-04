@@ -49,6 +49,7 @@ namespace SetUpSheet.UI
         private void refresh()
         {
             cboLeader.DataSource = null;
+            cboLeader.DataSource = null;
             cboLeader.DataSource = roster.Employees.ToList();
             foreach (ComboBox item in pnlNames.Controls.OfType<ComboBox>())
             {
