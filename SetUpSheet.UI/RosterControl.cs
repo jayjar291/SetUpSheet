@@ -13,13 +13,9 @@ namespace SetUpSheet.UI
 {
     public partial class RosterControl : UserControl
     {
-        public RosterControl()
+        public RosterControl(Employee employee)
         {
             InitializeComponent();
-        }
-
-        public  void DataSource(Employee employee)
-        {
             txtName.Text = employee.FName;
             ckbIsMinor.Checked = employee.IsMinor;
             Clockin.Value = employee.ClockInTime;
@@ -59,6 +55,7 @@ namespace SetUpSheet.UI
                     break;
             }
         }
+
         public void EditMode(bool mode)
         {
             if (mode)

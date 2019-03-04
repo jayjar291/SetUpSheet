@@ -31,10 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUi));
             this.lblLunch = new System.Windows.Forms.Label();
             this.pnlLunch = new System.Windows.Forms.Panel();
+            this.lyPLunch = new System.Windows.Forms.FlowLayoutPanel();
             this.lblBreakL = new System.Windows.Forms.Label();
             this.lblClockInL = new System.Windows.Forms.Label();
             this.lblNameL = new System.Windows.Forms.Label();
             this.pnlTransition = new System.Windows.Forms.Panel();
+            this.lyPTrans = new System.Windows.Forms.FlowLayoutPanel();
             this.lblBreakT = new System.Windows.Forms.Label();
             this.lblClockinT = new System.Windows.Forms.Label();
             this.lblNameT = new System.Windows.Forms.Label();
@@ -83,6 +85,14 @@
             this.lblUiDrinks = new System.Windows.Forms.Label();
             this.lblUiShakes = new System.Windows.Forms.Label();
             this.pnlSecondary = new System.Windows.Forms.Panel();
+            this.cboSecondary18 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary17 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary16 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary15 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary14 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary13 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary11 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary12 = new System.Windows.Forms.ComboBox();
             this.cboSecondary10 = new System.Windows.Forms.ComboBox();
             this.cboSecondary9 = new System.Windows.Forms.ComboBox();
             this.cboSecondary8 = new System.Windows.Forms.ComboBox();
@@ -102,15 +112,6 @@
             this.lblUiTill5 = new System.Windows.Forms.Label();
             this.lblUiTill6 = new System.Windows.Forms.Label();
             this.lblUiTill7 = new System.Windows.Forms.Label();
-            this.cboSecondary18 = new System.Windows.Forms.ComboBox();
-            this.cboSecondary17 = new System.Windows.Forms.ComboBox();
-            this.cboSecondary16 = new System.Windows.Forms.ComboBox();
-            this.cboSecondary15 = new System.Windows.Forms.ComboBox();
-            this.cboSecondary14 = new System.Windows.Forms.ComboBox();
-            this.cboSecondary13 = new System.Windows.Forms.ComboBox();
-            this.cboSecondary11 = new System.Windows.Forms.ComboBox();
-            this.cboSecondary12 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.pnlLunch.SuspendLayout();
             this.pnlTransition.SuspendLayout();
             this.mnuControls.SuspendLayout();
@@ -132,6 +133,7 @@
             // 
             this.pnlLunch.AutoScroll = true;
             this.pnlLunch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLunch.Controls.Add(this.lyPLunch);
             this.pnlLunch.Controls.Add(this.lblBreakL);
             this.pnlLunch.Controls.Add(this.lblClockInL);
             this.pnlLunch.Controls.Add(this.lblNameL);
@@ -139,6 +141,15 @@
             this.pnlLunch.Name = "pnlLunch";
             this.pnlLunch.Size = new System.Drawing.Size(524, 293);
             this.pnlLunch.TabIndex = 129;
+            // 
+            // lyPLunch
+            // 
+            this.lyPLunch.AutoSize = true;
+            this.lyPLunch.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.lyPLunch.Location = new System.Drawing.Point(3, 21);
+            this.lyPLunch.Name = "lyPLunch";
+            this.lyPLunch.Size = new System.Drawing.Size(517, 267);
+            this.lyPLunch.TabIndex = 4;
             // 
             // lblBreakL
             // 
@@ -174,13 +185,23 @@
             // 
             this.pnlTransition.AutoScroll = true;
             this.pnlTransition.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlTransition.Controls.Add(this.lyPTrans);
             this.pnlTransition.Controls.Add(this.lblBreakT);
             this.pnlTransition.Controls.Add(this.lblClockinT);
             this.pnlTransition.Controls.Add(this.lblNameT);
             this.pnlTransition.Location = new System.Drawing.Point(763, 386);
             this.pnlTransition.Name = "pnlTransition";
-            this.pnlTransition.Size = new System.Drawing.Size(524, 197);
+            this.pnlTransition.Size = new System.Drawing.Size(524, 293);
             this.pnlTransition.TabIndex = 130;
+            // 
+            // lyPTrans
+            // 
+            this.lyPTrans.AutoSize = true;
+            this.lyPTrans.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.lyPTrans.Location = new System.Drawing.Point(3, 21);
+            this.lyPTrans.Name = "lyPTrans";
+            this.lyPTrans.Size = new System.Drawing.Size(516, 267);
+            this.lyPTrans.TabIndex = 7;
             // 
             // lblBreakT
             // 
@@ -245,20 +266,20 @@
             // munOpen
             // 
             this.munOpen.Name = "munOpen";
-            this.munOpen.Size = new System.Drawing.Size(180, 22);
+            this.munOpen.Size = new System.Drawing.Size(103, 22);
             this.munOpen.Text = "Open";
             this.munOpen.Click += new System.EventHandler(this.munOpen_Click);
             // 
             // mnuSave
             // 
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(180, 22);
+            this.mnuSave.Size = new System.Drawing.Size(103, 22);
             this.mnuSave.Text = "Save";
             // 
             // mnuRun
             // 
             this.mnuRun.Name = "mnuRun";
-            this.mnuRun.Size = new System.Drawing.Size(180, 22);
+            this.mnuRun.Size = new System.Drawing.Size(103, 22);
             this.mnuRun.Text = "Run";
             // 
             // mnuTools
@@ -274,21 +295,21 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(137, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
             // 
             // mnuBreaks
             // 
             this.mnuBreaks.Name = "mnuBreaks";
-            this.mnuBreaks.Size = new System.Drawing.Size(180, 22);
+            this.mnuBreaks.Size = new System.Drawing.Size(137, 22);
             this.mnuBreaks.Text = "Auto Breaks";
             this.mnuBreaks.Click += new System.EventHandler(this.mnuBreaks_Click);
             // 
             // mnuEdit
             // 
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(137, 22);
             this.mnuEdit.Text = "Edit";
             this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
@@ -623,6 +644,70 @@
             this.pnlSecondary.Size = new System.Drawing.Size(129, 561);
             this.pnlSecondary.TabIndex = 153;
             // 
+            // cboSecondary18
+            // 
+            this.cboSecondary18.FormattingEnabled = true;
+            this.cboSecondary18.Location = new System.Drawing.Point(3, 487);
+            this.cboSecondary18.Name = "cboSecondary18";
+            this.cboSecondary18.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary18.TabIndex = 160;
+            // 
+            // cboSecondary17
+            // 
+            this.cboSecondary17.FormattingEnabled = true;
+            this.cboSecondary17.Location = new System.Drawing.Point(3, 460);
+            this.cboSecondary17.Name = "cboSecondary17";
+            this.cboSecondary17.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary17.TabIndex = 159;
+            // 
+            // cboSecondary16
+            // 
+            this.cboSecondary16.FormattingEnabled = true;
+            this.cboSecondary16.Location = new System.Drawing.Point(3, 433);
+            this.cboSecondary16.Name = "cboSecondary16";
+            this.cboSecondary16.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary16.TabIndex = 158;
+            // 
+            // cboSecondary15
+            // 
+            this.cboSecondary15.FormattingEnabled = true;
+            this.cboSecondary15.Location = new System.Drawing.Point(3, 406);
+            this.cboSecondary15.Name = "cboSecondary15";
+            this.cboSecondary15.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary15.TabIndex = 157;
+            // 
+            // cboSecondary14
+            // 
+            this.cboSecondary14.FormattingEnabled = true;
+            this.cboSecondary14.Location = new System.Drawing.Point(3, 379);
+            this.cboSecondary14.Name = "cboSecondary14";
+            this.cboSecondary14.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary14.TabIndex = 156;
+            // 
+            // cboSecondary13
+            // 
+            this.cboSecondary13.FormattingEnabled = true;
+            this.cboSecondary13.Location = new System.Drawing.Point(3, 352);
+            this.cboSecondary13.Name = "cboSecondary13";
+            this.cboSecondary13.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary13.TabIndex = 155;
+            // 
+            // cboSecondary11
+            // 
+            this.cboSecondary11.FormattingEnabled = true;
+            this.cboSecondary11.Location = new System.Drawing.Point(3, 298);
+            this.cboSecondary11.Name = "cboSecondary11";
+            this.cboSecondary11.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary11.TabIndex = 153;
+            // 
+            // cboSecondary12
+            // 
+            this.cboSecondary12.FormattingEnabled = true;
+            this.cboSecondary12.Location = new System.Drawing.Point(3, 325);
+            this.cboSecondary12.Name = "cboSecondary12";
+            this.cboSecondary12.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary12.TabIndex = 154;
+            // 
             // cboSecondary10
             // 
             this.cboSecondary10.FormattingEnabled = true;
@@ -785,86 +870,11 @@
             this.lblUiTill7.TabIndex = 166;
             this.lblUiTill7.Text = "7:";
             // 
-            // cboSecondary18
-            // 
-            this.cboSecondary18.FormattingEnabled = true;
-            this.cboSecondary18.Location = new System.Drawing.Point(3, 487);
-            this.cboSecondary18.Name = "cboSecondary18";
-            this.cboSecondary18.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary18.TabIndex = 160;
-            // 
-            // cboSecondary17
-            // 
-            this.cboSecondary17.FormattingEnabled = true;
-            this.cboSecondary17.Location = new System.Drawing.Point(3, 460);
-            this.cboSecondary17.Name = "cboSecondary17";
-            this.cboSecondary17.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary17.TabIndex = 159;
-            // 
-            // cboSecondary16
-            // 
-            this.cboSecondary16.FormattingEnabled = true;
-            this.cboSecondary16.Location = new System.Drawing.Point(3, 433);
-            this.cboSecondary16.Name = "cboSecondary16";
-            this.cboSecondary16.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary16.TabIndex = 158;
-            // 
-            // cboSecondary15
-            // 
-            this.cboSecondary15.FormattingEnabled = true;
-            this.cboSecondary15.Location = new System.Drawing.Point(3, 406);
-            this.cboSecondary15.Name = "cboSecondary15";
-            this.cboSecondary15.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary15.TabIndex = 157;
-            // 
-            // cboSecondary14
-            // 
-            this.cboSecondary14.FormattingEnabled = true;
-            this.cboSecondary14.Location = new System.Drawing.Point(3, 379);
-            this.cboSecondary14.Name = "cboSecondary14";
-            this.cboSecondary14.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary14.TabIndex = 156;
-            // 
-            // cboSecondary13
-            // 
-            this.cboSecondary13.FormattingEnabled = true;
-            this.cboSecondary13.Location = new System.Drawing.Point(3, 352);
-            this.cboSecondary13.Name = "cboSecondary13";
-            this.cboSecondary13.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary13.TabIndex = 155;
-            // 
-            // cboSecondary11
-            // 
-            this.cboSecondary11.FormattingEnabled = true;
-            this.cboSecondary11.Location = new System.Drawing.Point(3, 298);
-            this.cboSecondary11.Name = "cboSecondary11";
-            this.cboSecondary11.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary11.TabIndex = 153;
-            // 
-            // cboSecondary12
-            // 
-            this.cboSecondary12.FormattingEnabled = true;
-            this.cboSecondary12.Location = new System.Drawing.Point(3, 325);
-            this.cboSecondary12.Name = "cboSecondary12";
-            this.cboSecondary12.Size = new System.Drawing.Size(121, 21);
-            this.cboSecondary12.TabIndex = 154;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(535, 264);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 167;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MainUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 729);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1299, 686);
             this.Controls.Add(this.lblUiTill7);
             this.Controls.Add(this.lblUiTill6);
             this.Controls.Add(this.lblUiTill5);
@@ -899,6 +909,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuControls;
             this.Name = "MainUi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lunch Setup Sheet";
             this.pnlLunch.ResumeLayout(false);
             this.pnlLunch.PerformLayout();
@@ -995,7 +1006,8 @@
         private System.Windows.Forms.Label lblUiTill5;
         private System.Windows.Forms.Label lblUiTill6;
         private System.Windows.Forms.Label lblUiTill7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.FlowLayoutPanel lyPLunch;
+        private System.Windows.Forms.FlowLayoutPanel lyPTrans;
     }
 }
 

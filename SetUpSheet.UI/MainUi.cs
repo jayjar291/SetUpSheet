@@ -30,8 +30,6 @@ namespace SetUpSheet.UI
 {
     public partial class MainUi : Form
     {
-        int y = 21;
-        int transY = 21;
         Roster roster = new Roster();
         public MainUi()
         {
@@ -39,21 +37,12 @@ namespace SetUpSheet.UI
         }
         private void PlaceControls(Employee employee)
         {
-            RosterControl temp = new RosterControl();
-            temp.Location = new Point(3, y);
-            temp.DataSource(employee);
-            pnlLunch.Controls.Add(temp);
+            RosterControl temp = new RosterControl(employee);
+            lyPLunch.Controls.Add(temp);
             if (employee.ClockOutTime.TimeOfDay > new TimeSpan(14, 30, 0))
             {
-                RosterControl temp2 = new RosterControl();
-                temp2.Location = new Point(3, transY);
-                temp2.DataSource(employee);
-                pnlTransition.Controls.Add(temp2);
-                transY += 33;
-            }
-            else
-            {
-                y += 33;
+                RosterControl temp2 = new RosterControl(employee);
+                lyPTrans.Controls.Add(temp2);
             }
         }
         /*Refresh Data Sources*/
@@ -65,18 +54,7 @@ namespace SetUpSheet.UI
             {
                 item.DataSource = roster.Employees.ToList();
             }
-            //foreach (Employee item in roster.Employees)
-            //{
-            //    foreach (RosterControl item2 in pnlLunch.Controls.OfType<RosterControl>())
-            //    {
-            //        item2.DataSource(item);
-            //    }
-            //    foreach (RosterControl item2 in pnlTransition.Controls.OfType<RosterControl>())
-            //    {
-            //        item2.DataSource(item);
-            //    }
-            //}
-            
+
         }
         /*load Functions*/
         private void munOpen_Click(object sender, EventArgs e)
@@ -131,7 +109,7 @@ namespace SetUpSheet.UI
 
         private void mnuEdit_Click(object sender, EventArgs e)
         {
-            foreach (RosterControl item in pnlLunch.Controls.OfType<RosterControl>())
+            foreach (RosterControl item in lyPLunch.Controls.OfType<RosterControl>())
             {
                 item.EditMode(true);
             }

@@ -21,9 +21,8 @@ namespace SetUpSheet.UI
             int y = 12;
             foreach (var item in roster.Employees)
             {
-                RosterControl temp = new RosterControl();
+                RosterControl temp = new RosterControl(item);
                 temp.Location = new Point(12,y);
-                temp.DataSource(item);
                 Controls.Add(temp);
                 y += 33;
             }
