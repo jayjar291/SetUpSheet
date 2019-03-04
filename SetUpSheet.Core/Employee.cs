@@ -24,6 +24,7 @@ namespace SetUpSheet.Core
             ClockOutTime = clockout;
             BrakeType = -1;
             GetTotalHours();
+            BreakTime breakTime = new BreakTime(this);
         }
         private void GetTotalHours()
         {

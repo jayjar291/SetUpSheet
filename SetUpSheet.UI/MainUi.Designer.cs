@@ -48,7 +48,6 @@
             this.mnuRun = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTools = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAdd = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuBreaks = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.cboLeader = new System.Windows.Forms.ComboBox();
             this.lblUiLunch = new System.Windows.Forms.Label();
@@ -286,7 +285,6 @@
             // 
             this.mnuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuAdd,
-            this.mnuBreaks,
             this.mnuEdit});
             this.mnuTools.Name = "mnuTools";
             this.mnuTools.Size = new System.Drawing.Size(47, 20);
@@ -295,21 +293,14 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(137, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
-            // 
-            // mnuBreaks
-            // 
-            this.mnuBreaks.Name = "mnuBreaks";
-            this.mnuBreaks.Size = new System.Drawing.Size(137, 22);
-            this.mnuBreaks.Text = "Auto Breaks";
-            this.mnuBreaks.Click += new System.EventHandler(this.mnuBreaks_Click);
             // 
             // mnuEdit
             // 
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(137, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
             this.mnuEdit.Text = "Edit";
             this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
@@ -942,7 +933,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuRun;
         private System.Windows.Forms.ToolStripMenuItem mnuTools;
         private System.Windows.Forms.ToolStripMenuItem mnuAdd;
-        private System.Windows.Forms.ToolStripMenuItem mnuBreaks;
         private System.Windows.Forms.ToolStripMenuItem mnuEdit;
         private System.Windows.Forms.ComboBox cboLeader;
         private System.Windows.Forms.Label lblUiLunch;

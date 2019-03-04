@@ -95,18 +95,6 @@ namespace SetUpSheet.UI
             }
             refresh();
         }
-        //todo move and remove
-
-        /*Auto Breaks Function*/
-        private void mnuBreaks_Click(object sender, EventArgs e)
-        {
-            foreach (var item in roster.Employees)
-            {
-                BreakTime breakTime = new BreakTime(item);
-            }
-            refresh();
-        }
-
         private void mnuEdit_Click(object sender, EventArgs e)
         {
             foreach (RosterControl item in lyPLunch.Controls.OfType<RosterControl>())
