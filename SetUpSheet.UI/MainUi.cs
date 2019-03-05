@@ -57,6 +57,7 @@ namespace SetUpSheet.UI
             foreach (ComboBox item in pnltransnames.Controls.OfType<ComboBox>())
             {
                 item.DataSource = roster.Employees.ToList();
+
             }
         }
         /*add Functions*/
@@ -102,12 +103,12 @@ namespace SetUpSheet.UI
                 {
                     PlaceControls(item);
                 }
+                refresh();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            refresh();
         }
 
         private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
