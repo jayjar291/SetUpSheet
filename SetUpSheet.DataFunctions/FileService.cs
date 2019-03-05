@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using SetUpSheet.Core;
+using System.Windows.Forms;
+
 
 namespace SetUpSheet.DataFunctions
 { 
-    public class FileService : ILoadable
+    public class FileService : ILoadable,ISaveable
     {
         private string fileName;
 
@@ -32,6 +34,33 @@ namespace SetUpSheet.DataFunctions
                 employees.Add(temp);
             }
             return employees;
+        }
+        //save employees
+        public void SaveEmployees(List<Employee> employees)
+        {
+            FileStream output = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+            StreamWriter streamWriter = new StreamWriter(output);
+            foreach (var item in employees)
+            {
+                streamWriter.WriteLine(item.ToFile());
+            }
+        }
+        //save Layout
+        public void SaveLayout(List<ComboBox> controls, List<Employee> employees)
+        {
+            FileStream output = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+            StreamWriter streamWriter = new StreamWriter(output);
+            foreach (var item in employees)
+            {
+                streamWriter.WriteLine(item.ToFile());
+                streamWriter.Flush();
+            }
+            foreach (var item in controls)
+            {
+                streamWriter.WriteLine(item.SelectedIndex);
+                streamWriter.Flush();
+            }
+            output.Close();
         }
     }
 }

@@ -329,14 +329,14 @@
             // importEmployeesToolStripMenuItem
             // 
             this.importEmployeesToolStripMenuItem.Name = "importEmployeesToolStripMenuItem";
-            this.importEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importEmployeesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.importEmployeesToolStripMenuItem.Text = "Import Employees";
             this.importEmployeesToolStripMenuItem.Click += new System.EventHandler(this.importEmployeesToolStripMenuItem_Click);
             // 
             // layoutToolStripMenuItem
             // 
             this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
-            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.layoutToolStripMenuItem.Text = "Layout";
             this.layoutToolStripMenuItem.Click += new System.EventHandler(this.layoutToolStripMenuItem_Click);
             // 
@@ -382,14 +382,14 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(96, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
             // 
             // mnuEdit
             // 
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(96, 22);
             this.mnuEdit.Text = "Edit";
             this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 

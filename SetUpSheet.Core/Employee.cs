@@ -34,5 +34,11 @@ namespace SetUpSheet.Core
         {
             return FName;
         }
+        //to file
+        public string ToFile()
+        {
+            string temp = $"{FName},{IsMinor},{ClockInTime},{ClockOutTime},{BrakeType},{BrakeStartTime}";
+            return temp;
+        }
     }
 }

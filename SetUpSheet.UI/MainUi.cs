@@ -3,11 +3,10 @@
  * Date 2-27-19
  * Setup Sheet UI
  *  
- *  The main functions for the first Deliverable are:
+ *  The main functions for the secound Deliverable are:
  *  
- *  Load employees’ function
- *  manually add employee
- *  auto break times
+ *  save functions
+ *  finnish ui
  *  
  *  these functions are finished
  *  
@@ -35,6 +34,7 @@ namespace SetUpSheet.UI
         {
             InitializeComponent();
         }
+        //place controls
         private void PlaceControls(Employee employee)
         {
             RosterControl temp = new RosterControl(employee);
@@ -76,6 +76,7 @@ namespace SetUpSheet.UI
             }
             refresh();
         }
+        //edit mode
         private void mnuEdit_Click(object sender, EventArgs e)
         {
             foreach (RosterControl item in lyPLunch.Controls.OfType<RosterControl>())
@@ -87,7 +88,7 @@ namespace SetUpSheet.UI
                 item.EditMode(true);
             }
         }
-
+        //load employees
         private void importEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -110,22 +111,75 @@ namespace SetUpSheet.UI
                 MessageBox.Show(ex.Message);
             }
         }
-
+        //todo add
         private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Console.WriteLine("this will be added later :)");
         }
-
+        //save employees
         private void exportEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("this will be added later :)");
-        }
+            try
+            {
 
+                SaveFileDialog saveFile = new SaveFileDialog();
+                saveFile.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+                var result = saveFile.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    ISaveable saveable = new FileService(saveFile.FileName);
+                    saveable.SaveEmployees(roster.Employees);
+                }
+                else
+                {
+                    throw new Exception("Could not find file.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //save layout
         private void saveLayoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("this will be added soon :)");
-        }
+            List<ComboBox> comboBoxes = new List<ComboBox>();
+            comboBoxes.Add(cboLeader);
+            comboBoxes.Add(cbotransleader);
+            foreach (ComboBox item in pnlNames.Controls)
+            {
+                comboBoxes.Add(item);
+            }
+            foreach (ComboBox item in pnlSecondary.Controls)
+            {
+                comboBoxes.Add(item);
+            }
+            foreach (ComboBox item in pnltransnames.Controls)
+            {
+                comboBoxes.Add(item);
+            }
+            try
+            {
 
+                SaveFileDialog saveFile = new SaveFileDialog();
+                saveFile.Filter = "Layout files (*.ssl)|*.ssl|All files (*.*)|*.*";
+                var result = saveFile.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    ISaveable saveable = new FileService(saveFile.FileName);
+                    saveable.SaveLayout(comboBoxes, roster.Employees);
+                }
+                else
+                {
+                    throw new Exception("Could not find file.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //todo add
         private void mnuRun_Click(object sender, EventArgs e)
         {
             Console.WriteLine("this will be added later :)");
