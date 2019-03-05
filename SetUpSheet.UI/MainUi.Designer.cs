@@ -44,7 +44,11 @@
             this.mnuControls = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.munOpen = new System.Windows.Forms.ToolStripMenuItem();
+            this.importEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveLayoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuRun = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTools = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAdd = new System.Windows.Forms.ToolStripMenuItem();
@@ -65,8 +69,8 @@
             this.lblUiIpos3 = new System.Windows.Forms.Label();
             this.lblUiCash = new System.Windows.Forms.Label();
             this.pnlNames = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboDiningWindow = new System.Windows.Forms.ComboBox();
+            this.cboWall = new System.Windows.Forms.ComboBox();
             this.cboTill7 = new System.Windows.Forms.ComboBox();
             this.cboTill6 = new System.Windows.Forms.ComboBox();
             this.cboTill5 = new System.Windows.Forms.ComboBox();
@@ -86,9 +90,8 @@
             this.lblUiDrinks = new System.Windows.Forms.Label();
             this.lblUiShakes = new System.Windows.Forms.Label();
             this.pnlSecondary = new System.Windows.Forms.Panel();
-            this.optTrash = new System.Windows.Forms.RadioButton();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.optParking = new System.Windows.Forms.RadioButton();
+            this.cboSecondary20 = new System.Windows.Forms.ComboBox();
+            this.cboSecondary19 = new System.Windows.Forms.ComboBox();
             this.cboSecondary18 = new System.Windows.Forms.ComboBox();
             this.cboSecondary17 = new System.Windows.Forms.ComboBox();
             this.cboSecondary16 = new System.Windows.Forms.ComboBox();
@@ -118,64 +121,63 @@
             this.lblUiTill7 = new System.Windows.Forms.Label();
             this.lbUiWall = new System.Windows.Forms.Label();
             this.lblUiWindowDining = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.comboBox18 = new System.Windows.Forms.ComboBox();
-            this.comboBox19 = new System.Windows.Forms.ComboBox();
-            this.comboBox20 = new System.Windows.Forms.ComboBox();
-            this.comboBox21 = new System.Windows.Forms.ComboBox();
-            this.comboBox22 = new System.Windows.Forms.ComboBox();
-            this.comboBox23 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.lblUiTrashRun = new System.Windows.Forms.Label();
+            this.lblUiStocker = new System.Windows.Forms.Label();
+            this.lblUiTill7trans = new System.Windows.Forms.Label();
+            this.lblUiTill6trans = new System.Windows.Forms.Label();
+            this.lblUiTill5trans = new System.Windows.Forms.Label();
+            this.lblUiTill4trans = new System.Windows.Forms.Label();
+            this.lblUiTill3trans = new System.Windows.Forms.Label();
+            this.lblUiServerTrans = new System.Windows.Forms.Label();
+            this.lblUiFcBaggingTrans = new System.Windows.Forms.Label();
+            this.lblUiFcLeadTrans = new System.Windows.Forms.Label();
+            this.lblUiFrontCounterTrans = new System.Windows.Forms.Label();
+            this.lblUiTransShakes = new System.Windows.Forms.Label();
+            this.lblUiTransDrinks = new System.Windows.Forms.Label();
+            this.lblTransBagging = new System.Windows.Forms.Label();
+            this.lblUiTransWindow = new System.Windows.Forms.Label();
+            this.pnltransnames = new System.Windows.Forms.Panel();
+            this.cbodiningroom = new System.Windows.Forms.ComboBox();
+            this.cboservice = new System.Windows.Forms.ComboBox();
+            this.cbotrashrun = new System.Windows.Forms.ComboBox();
+            this.cbostocker = new System.Windows.Forms.ComboBox();
+            this.cbotranstill7 = new System.Windows.Forms.ComboBox();
+            this.cbotranstill6 = new System.Windows.Forms.ComboBox();
+            this.cbotranstill5 = new System.Windows.Forms.ComboBox();
+            this.cbotranstill4 = new System.Windows.Forms.ComboBox();
+            this.cbotranstill3 = new System.Windows.Forms.ComboBox();
+            this.cboservertrans = new System.Windows.Forms.ComboBox();
+            this.cbofctranslead = new System.Windows.Forms.ComboBox();
+            this.cbofcbaggingtrans = new System.Windows.Forms.ComboBox();
+            this.cbotransshakes = new System.Windows.Forms.ComboBox();
+            this.cbotransdrinks = new System.Windows.Forms.ComboBox();
+            this.cbotransbagging = new System.Windows.Forms.ComboBox();
+            this.cbotransWindow = new System.Windows.Forms.ComboBox();
+            this.cboTransCash = new System.Windows.Forms.ComboBox();
+            this.cboHs = new System.Windows.Forms.ComboBox();
+            this.cbohs2 = new System.Windows.Forms.ComboBox();
+            this.lblUiTransCash = new System.Windows.Forms.Label();
+            this.lblHs2 = new System.Windows.Forms.Label();
+            this.lblHs1 = new System.Windows.Forms.Label();
+            this.lblTransitionDT = new System.Windows.Forms.Label();
+            this.lblLeaderTrans = new System.Windows.Forms.Label();
+            this.lblUiTransition = new System.Windows.Forms.Label();
+            this.lblUiServiceLead = new System.Windows.Forms.Label();
+            this.lblUiDiningRoom = new System.Windows.Forms.Label();
+            this.cbotransleader = new System.Windows.Forms.ComboBox();
             this.pnlLunch.SuspendLayout();
             this.pnlTransition.SuspendLayout();
             this.mnuControls.SuspendLayout();
             this.pnlNames.SuspendLayout();
             this.pnlSecondary.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnltransnames.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblLunch
             // 
             this.lblLunch.AutoSize = true;
             this.lblLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLunch.Location = new System.Drawing.Point(781, 22);
+            this.lblLunch.Location = new System.Drawing.Point(676, 25);
             this.lblLunch.Name = "lblLunch";
             this.lblLunch.Size = new System.Drawing.Size(96, 31);
             this.lblLunch.TabIndex = 131;
@@ -189,9 +191,9 @@
             this.pnlLunch.Controls.Add(this.lblBreakL);
             this.pnlLunch.Controls.Add(this.lblClockInL);
             this.pnlLunch.Controls.Add(this.lblNameL);
-            this.pnlLunch.Location = new System.Drawing.Point(763, 56);
+            this.pnlLunch.Location = new System.Drawing.Point(638, 59);
             this.pnlLunch.Name = "pnlLunch";
-            this.pnlLunch.Size = new System.Drawing.Size(524, 293);
+            this.pnlLunch.Size = new System.Drawing.Size(544, 293);
             this.pnlLunch.TabIndex = 129;
             // 
             // lyPLunch
@@ -200,7 +202,7 @@
             this.lyPLunch.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.lyPLunch.Location = new System.Drawing.Point(3, 21);
             this.lyPLunch.Name = "lyPLunch";
-            this.lyPLunch.Size = new System.Drawing.Size(517, 267);
+            this.lyPLunch.Size = new System.Drawing.Size(515, 267);
             this.lyPLunch.TabIndex = 4;
             // 
             // lblBreakL
@@ -241,9 +243,9 @@
             this.pnlTransition.Controls.Add(this.lblBreakT);
             this.pnlTransition.Controls.Add(this.lblClockinT);
             this.pnlTransition.Controls.Add(this.lblNameT);
-            this.pnlTransition.Location = new System.Drawing.Point(763, 386);
+            this.pnlTransition.Location = new System.Drawing.Point(638, 389);
             this.pnlTransition.Name = "pnlTransition";
-            this.pnlTransition.Size = new System.Drawing.Size(524, 293);
+            this.pnlTransition.Size = new System.Drawing.Size(544, 293);
             this.pnlTransition.TabIndex = 130;
             // 
             // lyPTrans
@@ -252,7 +254,7 @@
             this.lyPTrans.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.lyPTrans.Location = new System.Drawing.Point(3, 21);
             this.lyPTrans.Name = "lyPTrans";
-            this.lyPTrans.Size = new System.Drawing.Size(516, 267);
+            this.lyPTrans.Size = new System.Drawing.Size(515, 267);
             this.lyPTrans.TabIndex = 7;
             // 
             // lblBreakT
@@ -289,7 +291,7 @@
             // 
             this.lblTransition.AutoSize = true;
             this.lblTransition.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransition.Location = new System.Drawing.Point(781, 352);
+            this.lblTransition.Location = new System.Drawing.Point(676, 355);
             this.lblTransition.Name = "lblTransition";
             this.lblTransition.Size = new System.Drawing.Size(142, 31);
             this.lblTransition.TabIndex = 135;
@@ -302,7 +304,7 @@
             this.mnuTools});
             this.mnuControls.Location = new System.Drawing.Point(0, 0);
             this.mnuControls.Name = "mnuControls";
-            this.mnuControls.Size = new System.Drawing.Size(1299, 24);
+            this.mnuControls.Size = new System.Drawing.Size(1189, 24);
             this.mnuControls.TabIndex = 136;
             // 
             // mnuFile
@@ -317,22 +319,56 @@
             // 
             // munOpen
             // 
+            this.munOpen.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.importEmployeesToolStripMenuItem,
+            this.layoutToolStripMenuItem});
             this.munOpen.Name = "munOpen";
-            this.munOpen.Size = new System.Drawing.Size(103, 22);
+            this.munOpen.Size = new System.Drawing.Size(180, 22);
             this.munOpen.Text = "Open";
-            this.munOpen.Click += new System.EventHandler(this.munOpen_Click);
+            // 
+            // importEmployeesToolStripMenuItem
+            // 
+            this.importEmployeesToolStripMenuItem.Name = "importEmployeesToolStripMenuItem";
+            this.importEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importEmployeesToolStripMenuItem.Text = "Import Employees";
+            this.importEmployeesToolStripMenuItem.Click += new System.EventHandler(this.importEmployeesToolStripMenuItem_Click);
+            // 
+            // layoutToolStripMenuItem
+            // 
+            this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
+            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.layoutToolStripMenuItem.Text = "Layout";
+            this.layoutToolStripMenuItem.Click += new System.EventHandler(this.layoutToolStripMenuItem_Click);
             // 
             // mnuSave
             // 
+            this.mnuSave.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportEmployeesToolStripMenuItem,
+            this.saveLayoutToolStripMenuItem});
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(103, 22);
+            this.mnuSave.Size = new System.Drawing.Size(180, 22);
             this.mnuSave.Text = "Save";
+            // 
+            // exportEmployeesToolStripMenuItem
+            // 
+            this.exportEmployeesToolStripMenuItem.Name = "exportEmployeesToolStripMenuItem";
+            this.exportEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportEmployeesToolStripMenuItem.Text = "Export Employees";
+            this.exportEmployeesToolStripMenuItem.Click += new System.EventHandler(this.exportEmployeesToolStripMenuItem_Click);
+            // 
+            // saveLayoutToolStripMenuItem
+            // 
+            this.saveLayoutToolStripMenuItem.Name = "saveLayoutToolStripMenuItem";
+            this.saveLayoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveLayoutToolStripMenuItem.Text = "Save Layout";
+            this.saveLayoutToolStripMenuItem.Click += new System.EventHandler(this.saveLayoutToolStripMenuItem_Click);
             // 
             // mnuRun
             // 
             this.mnuRun.Name = "mnuRun";
-            this.mnuRun.Size = new System.Drawing.Size(103, 22);
+            this.mnuRun.Size = new System.Drawing.Size(180, 22);
             this.mnuRun.Text = "Run";
+            this.mnuRun.Click += new System.EventHandler(this.mnuRun_Click);
             // 
             // mnuTools
             // 
@@ -346,19 +382,20 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(96, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
             // 
             // mnuEdit
             // 
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(96, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
             this.mnuEdit.Text = "Edit";
             this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
             // cboLeader
             // 
+            this.cboLeader.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLeader.FormattingEnabled = true;
             this.cboLeader.Location = new System.Drawing.Point(79, 40);
             this.cboLeader.Name = "cboLeader";
@@ -415,6 +452,7 @@
             // 
             // cboDTLead
             // 
+            this.cboDTLead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDTLead.FormattingEnabled = true;
             this.cboDTLead.Location = new System.Drawing.Point(3, 3);
             this.cboDTLead.Name = "cboDTLead";
@@ -432,6 +470,7 @@
             // 
             // cboIpos1
             // 
+            this.cboIpos1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboIpos1.FormattingEnabled = true;
             this.cboIpos1.Location = new System.Drawing.Point(3, 28);
             this.cboIpos1.Name = "cboIpos1";
@@ -440,6 +479,7 @@
             // 
             // cboIpos2
             // 
+            this.cboIpos2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboIpos2.FormattingEnabled = true;
             this.cboIpos2.Location = new System.Drawing.Point(3, 55);
             this.cboIpos2.Name = "cboIpos2";
@@ -448,6 +488,7 @@
             // 
             // cboIpos3
             // 
+            this.cboIpos3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboIpos3.FormattingEnabled = true;
             this.cboIpos3.Location = new System.Drawing.Point(3, 82);
             this.cboIpos3.Name = "cboIpos3";
@@ -456,6 +497,7 @@
             // 
             // cboCash
             // 
+            this.cboCash.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCash.FormattingEnabled = true;
             this.cboCash.Location = new System.Drawing.Point(3, 109);
             this.cboCash.Name = "cboCash";
@@ -491,8 +533,8 @@
             // 
             // pnlNames
             // 
-            this.pnlNames.Controls.Add(this.comboBox1);
-            this.pnlNames.Controls.Add(this.comboBox3);
+            this.pnlNames.Controls.Add(this.cboDiningWindow);
+            this.pnlNames.Controls.Add(this.cboWall);
             this.pnlNames.Controls.Add(this.cboTill7);
             this.pnlNames.Controls.Add(this.cboTill6);
             this.pnlNames.Controls.Add(this.cboTill5);
@@ -516,24 +558,27 @@
             this.pnlNames.Size = new System.Drawing.Size(129, 594);
             this.pnlNames.TabIndex = 152;
             // 
-            // comboBox1
+            // cboDiningWindow
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 568);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 162;
+            this.cboDiningWindow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDiningWindow.FormattingEnabled = true;
+            this.cboDiningWindow.Location = new System.Drawing.Point(3, 568);
+            this.cboDiningWindow.Name = "cboDiningWindow";
+            this.cboDiningWindow.Size = new System.Drawing.Size(121, 21);
+            this.cboDiningWindow.TabIndex = 162;
             // 
-            // comboBox3
+            // cboWall
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(3, 541);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 161;
+            this.cboWall.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboWall.FormattingEnabled = true;
+            this.cboWall.Location = new System.Drawing.Point(3, 541);
+            this.cboWall.Name = "cboWall";
+            this.cboWall.Size = new System.Drawing.Size(121, 21);
+            this.cboWall.TabIndex = 161;
             // 
             // cboTill7
             // 
+            this.cboTill7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTill7.FormattingEnabled = true;
             this.cboTill7.Location = new System.Drawing.Point(3, 487);
             this.cboTill7.Name = "cboTill7";
@@ -542,6 +587,7 @@
             // 
             // cboTill6
             // 
+            this.cboTill6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTill6.FormattingEnabled = true;
             this.cboTill6.Location = new System.Drawing.Point(3, 460);
             this.cboTill6.Name = "cboTill6";
@@ -550,6 +596,7 @@
             // 
             // cboTill5
             // 
+            this.cboTill5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTill5.FormattingEnabled = true;
             this.cboTill5.Location = new System.Drawing.Point(3, 433);
             this.cboTill5.Name = "cboTill5";
@@ -558,6 +605,7 @@
             // 
             // cboTill4
             // 
+            this.cboTill4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTill4.FormattingEnabled = true;
             this.cboTill4.Location = new System.Drawing.Point(3, 406);
             this.cboTill4.Name = "cboTill4";
@@ -566,6 +614,7 @@
             // 
             // cboTill3
             // 
+            this.cboTill3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTill3.FormattingEnabled = true;
             this.cboTill3.Location = new System.Drawing.Point(3, 379);
             this.cboTill3.Name = "cboTill3";
@@ -574,6 +623,7 @@
             // 
             // cboFCServer
             // 
+            this.cboFCServer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFCServer.FormattingEnabled = true;
             this.cboFCServer.Location = new System.Drawing.Point(3, 352);
             this.cboFCServer.Name = "cboFCServer";
@@ -582,6 +632,7 @@
             // 
             // cboFCLead
             // 
+            this.cboFCLead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFCLead.FormattingEnabled = true;
             this.cboFCLead.Location = new System.Drawing.Point(3, 298);
             this.cboFCLead.Name = "cboFCLead";
@@ -590,6 +641,7 @@
             // 
             // cboFCBagging
             // 
+            this.cboFCBagging.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFCBagging.FormattingEnabled = true;
             this.cboFCBagging.Location = new System.Drawing.Point(3, 325);
             this.cboFCBagging.Name = "cboFCBagging";
@@ -598,6 +650,7 @@
             // 
             // cboShakes
             // 
+            this.cboShakes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboShakes.FormattingEnabled = true;
             this.cboShakes.Location = new System.Drawing.Point(3, 244);
             this.cboShakes.Name = "cboShakes";
@@ -606,6 +659,7 @@
             // 
             // cboDrinks
             // 
+            this.cboDrinks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDrinks.FormattingEnabled = true;
             this.cboDrinks.Location = new System.Drawing.Point(3, 217);
             this.cboDrinks.Name = "cboDrinks";
@@ -614,6 +668,7 @@
             // 
             // cboBagging
             // 
+            this.cboBagging.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboBagging.FormattingEnabled = true;
             this.cboBagging.Location = new System.Drawing.Point(3, 190);
             this.cboBagging.Name = "cboBagging";
@@ -622,6 +677,7 @@
             // 
             // cboWindow
             // 
+            this.cboWindow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboWindow.FormattingEnabled = true;
             this.cboWindow.Location = new System.Drawing.Point(3, 163);
             this.cboWindow.Name = "cboWindow";
@@ -630,6 +686,7 @@
             // 
             // cboExpedite
             // 
+            this.cboExpedite.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboExpedite.FormattingEnabled = true;
             this.cboExpedite.Location = new System.Drawing.Point(3, 136);
             this.cboExpedite.Name = "cboExpedite";
@@ -683,9 +740,8 @@
             // 
             // pnlSecondary
             // 
-            this.pnlSecondary.Controls.Add(this.optTrash);
-            this.pnlSecondary.Controls.Add(this.comboBox2);
-            this.pnlSecondary.Controls.Add(this.optParking);
+            this.pnlSecondary.Controls.Add(this.cboSecondary20);
+            this.pnlSecondary.Controls.Add(this.cboSecondary19);
             this.pnlSecondary.Controls.Add(this.cboSecondary18);
             this.pnlSecondary.Controls.Add(this.cboSecondary17);
             this.pnlSecondary.Controls.Add(this.cboSecondary16);
@@ -706,41 +762,30 @@
             this.pnlSecondary.Controls.Add(this.cboSecondary4);
             this.pnlSecondary.Location = new System.Drawing.Point(254, 71);
             this.pnlSecondary.Name = "pnlSecondary";
-            this.pnlSecondary.Size = new System.Drawing.Size(129, 608);
+            this.pnlSecondary.Size = new System.Drawing.Size(129, 594);
             this.pnlSecondary.TabIndex = 153;
             // 
-            // optTrash
+            // cboSecondary20
             // 
-            this.optTrash.AutoSize = true;
-            this.optTrash.Location = new System.Drawing.Point(3, 586);
-            this.optTrash.Name = "optTrash";
-            this.optTrash.Size = new System.Drawing.Size(75, 17);
-            this.optTrash.TabIndex = 170;
-            this.optTrash.TabStop = true;
-            this.optTrash.Text = "Trash Run";
-            this.optTrash.UseVisualStyleBackColor = true;
+            this.cboSecondary20.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSecondary20.FormattingEnabled = true;
+            this.cboSecondary20.Location = new System.Drawing.Point(3, 568);
+            this.cboSecondary20.Name = "cboSecondary20";
+            this.cboSecondary20.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary20.TabIndex = 163;
             // 
-            // comboBox2
+            // cboSecondary19
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 541);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 162;
-            // 
-            // optParking
-            // 
-            this.optParking.AutoSize = true;
-            this.optParking.Location = new System.Drawing.Point(3, 569);
-            this.optParking.Name = "optParking";
-            this.optParking.Size = new System.Drawing.Size(75, 17);
-            this.optParking.TabIndex = 169;
-            this.optParking.TabStop = true;
-            this.optParking.Text = "Parking lot";
-            this.optParking.UseVisualStyleBackColor = true;
+            this.cboSecondary19.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSecondary19.FormattingEnabled = true;
+            this.cboSecondary19.Location = new System.Drawing.Point(3, 541);
+            this.cboSecondary19.Name = "cboSecondary19";
+            this.cboSecondary19.Size = new System.Drawing.Size(121, 21);
+            this.cboSecondary19.TabIndex = 162;
             // 
             // cboSecondary18
             // 
+            this.cboSecondary18.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary18.FormattingEnabled = true;
             this.cboSecondary18.Location = new System.Drawing.Point(3, 487);
             this.cboSecondary18.Name = "cboSecondary18";
@@ -749,6 +794,7 @@
             // 
             // cboSecondary17
             // 
+            this.cboSecondary17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary17.FormattingEnabled = true;
             this.cboSecondary17.Location = new System.Drawing.Point(3, 460);
             this.cboSecondary17.Name = "cboSecondary17";
@@ -757,6 +803,7 @@
             // 
             // cboSecondary16
             // 
+            this.cboSecondary16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary16.FormattingEnabled = true;
             this.cboSecondary16.Location = new System.Drawing.Point(3, 433);
             this.cboSecondary16.Name = "cboSecondary16";
@@ -765,6 +812,7 @@
             // 
             // cboSecondary15
             // 
+            this.cboSecondary15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary15.FormattingEnabled = true;
             this.cboSecondary15.Location = new System.Drawing.Point(3, 406);
             this.cboSecondary15.Name = "cboSecondary15";
@@ -773,6 +821,7 @@
             // 
             // cboSecondary14
             // 
+            this.cboSecondary14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary14.FormattingEnabled = true;
             this.cboSecondary14.Location = new System.Drawing.Point(3, 379);
             this.cboSecondary14.Name = "cboSecondary14";
@@ -781,6 +830,7 @@
             // 
             // cboSecondary13
             // 
+            this.cboSecondary13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary13.FormattingEnabled = true;
             this.cboSecondary13.Location = new System.Drawing.Point(3, 352);
             this.cboSecondary13.Name = "cboSecondary13";
@@ -789,6 +839,7 @@
             // 
             // cboSecondary11
             // 
+            this.cboSecondary11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary11.FormattingEnabled = true;
             this.cboSecondary11.Location = new System.Drawing.Point(3, 298);
             this.cboSecondary11.Name = "cboSecondary11";
@@ -797,6 +848,7 @@
             // 
             // cboSecondary12
             // 
+            this.cboSecondary12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary12.FormattingEnabled = true;
             this.cboSecondary12.Location = new System.Drawing.Point(3, 325);
             this.cboSecondary12.Name = "cboSecondary12";
@@ -805,6 +857,7 @@
             // 
             // cboSecondary10
             // 
+            this.cboSecondary10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary10.FormattingEnabled = true;
             this.cboSecondary10.Location = new System.Drawing.Point(3, 244);
             this.cboSecondary10.Name = "cboSecondary10";
@@ -813,6 +866,7 @@
             // 
             // cboSecondary9
             // 
+            this.cboSecondary9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary9.FormattingEnabled = true;
             this.cboSecondary9.Location = new System.Drawing.Point(3, 217);
             this.cboSecondary9.Name = "cboSecondary9";
@@ -821,6 +875,7 @@
             // 
             // cboSecondary8
             // 
+            this.cboSecondary8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary8.FormattingEnabled = true;
             this.cboSecondary8.Location = new System.Drawing.Point(3, 190);
             this.cboSecondary8.Name = "cboSecondary8";
@@ -829,6 +884,7 @@
             // 
             // cboSecondary7
             // 
+            this.cboSecondary7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary7.FormattingEnabled = true;
             this.cboSecondary7.Location = new System.Drawing.Point(3, 163);
             this.cboSecondary7.Name = "cboSecondary7";
@@ -837,6 +893,7 @@
             // 
             // cboSecondary6
             // 
+            this.cboSecondary6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary6.FormattingEnabled = true;
             this.cboSecondary6.Location = new System.Drawing.Point(3, 136);
             this.cboSecondary6.Name = "cboSecondary6";
@@ -845,6 +902,7 @@
             // 
             // cboSecondary1
             // 
+            this.cboSecondary1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary1.FormattingEnabled = true;
             this.cboSecondary1.Location = new System.Drawing.Point(3, 3);
             this.cboSecondary1.Name = "cboSecondary1";
@@ -853,6 +911,7 @@
             // 
             // cboSecondary5
             // 
+            this.cboSecondary5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary5.FormattingEnabled = true;
             this.cboSecondary5.Location = new System.Drawing.Point(3, 109);
             this.cboSecondary5.Name = "cboSecondary5";
@@ -861,6 +920,7 @@
             // 
             // cboSecondary2
             // 
+            this.cboSecondary2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary2.FormattingEnabled = true;
             this.cboSecondary2.Location = new System.Drawing.Point(3, 28);
             this.cboSecondary2.Name = "cboSecondary2";
@@ -869,6 +929,7 @@
             // 
             // cboSecondary3
             // 
+            this.cboSecondary3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary3.FormattingEnabled = true;
             this.cboSecondary3.Location = new System.Drawing.Point(3, 55);
             this.cboSecondary3.Name = "cboSecondary3";
@@ -877,6 +938,7 @@
             // 
             // cboSecondary4
             // 
+            this.cboSecondary4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSecondary4.FormattingEnabled = true;
             this.cboSecondary4.Location = new System.Drawing.Point(3, 82);
             this.cboSecondary4.Name = "cboSecondary4";
@@ -983,442 +1045,452 @@
             this.lblUiWindowDining.TabIndex = 168;
             this.lblUiWindowDining.Text = "Window";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(454, 635);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 193;
-            this.label1.Text = "Window";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(469, 608);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 192;
-            this.label2.Text = "Wall";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(481, 554);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 13);
-            this.label3.TabIndex = 191;
-            this.label3.Text = "7:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(481, 527);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 13);
-            this.label4.TabIndex = 190;
-            this.label4.Text = "6:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(481, 500);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 13);
-            this.label5.TabIndex = 189;
-            this.label5.Text = "5:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(481, 473);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 13);
-            this.label6.TabIndex = 188;
-            this.label6.Text = "4:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(481, 446);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 13);
-            this.label7.TabIndex = 187;
-            this.label7.Text = "3:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(459, 419);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
-            this.label8.TabIndex = 186;
-            this.label8.Text = "Server";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(451, 392);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 13);
-            this.label9.TabIndex = 185;
-            this.label9.Text = "Bagging";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(420, 361);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 13);
-            this.label10.TabIndex = 184;
-            this.label10.Text = "FC Team Lead:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(398, 345);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 16);
-            this.label11.TabIndex = 183;
-            this.label11.Text = "Front Counter:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(454, 311);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 13);
-            this.label12.TabIndex = 182;
-            this.label12.Text = "Shakes";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(460, 284);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 13);
-            this.label13.TabIndex = 181;
-            this.label13.Text = "Drinks";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(451, 257);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 13);
-            this.label14.TabIndex = 180;
-            this.label14.Text = "Bagging";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(451, 230);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 13);
-            this.label15.TabIndex = 179;
-            this.label15.Text = "Window";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(449, 203);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(48, 13);
-            this.label16.TabIndex = 178;
-            this.label16.Text = "Expedite";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.comboBox5);
-            this.panel1.Controls.Add(this.comboBox6);
-            this.panel1.Controls.Add(this.comboBox7);
-            this.panel1.Controls.Add(this.comboBox8);
-            this.panel1.Controls.Add(this.comboBox9);
-            this.panel1.Controls.Add(this.comboBox10);
-            this.panel1.Controls.Add(this.comboBox11);
-            this.panel1.Controls.Add(this.comboBox12);
-            this.panel1.Controls.Add(this.comboBox13);
-            this.panel1.Controls.Add(this.comboBox14);
-            this.panel1.Controls.Add(this.comboBox15);
-            this.panel1.Controls.Add(this.comboBox16);
-            this.panel1.Controls.Add(this.comboBox17);
-            this.panel1.Controls.Add(this.comboBox18);
-            this.panel1.Controls.Add(this.comboBox19);
-            this.panel1.Controls.Add(this.comboBox20);
-            this.panel1.Controls.Add(this.comboBox21);
-            this.panel1.Controls.Add(this.comboBox22);
-            this.panel1.Controls.Add(this.comboBox23);
-            this.panel1.Location = new System.Drawing.Point(503, 64);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(129, 594);
-            this.panel1.TabIndex = 177;
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(3, 568);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 162;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(3, 541);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 21);
-            this.comboBox5.TabIndex = 161;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(3, 487);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(121, 21);
-            this.comboBox6.TabIndex = 160;
-            // 
-            // comboBox7
-            // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(3, 460);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(121, 21);
-            this.comboBox7.TabIndex = 159;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(3, 433);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(121, 21);
-            this.comboBox8.TabIndex = 158;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(3, 406);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 21);
-            this.comboBox9.TabIndex = 157;
-            // 
-            // comboBox10
-            // 
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(3, 379);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(121, 21);
-            this.comboBox10.TabIndex = 156;
-            // 
-            // comboBox11
-            // 
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(3, 352);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(121, 21);
-            this.comboBox11.TabIndex = 155;
-            // 
-            // comboBox12
-            // 
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(3, 298);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(121, 21);
-            this.comboBox12.TabIndex = 154;
-            // 
-            // comboBox13
-            // 
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(3, 325);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(121, 21);
-            this.comboBox13.TabIndex = 153;
-            // 
-            // comboBox14
-            // 
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(3, 244);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(121, 21);
-            this.comboBox14.TabIndex = 152;
-            // 
-            // comboBox15
-            // 
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(3, 217);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(121, 21);
-            this.comboBox15.TabIndex = 151;
-            // 
-            // comboBox16
-            // 
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(3, 190);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(121, 21);
-            this.comboBox16.TabIndex = 150;
-            // 
-            // comboBox17
-            // 
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(3, 163);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(121, 21);
-            this.comboBox17.TabIndex = 149;
-            // 
-            // comboBox18
-            // 
-            this.comboBox18.FormattingEnabled = true;
-            this.comboBox18.Location = new System.Drawing.Point(3, 136);
-            this.comboBox18.Name = "comboBox18";
-            this.comboBox18.Size = new System.Drawing.Size(121, 21);
-            this.comboBox18.TabIndex = 148;
-            // 
-            // comboBox19
-            // 
-            this.comboBox19.FormattingEnabled = true;
-            this.comboBox19.Location = new System.Drawing.Point(3, 3);
-            this.comboBox19.Name = "comboBox19";
-            this.comboBox19.Size = new System.Drawing.Size(121, 21);
-            this.comboBox19.TabIndex = 143;
-            // 
-            // comboBox20
-            // 
-            this.comboBox20.FormattingEnabled = true;
-            this.comboBox20.Location = new System.Drawing.Point(3, 109);
-            this.comboBox20.Name = "comboBox20";
-            this.comboBox20.Size = new System.Drawing.Size(121, 21);
-            this.comboBox20.TabIndex = 147;
-            // 
-            // comboBox21
-            // 
-            this.comboBox21.FormattingEnabled = true;
-            this.comboBox21.Location = new System.Drawing.Point(3, 28);
-            this.comboBox21.Name = "comboBox21";
-            this.comboBox21.Size = new System.Drawing.Size(121, 21);
-            this.comboBox21.TabIndex = 144;
-            // 
-            // comboBox22
-            // 
-            this.comboBox22.FormattingEnabled = true;
-            this.comboBox22.Location = new System.Drawing.Point(3, 55);
-            this.comboBox22.Name = "comboBox22";
-            this.comboBox22.Size = new System.Drawing.Size(121, 21);
-            this.comboBox22.TabIndex = 145;
-            // 
-            // comboBox23
-            // 
-            this.comboBox23.FormattingEnabled = true;
-            this.comboBox23.Location = new System.Drawing.Point(3, 82);
-            this.comboBox23.Name = "comboBox23";
-            this.comboBox23.Size = new System.Drawing.Size(121, 21);
-            this.comboBox23.TabIndex = 146;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(427, 179);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(70, 13);
-            this.label17.TabIndex = 176;
-            this.label17.Text = "Outside Cash";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(452, 152);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(45, 13);
-            this.label18.TabIndex = 175;
-            this.label18.Text = "IPOS#3";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(445, 125);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(52, 13);
-            this.label19.TabIndex = 174;
-            this.label19.Text = "IPOS/HS";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(445, 98);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(52, 13);
-            this.label20.TabIndex = 173;
-            this.label20.Text = "IPOS/HS";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(418, 73);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(82, 13);
-            this.label21.TabIndex = 172;
-            this.label21.Text = "DT Team Lead:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(418, 57);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(84, 16);
-            this.label22.TabIndex = 171;
-            this.label22.Text = "Drive Thru:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(418, 36);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 13);
-            this.label23.TabIndex = 170;
-            this.label23.Text = "Leader:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(418, 17);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(52, 16);
-            this.label24.TabIndex = 169;
-            this.label24.Text = "Lunch:";
+            // lblUiTrashRun
+            // 
+            this.lblUiTrashRun.AutoSize = true;
+            this.lblUiTrashRun.Location = new System.Drawing.Point(444, 528);
+            this.lblUiTrashRun.Name = "lblUiTrashRun";
+            this.lblUiTrashRun.Size = new System.Drawing.Size(52, 13);
+            this.lblUiTrashRun.TabIndex = 193;
+            this.lblUiTrashRun.Text = "Trash run";
+            // 
+            // lblUiStocker
+            // 
+            this.lblUiStocker.AutoSize = true;
+            this.lblUiStocker.Location = new System.Drawing.Point(452, 501);
+            this.lblUiStocker.Name = "lblUiStocker";
+            this.lblUiStocker.Size = new System.Drawing.Size(44, 13);
+            this.lblUiStocker.TabIndex = 192;
+            this.lblUiStocker.Text = "Stocker";
+            // 
+            // lblUiTill7trans
+            // 
+            this.lblUiTill7trans.AutoSize = true;
+            this.lblUiTill7trans.Location = new System.Drawing.Point(480, 474);
+            this.lblUiTill7trans.Name = "lblUiTill7trans";
+            this.lblUiTill7trans.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill7trans.TabIndex = 191;
+            this.lblUiTill7trans.Text = "7:";
+            // 
+            // lblUiTill6trans
+            // 
+            this.lblUiTill6trans.AutoSize = true;
+            this.lblUiTill6trans.Location = new System.Drawing.Point(480, 447);
+            this.lblUiTill6trans.Name = "lblUiTill6trans";
+            this.lblUiTill6trans.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill6trans.TabIndex = 190;
+            this.lblUiTill6trans.Text = "6:";
+            // 
+            // lblUiTill5trans
+            // 
+            this.lblUiTill5trans.AutoSize = true;
+            this.lblUiTill5trans.Location = new System.Drawing.Point(481, 420);
+            this.lblUiTill5trans.Name = "lblUiTill5trans";
+            this.lblUiTill5trans.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill5trans.TabIndex = 189;
+            this.lblUiTill5trans.Text = "5:";
+            // 
+            // lblUiTill4trans
+            // 
+            this.lblUiTill4trans.AutoSize = true;
+            this.lblUiTill4trans.Location = new System.Drawing.Point(480, 393);
+            this.lblUiTill4trans.Name = "lblUiTill4trans";
+            this.lblUiTill4trans.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill4trans.TabIndex = 188;
+            this.lblUiTill4trans.Text = "4:";
+            // 
+            // lblUiTill3trans
+            // 
+            this.lblUiTill3trans.AutoSize = true;
+            this.lblUiTill3trans.Location = new System.Drawing.Point(481, 366);
+            this.lblUiTill3trans.Name = "lblUiTill3trans";
+            this.lblUiTill3trans.Size = new System.Drawing.Size(16, 13);
+            this.lblUiTill3trans.TabIndex = 187;
+            this.lblUiTill3trans.Text = "3:";
+            // 
+            // lblUiServerTrans
+            // 
+            this.lblUiServerTrans.AutoSize = true;
+            this.lblUiServerTrans.Location = new System.Drawing.Point(459, 339);
+            this.lblUiServerTrans.Name = "lblUiServerTrans";
+            this.lblUiServerTrans.Size = new System.Drawing.Size(38, 13);
+            this.lblUiServerTrans.TabIndex = 186;
+            this.lblUiServerTrans.Text = "Server";
+            // 
+            // lblUiFcBaggingTrans
+            // 
+            this.lblUiFcBaggingTrans.AutoSize = true;
+            this.lblUiFcBaggingTrans.Location = new System.Drawing.Point(450, 312);
+            this.lblUiFcBaggingTrans.Name = "lblUiFcBaggingTrans";
+            this.lblUiFcBaggingTrans.Size = new System.Drawing.Size(46, 13);
+            this.lblUiFcBaggingTrans.TabIndex = 185;
+            this.lblUiFcBaggingTrans.Text = "Bagging";
+            // 
+            // lblUiFcLeadTrans
+            // 
+            this.lblUiFcLeadTrans.AutoSize = true;
+            this.lblUiFcLeadTrans.Location = new System.Drawing.Point(420, 282);
+            this.lblUiFcLeadTrans.Name = "lblUiFcLeadTrans";
+            this.lblUiFcLeadTrans.Size = new System.Drawing.Size(80, 13);
+            this.lblUiFcLeadTrans.TabIndex = 184;
+            this.lblUiFcLeadTrans.Text = "FC Team Lead:";
+            // 
+            // lblUiFrontCounterTrans
+            // 
+            this.lblUiFrontCounterTrans.AutoSize = true;
+            this.lblUiFrontCounterTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUiFrontCounterTrans.Location = new System.Drawing.Point(398, 266);
+            this.lblUiFrontCounterTrans.Name = "lblUiFrontCounterTrans";
+            this.lblUiFrontCounterTrans.Size = new System.Drawing.Size(104, 16);
+            this.lblUiFrontCounterTrans.TabIndex = 183;
+            this.lblUiFrontCounterTrans.Text = "Front Counter:";
+            // 
+            // lblUiTransShakes
+            // 
+            this.lblUiTransShakes.AutoSize = true;
+            this.lblUiTransShakes.Location = new System.Drawing.Point(454, 235);
+            this.lblUiTransShakes.Name = "lblUiTransShakes";
+            this.lblUiTransShakes.Size = new System.Drawing.Size(43, 13);
+            this.lblUiTransShakes.TabIndex = 182;
+            this.lblUiTransShakes.Text = "Shakes";
+            // 
+            // lblUiTransDrinks
+            // 
+            this.lblUiTransDrinks.AutoSize = true;
+            this.lblUiTransDrinks.Location = new System.Drawing.Point(459, 208);
+            this.lblUiTransDrinks.Name = "lblUiTransDrinks";
+            this.lblUiTransDrinks.Size = new System.Drawing.Size(37, 13);
+            this.lblUiTransDrinks.TabIndex = 181;
+            this.lblUiTransDrinks.Text = "Drinks";
+            // 
+            // lblTransBagging
+            // 
+            this.lblTransBagging.AutoSize = true;
+            this.lblTransBagging.Location = new System.Drawing.Point(451, 181);
+            this.lblTransBagging.Name = "lblTransBagging";
+            this.lblTransBagging.Size = new System.Drawing.Size(46, 13);
+            this.lblTransBagging.TabIndex = 180;
+            this.lblTransBagging.Text = "Bagging";
+            // 
+            // lblUiTransWindow
+            // 
+            this.lblUiTransWindow.AutoSize = true;
+            this.lblUiTransWindow.Location = new System.Drawing.Point(451, 154);
+            this.lblUiTransWindow.Name = "lblUiTransWindow";
+            this.lblUiTransWindow.Size = new System.Drawing.Size(46, 13);
+            this.lblUiTransWindow.TabIndex = 179;
+            this.lblUiTransWindow.Text = "Window";
+            // 
+            // pnltransnames
+            // 
+            this.pnltransnames.Controls.Add(this.cbodiningroom);
+            this.pnltransnames.Controls.Add(this.cboservice);
+            this.pnltransnames.Controls.Add(this.cbotrashrun);
+            this.pnltransnames.Controls.Add(this.cbostocker);
+            this.pnltransnames.Controls.Add(this.cbotranstill7);
+            this.pnltransnames.Controls.Add(this.cbotranstill6);
+            this.pnltransnames.Controls.Add(this.cbotranstill5);
+            this.pnltransnames.Controls.Add(this.cbotranstill4);
+            this.pnltransnames.Controls.Add(this.cbotranstill3);
+            this.pnltransnames.Controls.Add(this.cboservertrans);
+            this.pnltransnames.Controls.Add(this.cbofctranslead);
+            this.pnltransnames.Controls.Add(this.cbofcbaggingtrans);
+            this.pnltransnames.Controls.Add(this.cbotransshakes);
+            this.pnltransnames.Controls.Add(this.cbotransdrinks);
+            this.pnltransnames.Controls.Add(this.cbotransbagging);
+            this.pnltransnames.Controls.Add(this.cbotransWindow);
+            this.pnltransnames.Controls.Add(this.cboTransCash);
+            this.pnltransnames.Controls.Add(this.cboHs);
+            this.pnltransnames.Controls.Add(this.cbohs2);
+            this.pnltransnames.Location = new System.Drawing.Point(503, 71);
+            this.pnltransnames.Name = "pnltransnames";
+            this.pnltransnames.Size = new System.Drawing.Size(129, 535);
+            this.pnltransnames.TabIndex = 177;
+            // 
+            // cbodiningroom
+            // 
+            this.cbodiningroom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbodiningroom.FormattingEnabled = true;
+            this.cbodiningroom.Location = new System.Drawing.Point(3, 508);
+            this.cbodiningroom.Name = "cbodiningroom";
+            this.cbodiningroom.Size = new System.Drawing.Size(121, 21);
+            this.cbodiningroom.TabIndex = 164;
+            // 
+            // cboservice
+            // 
+            this.cboservice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboservice.FormattingEnabled = true;
+            this.cboservice.Location = new System.Drawing.Point(3, 481);
+            this.cboservice.Name = "cboservice";
+            this.cboservice.Size = new System.Drawing.Size(121, 21);
+            this.cboservice.TabIndex = 163;
+            // 
+            // cbotrashrun
+            // 
+            this.cbotrashrun.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotrashrun.FormattingEnabled = true;
+            this.cbotrashrun.Location = new System.Drawing.Point(3, 454);
+            this.cbotrashrun.Name = "cbotrashrun";
+            this.cbotrashrun.Size = new System.Drawing.Size(121, 21);
+            this.cbotrashrun.TabIndex = 162;
+            // 
+            // cbostocker
+            // 
+            this.cbostocker.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbostocker.FormattingEnabled = true;
+            this.cbostocker.Location = new System.Drawing.Point(3, 427);
+            this.cbostocker.Name = "cbostocker";
+            this.cbostocker.Size = new System.Drawing.Size(121, 21);
+            this.cbostocker.TabIndex = 161;
+            // 
+            // cbotranstill7
+            // 
+            this.cbotranstill7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotranstill7.FormattingEnabled = true;
+            this.cbotranstill7.Location = new System.Drawing.Point(3, 400);
+            this.cbotranstill7.Name = "cbotranstill7";
+            this.cbotranstill7.Size = new System.Drawing.Size(121, 21);
+            this.cbotranstill7.TabIndex = 160;
+            // 
+            // cbotranstill6
+            // 
+            this.cbotranstill6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotranstill6.FormattingEnabled = true;
+            this.cbotranstill6.Location = new System.Drawing.Point(3, 373);
+            this.cbotranstill6.Name = "cbotranstill6";
+            this.cbotranstill6.Size = new System.Drawing.Size(121, 21);
+            this.cbotranstill6.TabIndex = 159;
+            // 
+            // cbotranstill5
+            // 
+            this.cbotranstill5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotranstill5.FormattingEnabled = true;
+            this.cbotranstill5.Location = new System.Drawing.Point(3, 346);
+            this.cbotranstill5.Name = "cbotranstill5";
+            this.cbotranstill5.Size = new System.Drawing.Size(121, 21);
+            this.cbotranstill5.TabIndex = 158;
+            // 
+            // cbotranstill4
+            // 
+            this.cbotranstill4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotranstill4.FormattingEnabled = true;
+            this.cbotranstill4.Location = new System.Drawing.Point(3, 319);
+            this.cbotranstill4.Name = "cbotranstill4";
+            this.cbotranstill4.Size = new System.Drawing.Size(121, 21);
+            this.cbotranstill4.TabIndex = 157;
+            // 
+            // cbotranstill3
+            // 
+            this.cbotranstill3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotranstill3.FormattingEnabled = true;
+            this.cbotranstill3.Location = new System.Drawing.Point(3, 292);
+            this.cbotranstill3.Name = "cbotranstill3";
+            this.cbotranstill3.Size = new System.Drawing.Size(121, 21);
+            this.cbotranstill3.TabIndex = 156;
+            // 
+            // cboservertrans
+            // 
+            this.cboservertrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboservertrans.FormattingEnabled = true;
+            this.cboservertrans.Location = new System.Drawing.Point(3, 265);
+            this.cboservertrans.Name = "cboservertrans";
+            this.cboservertrans.Size = new System.Drawing.Size(121, 21);
+            this.cboservertrans.TabIndex = 155;
+            // 
+            // cbofctranslead
+            // 
+            this.cbofctranslead.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbofctranslead.FormattingEnabled = true;
+            this.cbofctranslead.Location = new System.Drawing.Point(3, 211);
+            this.cbofctranslead.Name = "cbofctranslead";
+            this.cbofctranslead.Size = new System.Drawing.Size(121, 21);
+            this.cbofctranslead.TabIndex = 154;
+            // 
+            // cbofcbaggingtrans
+            // 
+            this.cbofcbaggingtrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbofcbaggingtrans.FormattingEnabled = true;
+            this.cbofcbaggingtrans.Location = new System.Drawing.Point(3, 238);
+            this.cbofcbaggingtrans.Name = "cbofcbaggingtrans";
+            this.cbofcbaggingtrans.Size = new System.Drawing.Size(121, 21);
+            this.cbofcbaggingtrans.TabIndex = 153;
+            // 
+            // cbotransshakes
+            // 
+            this.cbotransshakes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotransshakes.FormattingEnabled = true;
+            this.cbotransshakes.Location = new System.Drawing.Point(3, 161);
+            this.cbotransshakes.Name = "cbotransshakes";
+            this.cbotransshakes.Size = new System.Drawing.Size(121, 21);
+            this.cbotransshakes.TabIndex = 152;
+            // 
+            // cbotransdrinks
+            // 
+            this.cbotransdrinks.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotransdrinks.FormattingEnabled = true;
+            this.cbotransdrinks.Location = new System.Drawing.Point(3, 134);
+            this.cbotransdrinks.Name = "cbotransdrinks";
+            this.cbotransdrinks.Size = new System.Drawing.Size(121, 21);
+            this.cbotransdrinks.TabIndex = 151;
+            // 
+            // cbotransbagging
+            // 
+            this.cbotransbagging.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotransbagging.FormattingEnabled = true;
+            this.cbotransbagging.Location = new System.Drawing.Point(3, 107);
+            this.cbotransbagging.Name = "cbotransbagging";
+            this.cbotransbagging.Size = new System.Drawing.Size(121, 21);
+            this.cbotransbagging.TabIndex = 150;
+            // 
+            // cbotransWindow
+            // 
+            this.cbotransWindow.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotransWindow.FormattingEnabled = true;
+            this.cbotransWindow.Location = new System.Drawing.Point(3, 80);
+            this.cbotransWindow.Name = "cbotransWindow";
+            this.cbotransWindow.Size = new System.Drawing.Size(121, 21);
+            this.cbotransWindow.TabIndex = 149;
+            // 
+            // cboTransCash
+            // 
+            this.cboTransCash.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTransCash.FormattingEnabled = true;
+            this.cboTransCash.Location = new System.Drawing.Point(3, 55);
+            this.cboTransCash.Name = "cboTransCash";
+            this.cboTransCash.Size = new System.Drawing.Size(121, 21);
+            this.cboTransCash.TabIndex = 147;
+            // 
+            // cboHs
+            // 
+            this.cboHs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboHs.FormattingEnabled = true;
+            this.cboHs.Location = new System.Drawing.Point(3, 3);
+            this.cboHs.Name = "cboHs";
+            this.cboHs.Size = new System.Drawing.Size(121, 21);
+            this.cboHs.TabIndex = 144;
+            // 
+            // cbohs2
+            // 
+            this.cbohs2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbohs2.FormattingEnabled = true;
+            this.cbohs2.Location = new System.Drawing.Point(3, 30);
+            this.cbohs2.Name = "cbohs2";
+            this.cbohs2.Size = new System.Drawing.Size(121, 21);
+            this.cbohs2.TabIndex = 145;
+            // 
+            // lblUiTransCash
+            // 
+            this.lblUiTransCash.AutoSize = true;
+            this.lblUiTransCash.Location = new System.Drawing.Point(427, 129);
+            this.lblUiTransCash.Name = "lblUiTransCash";
+            this.lblUiTransCash.Size = new System.Drawing.Size(70, 13);
+            this.lblUiTransCash.TabIndex = 176;
+            this.lblUiTransCash.Text = "Outside Cash";
+            // 
+            // lblHs2
+            // 
+            this.lblHs2.AutoSize = true;
+            this.lblHs2.Location = new System.Drawing.Point(475, 104);
+            this.lblHs2.Name = "lblHs2";
+            this.lblHs2.Size = new System.Drawing.Size(22, 13);
+            this.lblHs2.TabIndex = 174;
+            this.lblHs2.Text = "HS";
+            // 
+            // lblHs1
+            // 
+            this.lblHs1.AutoSize = true;
+            this.lblHs1.Location = new System.Drawing.Point(475, 77);
+            this.lblHs1.Name = "lblHs1";
+            this.lblHs1.Size = new System.Drawing.Size(22, 13);
+            this.lblHs1.TabIndex = 173;
+            this.lblHs1.Text = "HS";
+            // 
+            // lblTransitionDT
+            // 
+            this.lblTransitionDT.AutoSize = true;
+            this.lblTransitionDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransitionDT.Location = new System.Drawing.Point(418, 59);
+            this.lblTransitionDT.Name = "lblTransitionDT";
+            this.lblTransitionDT.Size = new System.Drawing.Size(84, 16);
+            this.lblTransitionDT.TabIndex = 171;
+            this.lblTransitionDT.Text = "Drive Thru:";
+            // 
+            // lblLeaderTrans
+            // 
+            this.lblLeaderTrans.AutoSize = true;
+            this.lblLeaderTrans.Location = new System.Drawing.Point(418, 43);
+            this.lblLeaderTrans.Name = "lblLeaderTrans";
+            this.lblLeaderTrans.Size = new System.Drawing.Size(43, 13);
+            this.lblLeaderTrans.TabIndex = 170;
+            this.lblLeaderTrans.Text = "Leader:";
+            // 
+            // lblUiTransition
+            // 
+            this.lblUiTransition.AutoSize = true;
+            this.lblUiTransition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUiTransition.Location = new System.Drawing.Point(418, 24);
+            this.lblUiTransition.Name = "lblUiTransition";
+            this.lblUiTransition.Size = new System.Drawing.Size(81, 16);
+            this.lblUiTransition.TabIndex = 169;
+            this.lblUiTransition.Text = "Transition:";
+            // 
+            // lblUiServiceLead
+            // 
+            this.lblUiServiceLead.AutoSize = true;
+            this.lblUiServiceLead.Location = new System.Drawing.Point(397, 555);
+            this.lblUiServiceLead.Name = "lblUiServiceLead";
+            this.lblUiServiceLead.Size = new System.Drawing.Size(100, 13);
+            this.lblUiServiceLead.TabIndex = 194;
+            this.lblUiServiceLead.Text = "Service Team Lead";
+            // 
+            // lblUiDiningRoom
+            // 
+            this.lblUiDiningRoom.AutoSize = true;
+            this.lblUiDiningRoom.Location = new System.Drawing.Point(429, 582);
+            this.lblUiDiningRoom.Name = "lblUiDiningRoom";
+            this.lblUiDiningRoom.Size = new System.Drawing.Size(68, 13);
+            this.lblUiDiningRoom.TabIndex = 195;
+            this.lblUiDiningRoom.Text = "Dining Room";
+            // 
+            // cbotransleader
+            // 
+            this.cbotransleader.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbotransleader.FormattingEnabled = true;
+            this.cbotransleader.Location = new System.Drawing.Point(462, 40);
+            this.cbotransleader.Name = "cbotransleader";
+            this.cbotransleader.Size = new System.Drawing.Size(121, 21);
+            this.cbotransleader.TabIndex = 196;
             // 
             // MainUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 686);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label24);
+            this.ClientSize = new System.Drawing.Size(1189, 692);
+            this.Controls.Add(this.cbotransleader);
+            this.Controls.Add(this.lblUiDiningRoom);
+            this.Controls.Add(this.lblUiServiceLead);
+            this.Controls.Add(this.lblUiTrashRun);
+            this.Controls.Add(this.lblUiStocker);
+            this.Controls.Add(this.lblUiTill7trans);
+            this.Controls.Add(this.lblUiTill6trans);
+            this.Controls.Add(this.lblUiTill5trans);
+            this.Controls.Add(this.lblUiTill4trans);
+            this.Controls.Add(this.lblUiTill3trans);
+            this.Controls.Add(this.lblUiServerTrans);
+            this.Controls.Add(this.lblUiFcBaggingTrans);
+            this.Controls.Add(this.lblUiFcLeadTrans);
+            this.Controls.Add(this.lblUiFrontCounterTrans);
+            this.Controls.Add(this.lblUiTransShakes);
+            this.Controls.Add(this.lblUiTransDrinks);
+            this.Controls.Add(this.lblTransBagging);
+            this.Controls.Add(this.lblUiTransWindow);
+            this.Controls.Add(this.pnltransnames);
+            this.Controls.Add(this.lblUiTransCash);
+            this.Controls.Add(this.lblHs2);
+            this.Controls.Add(this.lblHs1);
+            this.Controls.Add(this.lblTransitionDT);
+            this.Controls.Add(this.lblLeaderTrans);
+            this.Controls.Add(this.lblUiTransition);
             this.Controls.Add(this.lblUiWindowDining);
             this.Controls.Add(this.lbUiWall);
             this.Controls.Add(this.lblUiTill7);
@@ -1465,8 +1537,7 @@
             this.mnuControls.PerformLayout();
             this.pnlNames.ResumeLayout(false);
             this.pnlSecondary.ResumeLayout(false);
-            this.pnlSecondary.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.pnltransnames.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1555,58 +1626,60 @@
         private System.Windows.Forms.Label lblUiTill7;
         private System.Windows.Forms.FlowLayoutPanel lyPLunch;
         private System.Windows.Forms.FlowLayoutPanel lyPTrans;
-        public System.Windows.Forms.ComboBox comboBox1;
-        public System.Windows.Forms.ComboBox comboBox3;
-        public System.Windows.Forms.ComboBox comboBox2;
+        public System.Windows.Forms.ComboBox cboDiningWindow;
+        public System.Windows.Forms.ComboBox cboWall;
+        public System.Windows.Forms.ComboBox cboSecondary19;
         private System.Windows.Forms.Label lbUiWall;
         private System.Windows.Forms.Label lblUiWindowDining;
-        private System.Windows.Forms.RadioButton optParking;
-        private System.Windows.Forms.RadioButton optTrash;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.ComboBox comboBox4;
-        public System.Windows.Forms.ComboBox comboBox5;
-        public System.Windows.Forms.ComboBox comboBox6;
-        public System.Windows.Forms.ComboBox comboBox7;
-        public System.Windows.Forms.ComboBox comboBox8;
-        public System.Windows.Forms.ComboBox comboBox9;
-        public System.Windows.Forms.ComboBox comboBox10;
-        public System.Windows.Forms.ComboBox comboBox11;
-        public System.Windows.Forms.ComboBox comboBox12;
-        public System.Windows.Forms.ComboBox comboBox13;
-        public System.Windows.Forms.ComboBox comboBox14;
-        public System.Windows.Forms.ComboBox comboBox15;
-        public System.Windows.Forms.ComboBox comboBox16;
-        public System.Windows.Forms.ComboBox comboBox17;
-        public System.Windows.Forms.ComboBox comboBox18;
-        public System.Windows.Forms.ComboBox comboBox19;
-        public System.Windows.Forms.ComboBox comboBox20;
-        public System.Windows.Forms.ComboBox comboBox21;
-        public System.Windows.Forms.ComboBox comboBox22;
-        public System.Windows.Forms.ComboBox comboBox23;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblUiTrashRun;
+        private System.Windows.Forms.Label lblUiStocker;
+        private System.Windows.Forms.Label lblUiTill7trans;
+        private System.Windows.Forms.Label lblUiTill6trans;
+        private System.Windows.Forms.Label lblUiTill5trans;
+        private System.Windows.Forms.Label lblUiTill4trans;
+        private System.Windows.Forms.Label lblUiTill3trans;
+        private System.Windows.Forms.Label lblUiServerTrans;
+        private System.Windows.Forms.Label lblUiFcBaggingTrans;
+        private System.Windows.Forms.Label lblUiFcLeadTrans;
+        private System.Windows.Forms.Label lblUiFrontCounterTrans;
+        private System.Windows.Forms.Label lblUiTransShakes;
+        private System.Windows.Forms.Label lblUiTransDrinks;
+        private System.Windows.Forms.Label lblTransBagging;
+        private System.Windows.Forms.Label lblUiTransWindow;
+        private System.Windows.Forms.Panel pnltransnames;
+        public System.Windows.Forms.ComboBox cbotrashrun;
+        public System.Windows.Forms.ComboBox cbostocker;
+        public System.Windows.Forms.ComboBox cbotranstill7;
+        public System.Windows.Forms.ComboBox cbotranstill6;
+        public System.Windows.Forms.ComboBox cbotranstill5;
+        public System.Windows.Forms.ComboBox cbotranstill4;
+        public System.Windows.Forms.ComboBox cbotranstill3;
+        public System.Windows.Forms.ComboBox cboservertrans;
+        public System.Windows.Forms.ComboBox cbofctranslead;
+        public System.Windows.Forms.ComboBox cbofcbaggingtrans;
+        public System.Windows.Forms.ComboBox cbotransshakes;
+        public System.Windows.Forms.ComboBox cbotransdrinks;
+        public System.Windows.Forms.ComboBox cbotransbagging;
+        public System.Windows.Forms.ComboBox cbotransWindow;
+        public System.Windows.Forms.ComboBox cboTransCash;
+        public System.Windows.Forms.ComboBox cboHs;
+        public System.Windows.Forms.ComboBox cbohs2;
+        private System.Windows.Forms.Label lblUiTransCash;
+        private System.Windows.Forms.Label lblHs2;
+        private System.Windows.Forms.Label lblHs1;
+        private System.Windows.Forms.Label lblTransitionDT;
+        private System.Windows.Forms.Label lblLeaderTrans;
+        private System.Windows.Forms.Label lblUiTransition;
+        public System.Windows.Forms.ComboBox cbodiningroom;
+        public System.Windows.Forms.ComboBox cboservice;
+        public System.Windows.Forms.ComboBox cboSecondary20;
+        private System.Windows.Forms.ToolStripMenuItem importEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem layoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportEmployeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveLayoutToolStripMenuItem;
+        private System.Windows.Forms.Label lblUiServiceLead;
+        private System.Windows.Forms.Label lblUiDiningRoom;
+        private System.Windows.Forms.ComboBox cbotransleader;
     }
 }
 

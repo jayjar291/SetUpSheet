@@ -48,37 +48,16 @@ namespace SetUpSheet.UI
         /*Refresh Data Sources*/
         private void refresh()
         {
-            cboLeader.DataSource = null;
-            cboLeader.DataSource = null;
+            cbotransleader.DataSource = roster.Employees.ToList();
             cboLeader.DataSource = roster.Employees.ToList();
             foreach (ComboBox item in pnlNames.Controls.OfType<ComboBox>())
             {
                 item.DataSource = roster.Employees.ToList();
             }
-
-        }
-        /*load Functions*/
-        private void munOpen_Click(object sender, EventArgs e)
-        {
-            try
+            foreach (ComboBox item in pnltransnames.Controls.OfType<ComboBox>())
             {
-                roster.LoadFile(ServiceLocator.GetEmployeePersistence("Production"));
-                Load load = new Load(roster);
-                var result = load.ShowDialog();
-                if (result == DialogResult.Cancel)
-                {
-                    roster.Employees.Clear();
-                }
-                foreach (var item in roster.Employees)
-                {
-                    PlaceControls(item);
-                }
+                item.DataSource = roster.Employees.ToList();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            refresh();
         }
         /*add Functions*/
         private void mnuAdd_Click(object sender, EventArgs e)
@@ -102,15 +81,53 @@ namespace SetUpSheet.UI
             {
                 item.EditMode(true);
             }
-            foreach (RosterControl item in pnlTransition.Controls.OfType<RosterControl>())
+            foreach (RosterControl item in lyPTrans.Controls.OfType<RosterControl>())
             {
                 item.EditMode(true);
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void importEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                roster.LoadFile(ServiceLocator.GetEmployeePersistence("Production"));
+                Load load = new Load(roster);
+                var result = load.ShowDialog();
+                if (result == DialogResult.Cancel)
+                {
+                    roster.Employees.Clear();
+                }
+                foreach (var item in roster.Employees)
+                {
+                    PlaceControls(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             refresh();
+        }
+
+        private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("this will be added later :)");
+        }
+
+        private void exportEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("this will be added later :)");
+        }
+
+        private void saveLayoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("this will be added soon :)");
+        }
+
+        private void mnuRun_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("this will be added later :)");
         }
     }
 }
