@@ -7,7 +7,7 @@ using System.IO;
 using SetUpSheet.Core;
 using System.Windows.Forms;
 
-
+//data functions
 namespace SetUpSheet.DataFunctions
 { 
     public class FileService : ILoadable,ISaveable
@@ -43,7 +43,9 @@ namespace SetUpSheet.DataFunctions
             foreach (var item in employees)
             {
                 streamWriter.WriteLine(item.ToFile());
+                streamWriter.Flush();
             }
+            output.Close();
         }
         //save Layout
         public void SaveLayout(List<ComboBox> controls, List<Employee> employees)
