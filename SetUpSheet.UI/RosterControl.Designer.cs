@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.BreakTime = new System.Windows.Forms.DateTimePicker();
             this.Clockout = new System.Windows.Forms.DateTimePicker();
             this.Clockin = new System.Windows.Forms.DateTimePicker();
             this.txtbreakType = new System.Windows.Forms.TextBox();
             this.ckbIsMinor = new System.Windows.Forms.CheckBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // BreakTime
@@ -114,7 +111,6 @@
             this.Controls.Add(this.txtName);
             this.Name = "RosterControl";
             this.Size = new System.Drawing.Size(494, 27);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +124,5 @@
         private System.Windows.Forms.TextBox txtbreakType;
         private System.Windows.Forms.CheckBox ckbIsMinor;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.BindingSource bindingSource;
     }
 }
