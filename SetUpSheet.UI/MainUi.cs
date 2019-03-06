@@ -79,13 +79,29 @@ namespace SetUpSheet.UI
         //edit mode
         private void mnuEdit_Click(object sender, EventArgs e)
         {
-            foreach (RosterControl item in lyPLunch.Controls.OfType<RosterControl>())
+            if (mnuEdit.Checked)
             {
-                item.EditMode(true);
+                foreach (RosterControl item in lyPLunch.Controls.OfType<RosterControl>())
+                {
+                    item.EditMode(true);
+                }
+                foreach (RosterControl item in lyPTrans.Controls.OfType<RosterControl>())
+                {
+                    item.EditMode(true);
+                }
+                mnuEdit.Text = "Save Edits";
             }
-            foreach (RosterControl item in lyPTrans.Controls.OfType<RosterControl>())
+            else
             {
-                item.EditMode(true);
+                foreach (RosterControl item in lyPLunch.Controls.OfType<RosterControl>())
+                {
+                    item.EditMode(false);
+                }
+                foreach (RosterControl item in lyPTrans.Controls.OfType<RosterControl>())
+                {
+                    item.EditMode(false);
+                }
+                refresh();
             }
         }
         //load employees

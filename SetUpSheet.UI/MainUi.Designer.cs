@@ -323,7 +323,7 @@
             this.importEmployeesToolStripMenuItem,
             this.layoutToolStripMenuItem});
             this.munOpen.Name = "munOpen";
-            this.munOpen.Size = new System.Drawing.Size(180, 22);
+            this.munOpen.Size = new System.Drawing.Size(103, 22);
             this.munOpen.Text = "Open";
             // 
             // importEmployeesToolStripMenuItem
@@ -346,27 +346,27 @@
             this.exportEmployeesToolStripMenuItem,
             this.saveLayoutToolStripMenuItem});
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(180, 22);
+            this.mnuSave.Size = new System.Drawing.Size(103, 22);
             this.mnuSave.Text = "Save";
             // 
             // exportEmployeesToolStripMenuItem
             // 
             this.exportEmployeesToolStripMenuItem.Name = "exportEmployeesToolStripMenuItem";
-            this.exportEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportEmployeesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.exportEmployeesToolStripMenuItem.Text = "Export Employees";
             this.exportEmployeesToolStripMenuItem.Click += new System.EventHandler(this.exportEmployeesToolStripMenuItem_Click);
             // 
             // saveLayoutToolStripMenuItem
             // 
             this.saveLayoutToolStripMenuItem.Name = "saveLayoutToolStripMenuItem";
-            this.saveLayoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveLayoutToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.saveLayoutToolStripMenuItem.Text = "Save Layout";
             this.saveLayoutToolStripMenuItem.Click += new System.EventHandler(this.saveLayoutToolStripMenuItem_Click);
             // 
             // mnuRun
             // 
             this.mnuRun.Name = "mnuRun";
-            this.mnuRun.Size = new System.Drawing.Size(180, 22);
+            this.mnuRun.Size = new System.Drawing.Size(103, 22);
             this.mnuRun.Text = "Run";
             this.mnuRun.Click += new System.EventHandler(this.mnuRun_Click);
             // 
@@ -382,14 +382,15 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(96, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
             // 
             // mnuEdit
             // 
+            this.mnuEdit.CheckOnClick = true;
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(96, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
             this.mnuEdit.Text = "Edit";
             this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
@@ -408,7 +409,7 @@
             this.lblUiLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiLunch.Location = new System.Drawing.Point(30, 24);
             this.lblUiLunch.Name = "lblUiLunch";
-            this.lblUiLunch.Size = new System.Drawing.Size(52, 16);
+            this.lblUiLunch.Size = new System.Drawing.Size(54, 16);
             this.lblUiLunch.TabIndex = 138;
             this.lblUiLunch.Text = "Lunch:";
             // 
@@ -427,7 +428,7 @@
             this.lblUiSecondaryDuties.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiSecondaryDuties.Location = new System.Drawing.Point(251, 24);
             this.lblUiSecondaryDuties.Name = "lblUiSecondaryDuties";
-            this.lblUiSecondaryDuties.Size = new System.Drawing.Size(135, 16);
+            this.lblUiSecondaryDuties.Size = new System.Drawing.Size(139, 16);
             this.lblUiSecondaryDuties.TabIndex = 140;
             this.lblUiSecondaryDuties.Text = "Secondary Duties:";
             // 
@@ -437,7 +438,7 @@
             this.lblUiDriveThru.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiDriveThru.Location = new System.Drawing.Point(30, 64);
             this.lblUiDriveThru.Name = "lblUiDriveThru";
-            this.lblUiDriveThru.Size = new System.Drawing.Size(84, 16);
+            this.lblUiDriveThru.Size = new System.Drawing.Size(87, 16);
             this.lblUiDriveThru.TabIndex = 141;
             this.lblUiDriveThru.Text = "Drive Thru:";
             // 
@@ -960,7 +961,7 @@
             this.lblUiFrontCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiFrontCounter.Location = new System.Drawing.Point(10, 352);
             this.lblUiFrontCounter.Name = "lblUiFrontCounter";
-            this.lblUiFrontCounter.Size = new System.Drawing.Size(104, 16);
+            this.lblUiFrontCounter.Size = new System.Drawing.Size(109, 16);
             this.lblUiFrontCounter.TabIndex = 158;
             this.lblUiFrontCounter.Text = "Front Counter:";
             // 
@@ -1141,7 +1142,7 @@
             this.lblUiFrontCounterTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiFrontCounterTrans.Location = new System.Drawing.Point(398, 266);
             this.lblUiFrontCounterTrans.Name = "lblUiFrontCounterTrans";
-            this.lblUiFrontCounterTrans.Size = new System.Drawing.Size(104, 16);
+            this.lblUiFrontCounterTrans.Size = new System.Drawing.Size(109, 16);
             this.lblUiFrontCounterTrans.TabIndex = 183;
             this.lblUiFrontCounterTrans.Text = "Front Counter:";
             // 
@@ -1411,7 +1412,7 @@
             this.lblTransitionDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransitionDT.Location = new System.Drawing.Point(418, 59);
             this.lblTransitionDT.Name = "lblTransitionDT";
-            this.lblTransitionDT.Size = new System.Drawing.Size(84, 16);
+            this.lblTransitionDT.Size = new System.Drawing.Size(87, 16);
             this.lblTransitionDT.TabIndex = 171;
             this.lblTransitionDT.Text = "Drive Thru:";
             // 
@@ -1430,7 +1431,7 @@
             this.lblUiTransition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiTransition.Location = new System.Drawing.Point(418, 24);
             this.lblUiTransition.Name = "lblUiTransition";
-            this.lblUiTransition.Size = new System.Drawing.Size(81, 16);
+            this.lblUiTransition.Size = new System.Drawing.Size(82, 16);
             this.lblUiTransition.TabIndex = 169;
             this.lblUiTransition.Text = "Transition:";
             // 

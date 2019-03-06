@@ -23,6 +23,7 @@ namespace SetUpSheet.UI
             {
                 RosterControl temp = new RosterControl(item);
                 temp.Location = new Point(12,y);
+                temp.EditMode(true);
                 Controls.Add(temp);
                 y += 33;
             }

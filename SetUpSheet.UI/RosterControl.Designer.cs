@@ -45,6 +45,7 @@
             this.BreakTime.Name = "BreakTime";
             this.BreakTime.Size = new System.Drawing.Size(75, 20);
             this.BreakTime.TabIndex = 118;
+            this.BreakTime.ValueChanged += new System.EventHandler(this.BreakTime_ValueChanged);
             // 
             // Clockout
             // 
@@ -55,9 +56,11 @@
             this.Clockout.Name = "Clockout";
             this.Clockout.Size = new System.Drawing.Size(75, 20);
             this.Clockout.TabIndex = 117;
+            this.Clockout.ValueChanged += new System.EventHandler(this.Clockout_ValueChanged);
             // 
             // Clockin
             // 
+            this.Clockin.CalendarForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Clockin.CustomFormat = "hh:mm tt";
             this.Clockin.Enabled = false;
             this.Clockin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -65,6 +68,7 @@
             this.Clockin.Name = "Clockin";
             this.Clockin.Size = new System.Drawing.Size(75, 20);
             this.Clockin.TabIndex = 116;
+            this.Clockin.ValueChanged += new System.EventHandler(this.Clockin_ValueChanged);
             // 
             // txtbreakType
             // 
@@ -84,6 +88,7 @@
             this.ckbIsMinor.TabIndex = 114;
             this.ckbIsMinor.Text = "Is minor";
             this.ckbIsMinor.UseVisualStyleBackColor = true;
+            this.ckbIsMinor.CheckedChanged += new System.EventHandler(this.ckbIsMinor_CheckedChanged);
             // 
             // txtName
             // 
@@ -92,6 +97,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(104, 20);
             this.txtName.TabIndex = 113;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // RosterControl
             // 

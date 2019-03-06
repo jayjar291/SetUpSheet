@@ -13,8 +13,10 @@ namespace SetUpSheet.UI
 {
     public partial class RosterControl : UserControl
     {
+        private Employee Employee;
         public RosterControl(Employee employee)
         {
+            Employee = employee;
             InitializeComponent();
             txtName.Text = employee.FName;
             ckbIsMinor.Checked = employee.IsMinor;
@@ -25,6 +27,7 @@ namespace SetUpSheet.UI
                 case -1:
                     {
                         txtbreakType.Text = "No Break";
+                        BreakTime.Value = new DateTime(1999,12,31,0,0,0);
                     }
                     break;
                 case 0:
@@ -72,6 +75,32 @@ namespace SetUpSheet.UI
                     item.Enabled = false;
                 }
             }
+        }
+
+        private void BreakTime_ValueChanged(object sender, EventArgs e)
+        {
+            Employee.BrakeStartTime = BreakTime.Value;
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            Employee.FName = txtName.Text;
+        }
+
+        private void ckbIsMinor_CheckedChanged(object sender, EventArgs e)
+        {
+            Employee.IsMinor = ckbIsMinor.Checked;
+            BreakTime breakTime = new BreakTime(Employee);
+        }
+
+        private void Clockin_ValueChanged(object sender, EventArgs e)
+        {
+            Employee.ClockInTime = Clockin.Value;
+        }
+
+        private void Clockout_ValueChanged(object sender, EventArgs e)
+        {
+            Employee.ClockOutTime = Clockout.Value;
         }
     }
 }
