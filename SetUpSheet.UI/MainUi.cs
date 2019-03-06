@@ -202,7 +202,7 @@ namespace SetUpSheet.UI
         {
             Console.WriteLine("this will be added later :)");
         }
-
+        //set tool tips
         private void SetNotes(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)

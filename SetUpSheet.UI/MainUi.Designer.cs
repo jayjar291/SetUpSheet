@@ -195,7 +195,7 @@
             this.pnlLunch.Controls.Add(this.lblNameL);
             this.pnlLunch.Location = new System.Drawing.Point(638, 59);
             this.pnlLunch.Name = "pnlLunch";
-            this.pnlLunch.Size = new System.Drawing.Size(544, 293);
+            this.pnlLunch.Size = new System.Drawing.Size(585, 293);
             this.pnlLunch.TabIndex = 129;
             // 
             // lyPLunch
@@ -204,7 +204,7 @@
             this.lyPLunch.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.lyPLunch.Location = new System.Drawing.Point(3, 21);
             this.lyPLunch.Name = "lyPLunch";
-            this.lyPLunch.Size = new System.Drawing.Size(515, 267);
+            this.lyPLunch.Size = new System.Drawing.Size(577, 267);
             this.lyPLunch.TabIndex = 4;
             // 
             // lblBreakL
@@ -247,7 +247,7 @@
             this.pnlTransition.Controls.Add(this.lblNameT);
             this.pnlTransition.Location = new System.Drawing.Point(638, 389);
             this.pnlTransition.Name = "pnlTransition";
-            this.pnlTransition.Size = new System.Drawing.Size(544, 293);
+            this.pnlTransition.Size = new System.Drawing.Size(585, 293);
             this.pnlTransition.TabIndex = 130;
             // 
             // lyPTrans
@@ -256,7 +256,7 @@
             this.lyPTrans.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.lyPTrans.Location = new System.Drawing.Point(3, 21);
             this.lyPTrans.Name = "lyPTrans";
-            this.lyPTrans.Size = new System.Drawing.Size(515, 267);
+            this.lyPTrans.Size = new System.Drawing.Size(577, 267);
             this.lyPTrans.TabIndex = 7;
             // 
             // lblBreakT
@@ -306,7 +306,7 @@
             this.mnuTools});
             this.mnuControls.Location = new System.Drawing.Point(0, 0);
             this.mnuControls.Name = "mnuControls";
-            this.mnuControls.Size = new System.Drawing.Size(1189, 24);
+            this.mnuControls.Size = new System.Drawing.Size(1232, 24);
             this.mnuControls.TabIndex = 136;
             // 
             // mnuFile
@@ -1509,7 +1509,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 692);
+            this.ClientSize = new System.Drawing.Size(1232, 692);
             this.Controls.Add(this.cbotransleader);
             this.Controls.Add(this.lblUiDiningRoom);
             this.Controls.Add(this.lblUiServiceLead);
