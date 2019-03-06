@@ -323,7 +323,7 @@
             this.importEmployeesToolStripMenuItem,
             this.layoutToolStripMenuItem});
             this.munOpen.Name = "munOpen";
-            this.munOpen.Size = new System.Drawing.Size(180, 22);
+            this.munOpen.Size = new System.Drawing.Size(103, 22);
             this.munOpen.Text = "Open";
             // 
             // importEmployeesToolStripMenuItem
@@ -346,27 +346,27 @@
             this.exportEmployeesToolStripMenuItem,
             this.saveLayoutToolStripMenuItem});
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(180, 22);
+            this.mnuSave.Size = new System.Drawing.Size(103, 22);
             this.mnuSave.Text = "Save";
             // 
             // exportEmployeesToolStripMenuItem
             // 
             this.exportEmployeesToolStripMenuItem.Name = "exportEmployeesToolStripMenuItem";
-            this.exportEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exportEmployeesToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.exportEmployeesToolStripMenuItem.Text = "Export Employees";
             this.exportEmployeesToolStripMenuItem.Click += new System.EventHandler(this.exportEmployeesToolStripMenuItem_Click);
             // 
             // saveLayoutToolStripMenuItem
             // 
             this.saveLayoutToolStripMenuItem.Name = "saveLayoutToolStripMenuItem";
-            this.saveLayoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveLayoutToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.saveLayoutToolStripMenuItem.Text = "Save Layout";
             this.saveLayoutToolStripMenuItem.Click += new System.EventHandler(this.saveLayoutToolStripMenuItem_Click);
             // 
             // mnuRun
             // 
             this.mnuRun.Name = "mnuRun";
-            this.mnuRun.Size = new System.Drawing.Size(180, 22);
+            this.mnuRun.Size = new System.Drawing.Size(103, 22);
             this.mnuRun.Text = "Run";
             this.mnuRun.Click += new System.EventHandler(this.mnuRun_Click);
             // 
