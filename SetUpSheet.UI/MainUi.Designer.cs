@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainUi));
             this.lblLunch = new System.Windows.Forms.Label();
             this.pnlLunch = new System.Windows.Forms.Panel();
@@ -165,6 +166,7 @@
             this.lblUiServiceLead = new System.Windows.Forms.Label();
             this.lblUiDiningRoom = new System.Windows.Forms.Label();
             this.cbotransleader = new System.Windows.Forms.ComboBox();
+            this.tooltipservice = new System.Windows.Forms.ToolTip(this.components);
             this.pnlLunch.SuspendLayout();
             this.pnlTransition.SuspendLayout();
             this.mnuControls.SuspendLayout();
@@ -382,7 +384,7 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(96, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
             // 
@@ -390,7 +392,7 @@
             // 
             this.mnuEdit.CheckOnClick = true;
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(96, 22);
             this.mnuEdit.Text = "Edit";
             this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
@@ -402,6 +404,7 @@
             this.cboLeader.Name = "cboLeader";
             this.cboLeader.Size = new System.Drawing.Size(121, 21);
             this.cboLeader.TabIndex = 137;
+            this.cboLeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // lblUiLunch
             // 
@@ -409,7 +412,7 @@
             this.lblUiLunch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiLunch.Location = new System.Drawing.Point(30, 24);
             this.lblUiLunch.Name = "lblUiLunch";
-            this.lblUiLunch.Size = new System.Drawing.Size(54, 16);
+            this.lblUiLunch.Size = new System.Drawing.Size(52, 16);
             this.lblUiLunch.TabIndex = 138;
             this.lblUiLunch.Text = "Lunch:";
             // 
@@ -428,7 +431,7 @@
             this.lblUiSecondaryDuties.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiSecondaryDuties.Location = new System.Drawing.Point(251, 24);
             this.lblUiSecondaryDuties.Name = "lblUiSecondaryDuties";
-            this.lblUiSecondaryDuties.Size = new System.Drawing.Size(139, 16);
+            this.lblUiSecondaryDuties.Size = new System.Drawing.Size(135, 16);
             this.lblUiSecondaryDuties.TabIndex = 140;
             this.lblUiSecondaryDuties.Text = "Secondary Duties:";
             // 
@@ -438,7 +441,7 @@
             this.lblUiDriveThru.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiDriveThru.Location = new System.Drawing.Point(30, 64);
             this.lblUiDriveThru.Name = "lblUiDriveThru";
-            this.lblUiDriveThru.Size = new System.Drawing.Size(87, 16);
+            this.lblUiDriveThru.Size = new System.Drawing.Size(84, 16);
             this.lblUiDriveThru.TabIndex = 141;
             this.lblUiDriveThru.Text = "Drive Thru:";
             // 
@@ -459,6 +462,7 @@
             this.cboDTLead.Name = "cboDTLead";
             this.cboDTLead.Size = new System.Drawing.Size(121, 21);
             this.cboDTLead.TabIndex = 143;
+            this.cboDTLead.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // lblUiIpos1
             // 
@@ -477,6 +481,7 @@
             this.cboIpos1.Name = "cboIpos1";
             this.cboIpos1.Size = new System.Drawing.Size(121, 21);
             this.cboIpos1.TabIndex = 144;
+            this.cboIpos1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboIpos2
             // 
@@ -486,6 +491,7 @@
             this.cboIpos2.Name = "cboIpos2";
             this.cboIpos2.Size = new System.Drawing.Size(121, 21);
             this.cboIpos2.TabIndex = 145;
+            this.cboIpos2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboIpos3
             // 
@@ -495,6 +501,7 @@
             this.cboIpos3.Name = "cboIpos3";
             this.cboIpos3.Size = new System.Drawing.Size(121, 21);
             this.cboIpos3.TabIndex = 146;
+            this.cboIpos3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboCash
             // 
@@ -504,6 +511,7 @@
             this.cboCash.Name = "cboCash";
             this.cboCash.Size = new System.Drawing.Size(121, 21);
             this.cboCash.TabIndex = 147;
+            this.cboCash.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // lblUiIpos2
             // 
@@ -567,6 +575,7 @@
             this.cboDiningWindow.Name = "cboDiningWindow";
             this.cboDiningWindow.Size = new System.Drawing.Size(121, 21);
             this.cboDiningWindow.TabIndex = 162;
+            this.cboDiningWindow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboWall
             // 
@@ -576,6 +585,7 @@
             this.cboWall.Name = "cboWall";
             this.cboWall.Size = new System.Drawing.Size(121, 21);
             this.cboWall.TabIndex = 161;
+            this.cboWall.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboTill7
             // 
@@ -585,6 +595,7 @@
             this.cboTill7.Name = "cboTill7";
             this.cboTill7.Size = new System.Drawing.Size(121, 21);
             this.cboTill7.TabIndex = 160;
+            this.cboTill7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboTill6
             // 
@@ -594,6 +605,7 @@
             this.cboTill6.Name = "cboTill6";
             this.cboTill6.Size = new System.Drawing.Size(121, 21);
             this.cboTill6.TabIndex = 159;
+            this.cboTill6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboTill5
             // 
@@ -603,6 +615,7 @@
             this.cboTill5.Name = "cboTill5";
             this.cboTill5.Size = new System.Drawing.Size(121, 21);
             this.cboTill5.TabIndex = 158;
+            this.cboTill5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboTill4
             // 
@@ -612,6 +625,7 @@
             this.cboTill4.Name = "cboTill4";
             this.cboTill4.Size = new System.Drawing.Size(121, 21);
             this.cboTill4.TabIndex = 157;
+            this.cboTill4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboTill3
             // 
@@ -621,6 +635,7 @@
             this.cboTill3.Name = "cboTill3";
             this.cboTill3.Size = new System.Drawing.Size(121, 21);
             this.cboTill3.TabIndex = 156;
+            this.cboTill3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboFCServer
             // 
@@ -630,6 +645,7 @@
             this.cboFCServer.Name = "cboFCServer";
             this.cboFCServer.Size = new System.Drawing.Size(121, 21);
             this.cboFCServer.TabIndex = 155;
+            this.cboFCServer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboFCLead
             // 
@@ -639,6 +655,7 @@
             this.cboFCLead.Name = "cboFCLead";
             this.cboFCLead.Size = new System.Drawing.Size(121, 21);
             this.cboFCLead.TabIndex = 154;
+            this.cboFCLead.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboFCBagging
             // 
@@ -648,6 +665,7 @@
             this.cboFCBagging.Name = "cboFCBagging";
             this.cboFCBagging.Size = new System.Drawing.Size(121, 21);
             this.cboFCBagging.TabIndex = 153;
+            this.cboFCBagging.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboShakes
             // 
@@ -657,6 +675,7 @@
             this.cboShakes.Name = "cboShakes";
             this.cboShakes.Size = new System.Drawing.Size(121, 21);
             this.cboShakes.TabIndex = 152;
+            this.cboShakes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboDrinks
             // 
@@ -666,6 +685,7 @@
             this.cboDrinks.Name = "cboDrinks";
             this.cboDrinks.Size = new System.Drawing.Size(121, 21);
             this.cboDrinks.TabIndex = 151;
+            this.cboDrinks.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboBagging
             // 
@@ -675,6 +695,7 @@
             this.cboBagging.Name = "cboBagging";
             this.cboBagging.Size = new System.Drawing.Size(121, 21);
             this.cboBagging.TabIndex = 150;
+            this.cboBagging.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboWindow
             // 
@@ -684,6 +705,7 @@
             this.cboWindow.Name = "cboWindow";
             this.cboWindow.Size = new System.Drawing.Size(121, 21);
             this.cboWindow.TabIndex = 149;
+            this.cboWindow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboExpedite
             // 
@@ -693,6 +715,7 @@
             this.cboExpedite.Name = "cboExpedite";
             this.cboExpedite.Size = new System.Drawing.Size(121, 21);
             this.cboExpedite.TabIndex = 148;
+            this.cboExpedite.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // lblUiExpedite
             // 
@@ -961,7 +984,7 @@
             this.lblUiFrontCounter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiFrontCounter.Location = new System.Drawing.Point(10, 352);
             this.lblUiFrontCounter.Name = "lblUiFrontCounter";
-            this.lblUiFrontCounter.Size = new System.Drawing.Size(109, 16);
+            this.lblUiFrontCounter.Size = new System.Drawing.Size(104, 16);
             this.lblUiFrontCounter.TabIndex = 158;
             this.lblUiFrontCounter.Text = "Front Counter:";
             // 
@@ -1142,7 +1165,7 @@
             this.lblUiFrontCounterTrans.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiFrontCounterTrans.Location = new System.Drawing.Point(398, 266);
             this.lblUiFrontCounterTrans.Name = "lblUiFrontCounterTrans";
-            this.lblUiFrontCounterTrans.Size = new System.Drawing.Size(109, 16);
+            this.lblUiFrontCounterTrans.Size = new System.Drawing.Size(104, 16);
             this.lblUiFrontCounterTrans.TabIndex = 183;
             this.lblUiFrontCounterTrans.Text = "Front Counter:";
             // 
@@ -1216,6 +1239,7 @@
             this.cbodiningroom.Name = "cbodiningroom";
             this.cbodiningroom.Size = new System.Drawing.Size(121, 21);
             this.cbodiningroom.TabIndex = 164;
+            this.cbodiningroom.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboservice
             // 
@@ -1225,6 +1249,7 @@
             this.cboservice.Name = "cboservice";
             this.cboservice.Size = new System.Drawing.Size(121, 21);
             this.cboservice.TabIndex = 163;
+            this.cboservice.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotrashrun
             // 
@@ -1234,6 +1259,7 @@
             this.cbotrashrun.Name = "cbotrashrun";
             this.cbotrashrun.Size = new System.Drawing.Size(121, 21);
             this.cbotrashrun.TabIndex = 162;
+            this.cbotrashrun.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbostocker
             // 
@@ -1243,6 +1269,7 @@
             this.cbostocker.Name = "cbostocker";
             this.cbostocker.Size = new System.Drawing.Size(121, 21);
             this.cbostocker.TabIndex = 161;
+            this.cbostocker.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotranstill7
             // 
@@ -1252,6 +1279,7 @@
             this.cbotranstill7.Name = "cbotranstill7";
             this.cbotranstill7.Size = new System.Drawing.Size(121, 21);
             this.cbotranstill7.TabIndex = 160;
+            this.cbotranstill7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotranstill6
             // 
@@ -1261,6 +1289,7 @@
             this.cbotranstill6.Name = "cbotranstill6";
             this.cbotranstill6.Size = new System.Drawing.Size(121, 21);
             this.cbotranstill6.TabIndex = 159;
+            this.cbotranstill6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotranstill5
             // 
@@ -1270,6 +1299,7 @@
             this.cbotranstill5.Name = "cbotranstill5";
             this.cbotranstill5.Size = new System.Drawing.Size(121, 21);
             this.cbotranstill5.TabIndex = 158;
+            this.cbotranstill5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotranstill4
             // 
@@ -1279,6 +1309,7 @@
             this.cbotranstill4.Name = "cbotranstill4";
             this.cbotranstill4.Size = new System.Drawing.Size(121, 21);
             this.cbotranstill4.TabIndex = 157;
+            this.cbotranstill4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotranstill3
             // 
@@ -1288,6 +1319,7 @@
             this.cbotranstill3.Name = "cbotranstill3";
             this.cbotranstill3.Size = new System.Drawing.Size(121, 21);
             this.cbotranstill3.TabIndex = 156;
+            this.cbotranstill3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboservertrans
             // 
@@ -1297,6 +1329,7 @@
             this.cboservertrans.Name = "cboservertrans";
             this.cboservertrans.Size = new System.Drawing.Size(121, 21);
             this.cboservertrans.TabIndex = 155;
+            this.cboservertrans.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbofctranslead
             // 
@@ -1306,6 +1339,7 @@
             this.cbofctranslead.Name = "cbofctranslead";
             this.cbofctranslead.Size = new System.Drawing.Size(121, 21);
             this.cbofctranslead.TabIndex = 154;
+            this.cbofctranslead.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbofcbaggingtrans
             // 
@@ -1315,6 +1349,7 @@
             this.cbofcbaggingtrans.Name = "cbofcbaggingtrans";
             this.cbofcbaggingtrans.Size = new System.Drawing.Size(121, 21);
             this.cbofcbaggingtrans.TabIndex = 153;
+            this.cbofcbaggingtrans.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotransshakes
             // 
@@ -1324,6 +1359,7 @@
             this.cbotransshakes.Name = "cbotransshakes";
             this.cbotransshakes.Size = new System.Drawing.Size(121, 21);
             this.cbotransshakes.TabIndex = 152;
+            this.cbotransshakes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotransdrinks
             // 
@@ -1333,6 +1369,7 @@
             this.cbotransdrinks.Name = "cbotransdrinks";
             this.cbotransdrinks.Size = new System.Drawing.Size(121, 21);
             this.cbotransdrinks.TabIndex = 151;
+            this.cbotransdrinks.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotransbagging
             // 
@@ -1342,6 +1379,7 @@
             this.cbotransbagging.Name = "cbotransbagging";
             this.cbotransbagging.Size = new System.Drawing.Size(121, 21);
             this.cbotransbagging.TabIndex = 150;
+            this.cbotransbagging.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbotransWindow
             // 
@@ -1351,6 +1389,7 @@
             this.cbotransWindow.Name = "cbotransWindow";
             this.cbotransWindow.Size = new System.Drawing.Size(121, 21);
             this.cbotransWindow.TabIndex = 149;
+            this.cbotransWindow.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboTransCash
             // 
@@ -1360,6 +1399,7 @@
             this.cboTransCash.Name = "cboTransCash";
             this.cboTransCash.Size = new System.Drawing.Size(121, 21);
             this.cboTransCash.TabIndex = 147;
+            this.cboTransCash.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cboHs
             // 
@@ -1369,6 +1409,7 @@
             this.cboHs.Name = "cboHs";
             this.cboHs.Size = new System.Drawing.Size(121, 21);
             this.cboHs.TabIndex = 144;
+            this.cboHs.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // cbohs2
             // 
@@ -1378,6 +1419,7 @@
             this.cbohs2.Name = "cbohs2";
             this.cbohs2.Size = new System.Drawing.Size(121, 21);
             this.cbohs2.TabIndex = 145;
+            this.cbohs2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // lblUiTransCash
             // 
@@ -1412,7 +1454,7 @@
             this.lblTransitionDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTransitionDT.Location = new System.Drawing.Point(418, 59);
             this.lblTransitionDT.Name = "lblTransitionDT";
-            this.lblTransitionDT.Size = new System.Drawing.Size(87, 16);
+            this.lblTransitionDT.Size = new System.Drawing.Size(84, 16);
             this.lblTransitionDT.TabIndex = 171;
             this.lblTransitionDT.Text = "Drive Thru:";
             // 
@@ -1431,7 +1473,7 @@
             this.lblUiTransition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUiTransition.Location = new System.Drawing.Point(418, 24);
             this.lblUiTransition.Name = "lblUiTransition";
-            this.lblUiTransition.Size = new System.Drawing.Size(82, 16);
+            this.lblUiTransition.Size = new System.Drawing.Size(81, 16);
             this.lblUiTransition.TabIndex = 169;
             this.lblUiTransition.Text = "Transition:";
             // 
@@ -1461,6 +1503,7 @@
             this.cbotransleader.Name = "cbotransleader";
             this.cbotransleader.Size = new System.Drawing.Size(121, 21);
             this.cbotransleader.TabIndex = 196;
+            this.cbotransleader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
             // MainUi
             // 
@@ -1681,6 +1724,7 @@
         private System.Windows.Forms.Label lblUiServiceLead;
         private System.Windows.Forms.Label lblUiDiningRoom;
         private System.Windows.Forms.ComboBox cbotransleader;
+        private System.Windows.Forms.ToolTip tooltipservice;
     }
 }
 

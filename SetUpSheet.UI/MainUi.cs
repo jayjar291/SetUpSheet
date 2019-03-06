@@ -38,10 +38,12 @@ namespace SetUpSheet.UI
         private void PlaceControls(Employee employee)
         {
             RosterControl temp = new RosterControl(employee);
+            temp.MouseDown += new MouseEventHandler(SetNotes);
             lyPLunch.Controls.Add(temp);
             if (employee.ClockOutTime.TimeOfDay > new TimeSpan(14, 30, 0))
             {
                 RosterControl temp2 = new RosterControl(employee);
+                temp2.MouseDown += new MouseEventHandler(SetNotes);
                 lyPTrans.Controls.Add(temp2);
             }
         }
@@ -199,6 +201,19 @@ namespace SetUpSheet.UI
         private void mnuRun_Click(object sender, EventArgs e)
         {
             Console.WriteLine("this will be added later :)");
+        }
+
+        private void SetNotes(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                Notes notes = new Notes();
+                var output = notes.ShowDialog();
+                if (output == DialogResult.OK)
+                {
+                    tooltipservice.SetToolTip((Control)sender, notes.txtNotes.Text);
+                }
+            }
         }
     }
 }
