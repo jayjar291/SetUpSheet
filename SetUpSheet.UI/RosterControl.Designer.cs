@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.BreakTime = new System.Windows.Forms.DateTimePicker();
             this.Clockout = new System.Windows.Forms.DateTimePicker();
             this.Clockin = new System.Windows.Forms.DateTimePicker();
             this.txtbreakType = new System.Windows.Forms.TextBox();
             this.ckbIsMinor = new System.Windows.Forms.CheckBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // BreakTime
@@ -44,7 +44,7 @@
             this.BreakTime.CustomFormat = "hh:mm tt";
             this.BreakTime.Enabled = false;
             this.BreakTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.BreakTime.Location = new System.Drawing.Point(416, 3);
+            this.BreakTime.Location = new System.Drawing.Point(476, 3);
             this.BreakTime.Name = "BreakTime";
             this.BreakTime.Size = new System.Drawing.Size(75, 20);
             this.BreakTime.TabIndex = 118;
@@ -55,7 +55,7 @@
             this.Clockout.CustomFormat = "hh:mm tt";
             this.Clockout.Enabled = false;
             this.Clockout.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Clockout.Location = new System.Drawing.Point(262, 3);
+            this.Clockout.Location = new System.Drawing.Point(302, 3);
             this.Clockout.Name = "Clockout";
             this.Clockout.Size = new System.Drawing.Size(75, 20);
             this.Clockout.TabIndex = 117;
@@ -67,7 +67,7 @@
             this.Clockin.CustomFormat = "hh:mm tt";
             this.Clockin.Enabled = false;
             this.Clockin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Clockin.Location = new System.Drawing.Point(181, 3);
+            this.Clockin.Location = new System.Drawing.Point(201, 3);
             this.Clockin.Name = "Clockin";
             this.Clockin.Size = new System.Drawing.Size(75, 20);
             this.Clockin.TabIndex = 116;
@@ -76,7 +76,7 @@
             // txtbreakType
             // 
             this.txtbreakType.Enabled = false;
-            this.txtbreakType.Location = new System.Drawing.Point(343, 3);
+            this.txtbreakType.Location = new System.Drawing.Point(383, 3);
             this.txtbreakType.Name = "txtbreakType";
             this.txtbreakType.Size = new System.Drawing.Size(67, 20);
             this.txtbreakType.TabIndex = 115;
@@ -102,10 +102,46 @@
             this.txtName.TabIndex = 113;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Enabled = false;
+            this.radioButton1.Location = new System.Drawing.Point(181, 6);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(14, 13);
+            this.radioButton1.TabIndex = 119;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Enabled = false;
+            this.radioButton2.Location = new System.Drawing.Point(282, 6);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(14, 13);
+            this.radioButton2.TabIndex = 120;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Enabled = false;
+            this.radioButton3.Location = new System.Drawing.Point(456, 6);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(14, 13);
+            this.radioButton3.TabIndex = 121;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // RosterControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.BreakTime);
             this.Controls.Add(this.Clockout);
             this.Controls.Add(this.Clockin);
@@ -113,8 +149,7 @@
             this.Controls.Add(this.ckbIsMinor);
             this.Controls.Add(this.txtName);
             this.Name = "RosterControl";
-            this.Size = new System.Drawing.Size(494, 27);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
+            this.Size = new System.Drawing.Size(568, 27);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,6 +163,8 @@
         private System.Windows.Forms.TextBox txtbreakType;
         private System.Windows.Forms.CheckBox ckbIsMinor;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.BindingSource bindingSource;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }
