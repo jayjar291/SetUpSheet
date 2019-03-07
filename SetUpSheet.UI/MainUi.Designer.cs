@@ -214,7 +214,7 @@
             // 
             this.lblBreakL.AutoSize = true;
             this.lblBreakL.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreakL.Location = new System.Drawing.Point(348, 0);
+            this.lblBreakL.Location = new System.Drawing.Point(398, 0);
             this.lblBreakL.Name = "lblBreakL";
             this.lblBreakL.Size = new System.Drawing.Size(114, 18);
             this.lblBreakL.TabIndex = 3;
@@ -267,7 +267,7 @@
             // 
             this.lblBreakT.AutoSize = true;
             this.lblBreakT.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreakT.Location = new System.Drawing.Point(348, 0);
+            this.lblBreakT.Location = new System.Drawing.Point(398, 0);
             this.lblBreakT.Name = "lblBreakT";
             this.lblBreakT.Size = new System.Drawing.Size(114, 18);
             this.lblBreakT.TabIndex = 6;
