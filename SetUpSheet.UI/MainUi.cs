@@ -22,6 +22,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -197,12 +198,7 @@ namespace SetUpSheet.UI
                 MessageBox.Show(ex.Message);
             }
         }
-        //todo add
-        private void mnuRun_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("this will be added later :)");
-        }
-
+        //set notes
         private void SetNotes(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -214,6 +210,11 @@ namespace SetUpSheet.UI
                     tooltipservice.SetToolTip((Control)sender, notes.txtNotes.Text);
                 }
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblUiClock.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
     }
 }

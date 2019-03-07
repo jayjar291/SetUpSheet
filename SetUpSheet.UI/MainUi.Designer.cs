@@ -167,6 +167,9 @@
             this.lblUiDiningRoom = new System.Windows.Forms.Label();
             this.cbotransleader = new System.Windows.Forms.ComboBox();
             this.tooltipservice = new System.Windows.Forms.ToolTip(this.components);
+            this.lblUiClock = new System.Windows.Forms.Label();
+            this.timerClock = new System.Windows.Forms.Timer(this.components);
+            this.timerAlerts = new System.Windows.Forms.Timer(this.components);
             this.pnlLunch.SuspendLayout();
             this.pnlTransition.SuspendLayout();
             this.mnuControls.SuspendLayout();
@@ -370,7 +373,6 @@
             this.mnuRun.Name = "mnuRun";
             this.mnuRun.Size = new System.Drawing.Size(103, 22);
             this.mnuRun.Text = "Run";
-            this.mnuRun.Click += new System.EventHandler(this.mnuRun_Click);
             // 
             // mnuTools
             // 
@@ -1505,11 +1507,32 @@
             this.cbotransleader.TabIndex = 196;
             this.cbotransleader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SetNotes);
             // 
+            // lblUiClock
+            // 
+            this.lblUiClock.AutoSize = true;
+            this.lblUiClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUiClock.Location = new System.Drawing.Point(389, 615);
+            this.lblUiClock.Name = "lblUiClock";
+            this.lblUiClock.Size = new System.Drawing.Size(167, 25);
+            this.lblUiClock.TabIndex = 197;
+            this.lblUiClock.Text = "HH:MM:SS AM";
+            // 
+            // timerClock
+            // 
+            this.timerClock.Enabled = true;
+            this.timerClock.Interval = 1000;
+            this.timerClock.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timerAlerts
+            // 
+            this.timerAlerts.Interval = 900000;
+            // 
             // MainUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 692);
+            this.Controls.Add(this.lblUiClock);
             this.Controls.Add(this.cbotransleader);
             this.Controls.Add(this.lblUiDiningRoom);
             this.Controls.Add(this.lblUiServiceLead);
@@ -1725,6 +1748,9 @@
         private System.Windows.Forms.Label lblUiDiningRoom;
         private System.Windows.Forms.ComboBox cbotransleader;
         private System.Windows.Forms.ToolTip tooltipservice;
+        private System.Windows.Forms.Label lblUiClock;
+        private System.Windows.Forms.Timer timerClock;
+        private System.Windows.Forms.Timer timerAlerts;
     }
 }
 
