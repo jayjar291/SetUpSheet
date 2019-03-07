@@ -50,7 +50,6 @@
             this.mnuSave = new System.Windows.Forms.ToolStripMenuItem();
             this.exportEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveLayoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuRun = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTools = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuEdit = new System.Windows.Forms.ToolStripMenuItem();
@@ -198,7 +197,7 @@
             this.pnlLunch.Controls.Add(this.lblNameL);
             this.pnlLunch.Location = new System.Drawing.Point(638, 59);
             this.pnlLunch.Name = "pnlLunch";
-            this.pnlLunch.Size = new System.Drawing.Size(585, 293);
+            this.pnlLunch.Size = new System.Drawing.Size(612, 293);
             this.pnlLunch.TabIndex = 129;
             // 
             // lyPLunch
@@ -207,8 +206,9 @@
             this.lyPLunch.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.lyPLunch.Location = new System.Drawing.Point(3, 21);
             this.lyPLunch.Name = "lyPLunch";
-            this.lyPLunch.Size = new System.Drawing.Size(577, 267);
+            this.lyPLunch.Size = new System.Drawing.Size(586, 267);
             this.lyPLunch.TabIndex = 4;
+            this.lyPLunch.WrapContents = false;
             // 
             // lblBreakL
             // 
@@ -250,7 +250,7 @@
             this.pnlTransition.Controls.Add(this.lblNameT);
             this.pnlTransition.Location = new System.Drawing.Point(638, 389);
             this.pnlTransition.Name = "pnlTransition";
-            this.pnlTransition.Size = new System.Drawing.Size(585, 293);
+            this.pnlTransition.Size = new System.Drawing.Size(612, 293);
             this.pnlTransition.TabIndex = 130;
             // 
             // lyPTrans
@@ -259,8 +259,9 @@
             this.lyPTrans.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.lyPTrans.Location = new System.Drawing.Point(3, 21);
             this.lyPTrans.Name = "lyPTrans";
-            this.lyPTrans.Size = new System.Drawing.Size(577, 267);
+            this.lyPTrans.Size = new System.Drawing.Size(586, 267);
             this.lyPTrans.TabIndex = 7;
+            this.lyPTrans.WrapContents = false;
             // 
             // lblBreakT
             // 
@@ -309,15 +310,14 @@
             this.mnuTools});
             this.mnuControls.Location = new System.Drawing.Point(0, 0);
             this.mnuControls.Name = "mnuControls";
-            this.mnuControls.Size = new System.Drawing.Size(1232, 24);
+            this.mnuControls.Size = new System.Drawing.Size(1263, 24);
             this.mnuControls.TabIndex = 136;
             // 
             // mnuFile
             // 
             this.mnuFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.munOpen,
-            this.mnuSave,
-            this.mnuRun});
+            this.mnuSave});
             this.mnuFile.Name = "mnuFile";
             this.mnuFile.Size = new System.Drawing.Size(37, 20);
             this.mnuFile.Text = "File";
@@ -328,20 +328,20 @@
             this.importEmployeesToolStripMenuItem,
             this.layoutToolStripMenuItem});
             this.munOpen.Name = "munOpen";
-            this.munOpen.Size = new System.Drawing.Size(103, 22);
+            this.munOpen.Size = new System.Drawing.Size(180, 22);
             this.munOpen.Text = "Open";
             // 
             // importEmployeesToolStripMenuItem
             // 
             this.importEmployeesToolStripMenuItem.Name = "importEmployeesToolStripMenuItem";
-            this.importEmployeesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.importEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.importEmployeesToolStripMenuItem.Text = "Import Employees";
             this.importEmployeesToolStripMenuItem.Click += new System.EventHandler(this.importEmployeesToolStripMenuItem_Click);
             // 
             // layoutToolStripMenuItem
             // 
             this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
-            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.layoutToolStripMenuItem.Text = "Layout";
             this.layoutToolStripMenuItem.Click += new System.EventHandler(this.layoutToolStripMenuItem_Click);
             // 
@@ -351,7 +351,7 @@
             this.exportEmployeesToolStripMenuItem,
             this.saveLayoutToolStripMenuItem});
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(103, 22);
+            this.mnuSave.Size = new System.Drawing.Size(180, 22);
             this.mnuSave.Text = "Save";
             // 
             // exportEmployeesToolStripMenuItem
@@ -368,12 +368,6 @@
             this.saveLayoutToolStripMenuItem.Text = "Save Layout";
             this.saveLayoutToolStripMenuItem.Click += new System.EventHandler(this.saveLayoutToolStripMenuItem_Click);
             // 
-            // mnuRun
-            // 
-            this.mnuRun.Name = "mnuRun";
-            this.mnuRun.Size = new System.Drawing.Size(103, 22);
-            this.mnuRun.Text = "Run";
-            // 
             // mnuTools
             // 
             this.mnuTools.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -386,7 +380,7 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(96, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
             // 
@@ -394,7 +388,7 @@
             // 
             this.mnuEdit.CheckOnClick = true;
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(96, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
             this.mnuEdit.Text = "Edit";
             this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
@@ -1511,7 +1505,7 @@
             // 
             this.lblUiClock.AutoSize = true;
             this.lblUiClock.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUiClock.Location = new System.Drawing.Point(389, 615);
+            this.lblUiClock.Location = new System.Drawing.Point(416, 630);
             this.lblUiClock.Name = "lblUiClock";
             this.lblUiClock.Size = new System.Drawing.Size(167, 25);
             this.lblUiClock.TabIndex = 197;
@@ -1525,13 +1519,15 @@
             // 
             // timerAlerts
             // 
-            this.timerAlerts.Interval = 900000;
+            this.timerAlerts.Enabled = true;
+            this.timerAlerts.Interval = 1000;
+            this.timerAlerts.Tick += new System.EventHandler(this.timerAlerts_Tick);
             // 
             // MainUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 692);
+            this.ClientSize = new System.Drawing.Size(1263, 692);
             this.Controls.Add(this.lblUiClock);
             this.Controls.Add(this.cbotransleader);
             this.Controls.Add(this.lblUiDiningRoom);
@@ -1625,7 +1621,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuFile;
         private System.Windows.Forms.ToolStripMenuItem munOpen;
         private System.Windows.Forms.ToolStripMenuItem mnuSave;
-        private System.Windows.Forms.ToolStripMenuItem mnuRun;
         private System.Windows.Forms.ToolStripMenuItem mnuTools;
         private System.Windows.Forms.ToolStripMenuItem mnuAdd;
         private System.Windows.Forms.ToolStripMenuItem mnuEdit;

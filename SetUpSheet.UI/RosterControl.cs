@@ -57,6 +57,7 @@ namespace SetUpSheet.UI
                 default:
                     break;
             }
+            RunMode();
         }
 
         public void EditMode(bool mode)
@@ -101,6 +102,53 @@ namespace SetUpSheet.UI
         private void Clockout_ValueChanged(object sender, EventArgs e)
         {
             Employee.ClockOutTime = Clockout.Value;
+        }
+        public void RunMode()
+        {
+            if (DateTime.Now >= Clockin.Value.AddMinutes(-15))
+            {
+                incator1.BackColor = Color.Orange;
+                if (DateTime.Now >= Clockin.Value)
+                {
+                    incator1.BackColor = Color.Green;
+                    if (Employee.BrakeType == -1)
+                    {
+                        if (DateTime.Now >= Clockout.Value.AddMinutes(-15))
+                        {
+                            incator2.BackColor = Color.Orange;
+                            if (DateTime.Now >= Clockout.Value)
+                            {
+                                incator2.BackColor = Color.Blue;
+                                incator1.BackColor = SystemColors.Control;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (DateTime.Now >= BreakTime.Value.AddMinutes(-15))
+                        {
+                            incator3.BackColor = Color.Orange;
+                            if (DateTime.Now >= BreakTime.Value)
+                            {
+                                incator3.BackColor = Color.Green;
+                                if (DateTime.Now >= BreakTime.Value.AddMinutes(int.Parse(txtbreakType.Text)))
+                                {
+                                    incator3.BackColor = Color.Blue;
+                                    if (DateTime.Now >= Clockout.Value.AddMinutes(-15))
+                                    {
+                                        incator2.BackColor = Color.Orange;
+                                        if (DateTime.Now >= Clockout.Value)
+                                        {
+                                            incator2.BackColor = Color.Blue;
+                                            incator1.BackColor = SystemColors.Control;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

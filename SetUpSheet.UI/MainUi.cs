@@ -216,5 +216,17 @@ namespace SetUpSheet.UI
         {
             lblUiClock.Text = DateTime.Now.ToString("hh:mm:ss tt");
         }
+
+        private void timerAlerts_Tick(object sender, EventArgs e)
+        {
+            foreach (RosterControl item in lyPLunch.Controls.OfType<RosterControl>())
+            {
+                item.RunMode();
+            }
+            foreach (RosterControl item in lyPTrans.Controls.OfType<RosterControl>())
+            {
+                item.RunMode();
+            }
+        }
     }
 }

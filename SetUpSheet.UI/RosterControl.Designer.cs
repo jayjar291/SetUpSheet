@@ -34,9 +34,9 @@
             this.txtbreakType = new System.Windows.Forms.TextBox();
             this.ckbIsMinor = new System.Windows.Forms.CheckBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.incator1 = new System.Windows.Forms.Button();
+            this.incator2 = new System.Windows.Forms.Button();
+            this.incator3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BreakTime
@@ -102,46 +102,46 @@
             this.txtName.TabIndex = 113;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
-            // radioButton1
+            // incator1
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(181, 6);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 13);
-            this.radioButton1.TabIndex = 119;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.incator1.BackColor = System.Drawing.SystemColors.Control;
+            this.incator1.FlatAppearance.BorderSize = 0;
+            this.incator1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.incator1.Location = new System.Drawing.Point(181, 6);
+            this.incator1.Name = "incator1";
+            this.incator1.Size = new System.Drawing.Size(14, 13);
+            this.incator1.TabIndex = 122;
+            this.incator1.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // incator2
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Enabled = false;
-            this.radioButton2.Location = new System.Drawing.Point(282, 6);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 13);
-            this.radioButton2.TabIndex = 120;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.incator2.BackColor = System.Drawing.SystemColors.Control;
+            this.incator2.FlatAppearance.BorderSize = 0;
+            this.incator2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.incator2.Location = new System.Drawing.Point(282, 6);
+            this.incator2.Name = "incator2";
+            this.incator2.Size = new System.Drawing.Size(14, 13);
+            this.incator2.TabIndex = 123;
+            this.incator2.UseVisualStyleBackColor = false;
             // 
-            // radioButton3
+            // incator3
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Enabled = false;
-            this.radioButton3.Location = new System.Drawing.Point(456, 6);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(14, 13);
-            this.radioButton3.TabIndex = 121;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.incator3.BackColor = System.Drawing.SystemColors.Control;
+            this.incator3.FlatAppearance.BorderSize = 0;
+            this.incator3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.incator3.Location = new System.Drawing.Point(456, 6);
+            this.incator3.Name = "incator3";
+            this.incator3.Size = new System.Drawing.Size(14, 13);
+            this.incator3.TabIndex = 124;
+            this.incator3.UseVisualStyleBackColor = false;
             // 
             // RosterControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.incator3);
+            this.Controls.Add(this.incator2);
+            this.Controls.Add(this.incator1);
             this.Controls.Add(this.BreakTime);
             this.Controls.Add(this.Clockout);
             this.Controls.Add(this.Clockin);
@@ -163,8 +163,8 @@
         private System.Windows.Forms.TextBox txtbreakType;
         private System.Windows.Forms.CheckBox ckbIsMinor;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Button incator1;
+        private System.Windows.Forms.Button incator2;
+        private System.Windows.Forms.Button incator3;
     }
 }
