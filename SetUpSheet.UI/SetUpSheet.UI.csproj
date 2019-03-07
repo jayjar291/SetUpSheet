@@ -62,7 +62,7 @@
     </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>4DDF5FF66431741BCA8EB327D5DFF2273C02A554</ManifestCertificateThumbprint>
