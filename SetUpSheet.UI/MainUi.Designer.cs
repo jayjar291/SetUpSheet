@@ -168,7 +168,6 @@
             this.tooltipservice = new System.Windows.Forms.ToolTip(this.components);
             this.lblUiClock = new System.Windows.Forms.Label();
             this.timerClock = new System.Windows.Forms.Timer(this.components);
-            this.timerAlerts = new System.Windows.Forms.Timer(this.components);
             this.pnlLunch.SuspendLayout();
             this.pnlTransition.SuspendLayout();
             this.mnuControls.SuspendLayout();
@@ -328,20 +327,20 @@
             this.importEmployeesToolStripMenuItem,
             this.layoutToolStripMenuItem});
             this.munOpen.Name = "munOpen";
-            this.munOpen.Size = new System.Drawing.Size(180, 22);
+            this.munOpen.Size = new System.Drawing.Size(103, 22);
             this.munOpen.Text = "Open";
             // 
             // importEmployeesToolStripMenuItem
             // 
             this.importEmployeesToolStripMenuItem.Name = "importEmployeesToolStripMenuItem";
-            this.importEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importEmployeesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.importEmployeesToolStripMenuItem.Text = "Import Employees";
             this.importEmployeesToolStripMenuItem.Click += new System.EventHandler(this.importEmployeesToolStripMenuItem_Click);
             // 
             // layoutToolStripMenuItem
             // 
             this.layoutToolStripMenuItem.Name = "layoutToolStripMenuItem";
-            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.layoutToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.layoutToolStripMenuItem.Text = "Layout";
             this.layoutToolStripMenuItem.Click += new System.EventHandler(this.layoutToolStripMenuItem_Click);
             // 
@@ -351,7 +350,7 @@
             this.exportEmployeesToolStripMenuItem,
             this.saveLayoutToolStripMenuItem});
             this.mnuSave.Name = "mnuSave";
-            this.mnuSave.Size = new System.Drawing.Size(180, 22);
+            this.mnuSave.Size = new System.Drawing.Size(103, 22);
             this.mnuSave.Text = "Save";
             // 
             // exportEmployeesToolStripMenuItem
@@ -380,7 +379,7 @@
             // mnuAdd
             // 
             this.mnuAdd.Name = "mnuAdd";
-            this.mnuAdd.Size = new System.Drawing.Size(180, 22);
+            this.mnuAdd.Size = new System.Drawing.Size(96, 22);
             this.mnuAdd.Text = "Add";
             this.mnuAdd.Click += new System.EventHandler(this.mnuAdd_Click);
             // 
@@ -388,7 +387,7 @@
             // 
             this.mnuEdit.CheckOnClick = true;
             this.mnuEdit.Name = "mnuEdit";
-            this.mnuEdit.Size = new System.Drawing.Size(180, 22);
+            this.mnuEdit.Size = new System.Drawing.Size(96, 22);
             this.mnuEdit.Text = "Edit";
             this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
@@ -1517,12 +1516,6 @@
             this.timerClock.Interval = 1000;
             this.timerClock.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // timerAlerts
-            // 
-            this.timerAlerts.Enabled = true;
-            this.timerAlerts.Interval = 1000;
-            this.timerAlerts.Tick += new System.EventHandler(this.timerAlerts_Tick);
-            // 
             // MainUi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1745,7 +1738,6 @@
         private System.Windows.Forms.ToolTip tooltipservice;
         private System.Windows.Forms.Label lblUiClock;
         private System.Windows.Forms.Timer timerClock;
-        private System.Windows.Forms.Timer timerAlerts;
     }
 }
 

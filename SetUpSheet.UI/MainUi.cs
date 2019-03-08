@@ -1,12 +1,11 @@
 ﻿/*
  * Dev Jared Stapley
- * Date 2-27-19
+ * Date 3-8-19
  * Setup Sheet UI
  *  
- *  The main functions for the secound Deliverable are:
+ *  The main functions for the third Deliverable are:
  *  
- *  save functions
- *  finnish ui
+ *  alert functions
  *  
  *  these functions are finished
  *  
@@ -215,10 +214,6 @@ namespace SetUpSheet.UI
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblUiClock.Text = DateTime.Now.ToString("hh:mm:ss tt");
-        }
-
-        private void timerAlerts_Tick(object sender, EventArgs e)
-        {
             foreach (RosterControl item in lyPLunch.Controls.OfType<RosterControl>())
             {
                 item.RunMode();

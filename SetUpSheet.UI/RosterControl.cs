@@ -59,7 +59,7 @@ namespace SetUpSheet.UI
             }
             RunMode();
         }
-
+        //edit mode
         public void EditMode(bool mode)
         {
             if (mode)
@@ -78,6 +78,7 @@ namespace SetUpSheet.UI
             }
         }
 
+        //binding
         private void BreakTime_ValueChanged(object sender, EventArgs e)
         {
             Employee.BrakeStartTime = BreakTime.Value;
@@ -103,6 +104,7 @@ namespace SetUpSheet.UI
         {
             Employee.ClockOutTime = Clockout.Value;
         }
+        //alerts
         public void RunMode()
         {
             if (DateTime.Now >= Clockin.Value.AddMinutes(-15))
@@ -134,7 +136,7 @@ namespace SetUpSheet.UI
                                 if (DateTime.Now >= BreakTime.Value.AddMinutes(int.Parse(txtbreakType.Text)))
                                 {
                                     incator3.BackColor = Color.Blue;
-                                    if (DateTime.Now >= Clockout.Value.AddMinutes(-15))
+                                    if (DateTime.Now >= (Clockout.Value.AddMinutes(-15)))
                                     {
                                         incator2.BackColor = Color.Orange;
                                         if (DateTime.Now >= Clockout.Value)
