@@ -10,18 +10,36 @@ using System.Windows.Forms;
 //data functions
 namespace SetUpSheet.DataFunctions
 { 
+
     public class FileService : ILoadable,ISaveable
     {
         private string fileName;
+        StreamReader streamReaderadvance;
+        FileStream inputadvanced; 
 
         public FileService(string fileName)
         {
             this.fileName = fileName;
+            
         }
 
         public List<ComboBox> comboBoxes()
         {
-            throw new NotImplementedException();
+            List<ComboBox> comboBoxes = new List<ComboBox>();
+            while (!streamReaderadvance.EndOfStream)
+            {
+                var line = streamReaderadvance.ReadLine();
+                if (line == "~*~")
+                {
+                    comboBoxes.Add(new ComboBox() { Text = line });
+                }
+                else
+                {
+                    int index = int.Parse(line);
+                    comboBoxes.Add(new ComboBox() { SelectedIndex = index});
+                }
+            }
+            return comboBoxes;
         }
 
         /*load file in to list*/
@@ -43,16 +61,18 @@ namespace SetUpSheet.DataFunctions
 
         public List<Employee> LoadAdvanced()
         {
-            FileStream input = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            StreamReader streamReader = new StreamReader(input);
+            inputadvanced = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            streamReaderadvance = new StreamReader(inputadvanced);
             List<Employee> employees = new List<Employee>();
-
-            while (streamReader.ReadLine() != "~*~")
+            var employee = streamReaderadvance.ReadLine();
+            while (employee != "~*~")
             {
-                var employee = streamReader.ReadLine();
                 string[] split = employee.Split(',');
                 Employee temp = new Employee(split[0], bool.Parse(split[1]), DateTime.Parse(split[2]), DateTime.Parse(split[3]));
+                temp.BrakeStartTime = DateTime.Parse(split[5]);
+                temp.BrakeType = int.Parse(split[4]);
                 employees.Add(temp);
+                employee = streamReaderadvance.ReadLine();
             }
             return employees;
         }
@@ -94,10 +114,6 @@ namespace SetUpSheet.DataFunctions
                 }
             }
             output.Close();
-        }
-        private override Employee(string fname, bool minor, DateTime clockin, DateTime clockout, int breakType, DateTime breakStart,TimeSpan totalHours)
-        {
-
         }
     }
 }

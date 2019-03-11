@@ -16,6 +16,10 @@ namespace SetUpSheet.DataFunctions
         {
             Employees = employeeService.Load();
         }
+        public void Loadlayout(ILoadable employeeService)
+        {
+            Employees = employeeService.LoadAdvanced();
+        }
         /*add employee function*/
         public void AddEmployee(Employee emp)
         {

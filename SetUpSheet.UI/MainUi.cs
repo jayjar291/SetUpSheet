@@ -132,7 +132,31 @@ namespace SetUpSheet.UI
         //todo add
         private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("this will be added later :)");
+            try
+            {
+                OpenFileDialog openFile = new OpenFileDialog();
+                openFile.Filter = "Layout files (*.ssl)|*.ssl|All files (*.*)|*.*";
+                var result = openFile.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    ILoadable loadable = new FileService(openFile.FileName);
+                    roster.Loadlayout(loadable);
+                    foreach (var item in roster.Employees)
+                    {
+                        PlaceControls(item);
+                    }
+
+                    refresh();
+                }
+                else
+                {
+                    throw new InvalidProgramException("Could not find file.");
+                }
+            }
+            catch (InvalidProgramException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         //save employees
         private void exportEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
