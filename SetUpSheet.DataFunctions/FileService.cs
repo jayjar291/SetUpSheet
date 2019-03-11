@@ -19,6 +19,11 @@ namespace SetUpSheet.DataFunctions
             this.fileName = fileName;
         }
 
+        public List<ComboBox> comboBoxes()
+        {
+            throw new NotImplementedException();
+        }
+
         /*load file in to list*/
         public List<Employee> Load()
         {
@@ -35,6 +40,23 @@ namespace SetUpSheet.DataFunctions
             }
             return employees;
         }
+
+        public List<Employee> LoadAdvanced()
+        {
+            FileStream input = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            StreamReader streamReader = new StreamReader(input);
+            List<Employee> employees = new List<Employee>();
+
+            while (streamReader.ReadLine() != "~*~")
+            {
+                var employee = streamReader.ReadLine();
+                string[] split = employee.Split(',');
+                Employee temp = new Employee(split[0], bool.Parse(split[1]), DateTime.Parse(split[2]), DateTime.Parse(split[3]));
+                employees.Add(temp);
+            }
+            return employees;
+        }
+
         //save employees
         public void SaveEmployees(List<Employee> employees)
         {
@@ -57,12 +79,25 @@ namespace SetUpSheet.DataFunctions
                 streamWriter.WriteLine(item.ToFile());
                 streamWriter.Flush();
             }
+            streamWriter.WriteLine("~*~");
             foreach (var item in controls)
             {
-                streamWriter.WriteLine(item.SelectedIndex);
-                streamWriter.Flush();
+                if (item.Text != "~*~")
+                {
+                    streamWriter.WriteLine(item.SelectedIndex);
+                    streamWriter.Flush();
+                }
+                else
+                {
+                    streamWriter.WriteLine(item.Text);
+                    streamWriter.Flush();
+                }
             }
             output.Close();
+        }
+        private override Employee(string fname, bool minor, DateTime clockin, DateTime clockout, int breakType, DateTime breakStart,TimeSpan totalHours)
+        {
+
         }
     }
 }

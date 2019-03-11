@@ -161,21 +161,26 @@ namespace SetUpSheet.UI
         //save layout
         private void saveLayoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ComboBox spacer = new ComboBox() { Text = "~*~"};
             List<ComboBox> comboBoxes = new List<ComboBox>();
             comboBoxes.Add(cboLeader);
             comboBoxes.Add(cbotransleader);
+            comboBoxes.Add(spacer);
             foreach (ComboBox item in pnlNames.Controls)
             {
                 comboBoxes.Add(item);
             }
+            comboBoxes.Add(spacer);
             foreach (ComboBox item in pnlSecondary.Controls)
             {
                 comboBoxes.Add(item);
             }
+            comboBoxes.Add(spacer);
             foreach (ComboBox item in pnltransnames.Controls)
             {
                 comboBoxes.Add(item);
             }
+            comboBoxes.Add(spacer);
             try
             {
 

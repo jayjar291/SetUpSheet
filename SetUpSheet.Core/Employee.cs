@@ -15,20 +15,15 @@ namespace SetUpSheet.Core
         public DateTime ClockOutTime { get; set; }
         public DateTime BrakeStartTime { get; set; }
         public int BrakeType { get; set; }
-        public TimeSpan TotalHours { get; set; }
-        public Employee(string fname, bool minor, DateTime clockin,DateTime clockout)
+        public TimeSpan TotalHours => ClockOutTime - ClockInTime;
+        public Employee(string fname, bool minor, DateTime clockin,DateTime clockout, bool adv =false)
         {
             FName = fname;
             IsMinor = minor;
             ClockInTime = clockin;
             ClockOutTime = clockout;
             BrakeType = -1;
-            GetTotalHours();
             BreakTime breakTime = new BreakTime(this);
-        }
-        private void GetTotalHours()
-        {
-            TotalHours = ClockOutTime - ClockInTime;
         }
         public override string ToString()
         {
