@@ -16,14 +16,17 @@ namespace SetUpSheet.Core
         public DateTime BrakeStartTime { get; set; }
         public int BrakeType { get; set; }
         public TimeSpan TotalHours => ClockOutTime - ClockInTime;
-        public Employee(string fname, bool minor, DateTime clockin,DateTime clockout, bool adv =false)
+        public Employee(string fname, bool minor, DateTime clockin,DateTime clockout, bool standerd = false)
         {
             FName = fname;
             IsMinor = minor;
             ClockInTime = clockin;
             ClockOutTime = clockout;
-            BrakeType = -1;
-            BreakTime breakTime = new BreakTime(this);
+            if (standerd)
+            {
+                BrakeType = -1;
+                BreakTime breakTime = new BreakTime(this);
+            }
         }
         public override string ToString()
         {
@@ -32,7 +35,7 @@ namespace SetUpSheet.Core
         //to file
         public string ToFile()
         {
-            string temp = $"{FName},{IsMinor},{ClockInTime},{ClockOutTime},{BrakeType},{BrakeStartTime}";
+            string temp = $"{FName},{IsMinor},{ClockInTime.ToLongTimeString()},{ClockOutTime.ToLongTimeString()},{BrakeType},{BrakeStartTime.ToLongTimeString()}";
             return temp;
         }
     }

@@ -111,18 +111,29 @@ namespace SetUpSheet.UI
         {
             try
             {
-                roster.LoadFile(ServiceLocator.GetEmployeePersistence("Production"));
-                Load load = new Load(roster);
-                var result = load.ShowDialog();
-                if (result == DialogResult.Cancel)
+                OpenFileDialog openFile = new OpenFileDialog();
+                openFile.Filter = "CSV files (*.csv)|*.csv|All files (*.*)|*.*";
+                var result = openFile.ShowDialog();
+                if (result == DialogResult.OK)
                 {
-                    roster.Employees.Clear();
+                    ILoadable loadable = new FileService(openFile.FileName);
+                    roster.LoadFile(loadable);
+                    Load load = new Load(roster);
+                    var resultLoad = load.ShowDialog();
+                    if (resultLoad == DialogResult.Cancel)
+                    {
+                        roster.Employees.Clear();
+                    }
+                    foreach (var item in roster.Employees)
+                    {
+                        PlaceControls(item);
+                    }
+                    refresh();
                 }
-                foreach (var item in roster.Employees)
+                else
                 {
-                    PlaceControls(item);
+                    throw new Exception("Could not find file.");
                 }
-                refresh();
             }
             catch (Exception ex)
             {
@@ -145,8 +156,48 @@ namespace SetUpSheet.UI
                     {
                         PlaceControls(item);
                     }
-
                     refresh();
+                    List<int> comboBoxesindex = loadable.comboBoxes();
+                    int index = 1;
+                    cbotransleader.SelectedIndex = comboBoxesindex[1];
+                    cboLeader.SelectedIndex = comboBoxesindex[0];
+                    if (!(comboBoxesindex[index] == -5))
+                    {
+                        foreach (ComboBox item in pnlNames.Controls)
+                        {
+                            item.SelectedIndex = comboBoxesindex[index];
+                            index++;
+                        }
+                        if (!(comboBoxesindex[index] == -5))
+                        {
+                            foreach (ComboBox item in pnlSecondary.Controls)
+                            {
+                                item.SelectedIndex = comboBoxesindex[index];
+                                index++;
+                            }
+                            if (!(comboBoxesindex[index] == -5))
+                            {
+                                foreach (ComboBox item in pnlTransition.Controls)
+                                {
+                                    item.SelectedIndex = comboBoxesindex[index];
+                                    index++;
+                                }
+                            }
+                            else
+                            {
+                                index++;
+                                foreach (ComboBox item in pnlTransition.Controls)
+                                {
+                                    item.SelectedIndex = comboBoxesindex[index];
+                                    index++;
+                                }
+                            }
+                        }
+                        else
+                        {
+
+                        }
+                    }
                 }
                 else
                 {

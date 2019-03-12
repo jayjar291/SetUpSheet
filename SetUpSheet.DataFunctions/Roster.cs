@@ -18,6 +18,10 @@ namespace SetUpSheet.DataFunctions
         }
         public void Loadlayout(ILoadable employeeService)
         {
+            if (!(Employees is null))
+            {
+                Employees.Clear();
+            }
             Employees = employeeService.LoadAdvanced();
         }
         /*add employee function*/

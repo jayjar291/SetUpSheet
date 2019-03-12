@@ -92,7 +92,6 @@ namespace SetUpSheet.UI
         private void ckbIsMinor_CheckedChanged(object sender, EventArgs e)
         {
             Employee.IsMinor = ckbIsMinor.Checked;
-            BreakTime breakTime = new BreakTime(Employee);
         }
 
         private void Clockin_ValueChanged(object sender, EventArgs e)

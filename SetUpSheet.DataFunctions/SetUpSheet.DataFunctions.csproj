@@ -47,7 +47,6 @@
     <Compile Include="FileService.cs" />
     <Compile Include="ILoadable.cs" />
     <Compile Include="ISaveable.cs" />
-    <Compile Include="MockFileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roster.cs" />
   </ItemGroup>

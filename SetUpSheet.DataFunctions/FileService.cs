@@ -15,31 +15,34 @@ namespace SetUpSheet.DataFunctions
     {
         private string fileName;
         StreamReader streamReaderadvance;
-        FileStream inputadvanced; 
-
+        FileStream inputadvanced;
+        private List<int> nulldata = new List<int>();
+        
         public FileService(string fileName)
         {
             this.fileName = fileName;
-            
+            for (int i = 0; i < 100; i++)
+            {
+                nulldata.Add(i);
+            }
         }
 
-        public List<ComboBox> comboBoxes()
+        public List<int> comboBoxes()
         {
-            List<ComboBox> comboBoxes = new List<ComboBox>();
+            List<int> index = new List<int>();
             while (!streamReaderadvance.EndOfStream)
             {
                 var line = streamReaderadvance.ReadLine();
                 if (line == "~*~")
                 {
-                    comboBoxes.Add(new ComboBox() { Text = line });
+                    index.Add(-5);
                 }
                 else
                 {
-                    int index = int.Parse(line);
-                    comboBoxes.Add(new ComboBox() { SelectedIndex = index});
+                    index.Add(int.Parse(line));
                 }
             }
-            return comboBoxes;
+            return index;
         }
 
         /*load file in to list*/
@@ -53,7 +56,7 @@ namespace SetUpSheet.DataFunctions
             {
                 var employee = streamReader.ReadLine();
                 string[] split = employee.Split(',');
-                Employee temp = new Employee(split[0], bool.Parse(split[1]), DateTime.Parse(split[2]), DateTime.Parse(split[3]));
+                Employee temp = new Employee(split[0], bool.Parse(split[1]), DateTime.Parse(split[2]), DateTime.Parse(split[3]), true);
                 employees.Add(temp);
             }
             return employees;
