@@ -13,6 +13,6 @@ namespace SetUpSheet.DataFunctions
     {
         List<Employee> Load();
         List<Employee> LoadAdvanced();
-        List<int> comboBoxes();
+        List<List<int>> comboBoxes();
     }
 }

@@ -26,20 +26,22 @@ namespace SetUpSheet.DataFunctions
                 nulldata.Add(i);
             }
         }
-
-        public List<int> comboBoxes()
+        //load indexes for comboboxes
+        public List<List<int>> comboBoxes()
         {
-            List<int> index = new List<int>();
+            List<List<int>> index = new List<List<int>>();
+            List<int> temp = new List<int>();
             while (!streamReaderadvance.EndOfStream)
             {
                 var line = streamReaderadvance.ReadLine();
                 if (line == "~*~")
                 {
-                    index.Add(-5);
+                    index.Add(temp.ToList());
+                    temp.Clear();
                 }
                 else
                 {
-                    index.Add(int.Parse(line));
+                    temp.Add(int.Parse(line));
                 }
             }
             return index;
@@ -61,7 +63,7 @@ namespace SetUpSheet.DataFunctions
             }
             return employees;
         }
-
+        //load advanced list of employees
         public List<Employee> LoadAdvanced()
         {
             inputadvanced = new FileStream(fileName, FileMode.Open, FileAccess.Read);

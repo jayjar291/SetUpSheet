@@ -1,11 +1,12 @@
 ﻿/*
  * Dev Jared Stapley
- * Date 3-8-19
+ * Date 3-13-19
  * Setup Sheet UI
  *  
- *  The main functions for the third Deliverable are:
+ *  The main functions for the final Deliverable are:
  *  
- *  alert functions
+ *  load layout function
+ *  I removed run mode.
  *  
  *  these functions are finished
  *  
@@ -140,7 +141,7 @@ namespace SetUpSheet.UI
                 MessageBox.Show(ex.Message);
             }
         }
-        //todo add
+        //import layout
         private void layoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -152,51 +153,33 @@ namespace SetUpSheet.UI
                 {
                     ILoadable loadable = new FileService(openFile.FileName);
                     roster.Loadlayout(loadable);
+                    lyPLunch.Controls.Clear();
+                    lyPTrans.Controls.Clear();
                     foreach (var item in roster.Employees)
                     {
                         PlaceControls(item);
                     }
                     refresh();
-                    List<int> comboBoxesindex = loadable.comboBoxes();
-                    int index = 1;
-                    cbotransleader.SelectedIndex = comboBoxesindex[1];
-                    cboLeader.SelectedIndex = comboBoxesindex[0];
-                    if (!(comboBoxesindex[index] == -5))
+                    List<List<int>> comboBoxesindex = loadable.comboBoxes();
+                    int index = 0;
+                    cbotransleader.SelectedIndex = comboBoxesindex[0][1];
+                    cboLeader.SelectedIndex = comboBoxesindex[0][0];
+                    foreach (ComboBox item in pnlNames.Controls)
                     {
-                        foreach (ComboBox item in pnlNames.Controls)
-                        {
-                            item.SelectedIndex = comboBoxesindex[index];
-                            index++;
-                        }
-                        if (!(comboBoxesindex[index] == -5))
-                        {
-                            foreach (ComboBox item in pnlSecondary.Controls)
-                            {
-                                item.SelectedIndex = comboBoxesindex[index];
-                                index++;
-                            }
-                            if (!(comboBoxesindex[index] == -5))
-                            {
-                                foreach (ComboBox item in pnlTransition.Controls)
-                                {
-                                    item.SelectedIndex = comboBoxesindex[index];
-                                    index++;
-                                }
-                            }
-                            else
-                            {
-                                index++;
-                                foreach (ComboBox item in pnlTransition.Controls)
-                                {
-                                    item.SelectedIndex = comboBoxesindex[index];
-                                    index++;
-                                }
-                            }
-                        }
-                        else
-                        {
-
-                        }
+                        item.SelectedIndex = comboBoxesindex[1][index];
+                        index++;
+                    }
+                    index = 0;
+                    foreach (ComboBox item in pnlSecondary.Controls)
+                    {
+                        item.SelectedIndex = comboBoxesindex[2][index];
+                        index++;
+                    }
+                    index = 0;
+                    foreach (ComboBox item in pnltransnames.Controls)
+                    {
+                        item.SelectedIndex = comboBoxesindex[3][index];
+                        index++;
                     }
                 }
                 else
